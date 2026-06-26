@@ -276,7 +276,6 @@ const Skiper30 = () => {
                         width: "auto",
                         height: "auto",
                         objectFit: "contain",
-                        filter: "brightness(0) invert(1)",
                       }}
                     />
                   )}
