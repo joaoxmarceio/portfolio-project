@@ -15,6 +15,7 @@ const images = [
   "/PARALLAX POSTERS/Y2K.png",
   "/PARALLAX POSTERS/DON'T YOU REALIZE.png",
   "/PARALLAX POSTERS/FUTURE.png",
+  "/PARALLAX POSTERS/ASFALTOREC.png",
 ];
 
 const Skiper30 = () => {
@@ -74,7 +75,7 @@ const Skiper30 = () => {
         <Column images={[images[0], images[1], images[2]]} y={y} />
         <Column images={[images[3], images[4], images[5]]} y={y2} />
         <Column images={[images[6], images[7], images[8]]} y={y3} />
-        <Column images={[images[9], images[10]]} y={y4} />
+        <Column images={[images[9], images[10], images[11]]} y={y4} />
       </div>
     </main>
   );
