@@ -30,3 +30,4 @@ tsconfig.tsbuildinfo
 # Bun lockfile and cache
 bun.lock
 .bun/
+.env*
