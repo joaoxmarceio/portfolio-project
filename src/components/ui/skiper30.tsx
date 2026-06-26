@@ -255,7 +255,7 @@ const Skiper30 = () => {
               <div
                 className="absolute inset-0 flex flex-col items-center justify-center
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ backgroundColor: "rgba(0,0,0,0.50)" }}
+                style={{ backgroundColor: "rgba(0,0,0,0.70)" }}
               >
                 <div
                   style={{
@@ -271,8 +271,8 @@ const Skiper30 = () => {
                       src={posters[selected].meta.logo!}
                       alt="poster logo"
                       style={{
-                        maxWidth: "140px",
-                        maxHeight: "70px",
+                        maxWidth: "220px",
+                        maxHeight: "110px",
                         width: "auto",
                         height: "auto",
                         objectFit: "contain",
@@ -291,6 +291,7 @@ const Skiper30 = () => {
                   <p
                     style={{
                       ...infoStyle,
+                      fontSize: "10px",
                       whiteSpace: "pre-line",
                       textAlign: "center",
                       lineHeight: 1.55,
