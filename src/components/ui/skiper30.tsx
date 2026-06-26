@@ -10,11 +10,11 @@ const images = [
   "/PROJECTS/POSTERS 1ST PARALLAX/DON'T YOU REALIZE.jpg",
   "/PROJECTS/POSTERS 1ST PARALLAX/FUTURE.jpg",
   "/PROJECTS/POSTERS 1ST PARALLAX/Y2K.jpg",
-  "/PROJECTS/POSTERS 1ST PARALLAX/BOMBTRACK-POSTER.png",
-  "/PROJECTS/POSTERS 1ST PARALLAX/OLD SAYING.jpg",
-  "/PROJECTS/POSTERS 1ST PARALLAX/AGUETONI.jpg",
-  "/PROJECTS/POSTERS 1ST PARALLAX/DON'T YOU REALIZE.jpg",
-  "/PROJECTS/POSTERS 1ST PARALLAX/FUTURE.jpg"
+  "/PROJECTS/POSTERS 1ST PARALLAX/BOTTEGA.jpg",
+  "/PROJECTS/POSTERS 1ST PARALLAX/STUSSY.jpg",
+  "/PROJECTS/POSTERS 1ST PARALLAX/STUSSY X NIKE.jpg",
+  "/PROJECTS/POSTERS 1ST PARALLAX/ETER.jpg",
+  "/PROJECTS/POSTERS 1ST PARALLAX/ASFALTOREC.jpg"
 ];
 
 const Skiper30 = () => {
@@ -92,7 +92,7 @@ const Column = ({ images, y }: ColumnProps) => {
       style={{ y }}
     >
       {images.map((src, i) => (
-        <div key={i} className="relative w-full h-auto overflow-hidden rounded-2xl border border-white/5 shadow-soft">
+        <div key={i} className="relative w-full h-auto">
           <img
             src={`${src}`}
             alt="poster"
