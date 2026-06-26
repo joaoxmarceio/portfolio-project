@@ -25,7 +25,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/STUSSY.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/STUSSY.png",
       date: "2023",
       description:
         "Inspired by decades of streetwear\nculture, celebrating the iconic Stüssy\nbrand and its enduring creative legacy.",
@@ -34,7 +34,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/DREAM.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/DREAM.png",
       date: "2023",
       description:
         "A surreal visual exploring ambition\nand the pursuit of creative dreams\nthrough bold graphic language.",
@@ -43,7 +43,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/OLD SAYING.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/OLD SAYING.png",
       date: "2022",
       description:
         "Typography-driven composition inspired\nby timeless phrases and the wisdom\nhidden in everyday expression.",
@@ -52,7 +52,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/ASFALTOREC.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/ASFALTOREC.png",
       date: "2023",
       description:
         "Raw street energy translated into\nbold visuals for Asfalto Records,\ncelebrating underground music culture.",
@@ -70,7 +70,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/PELUK.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/PELUK.png",
       date: "2024",
       description:
         "A vibrant celebration of Latin culture,\nblending warmth and bold aesthetics\ninto a striking visual narrative.",
@@ -79,7 +79,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/STUSSY X NIKE.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/STUSSY X NIKE.png",
       date: "2023",
       description:
         "Tribute to the legendary collaboration\nbetween Stüssy and Nike, two icons\nshaping street culture for decades.",
@@ -97,7 +97,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/Y2K.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/Y2K.png",
       date: "2022",
       description:
         "Nostalgic Y2K aesthetics reimagined\nfor a new generation, capturing\nthe chaos and optimism of that era.",
@@ -106,7 +106,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/DON'T YOU REALIZE.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/DON'T YOU REALIZE.png",
       date: "2023",
       description:
         "An introspective composition questioning\nperception and awareness, using stark\ncontrast to provoke emotional response.",
@@ -115,7 +115,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/FUTURE.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/FUTURE.png",
       date: "2024",
       description:
         "Bold typographic statement about\nthe future and who holds the power\nto decide what comes next.",
@@ -124,7 +124,7 @@ const posters: Poster[] = [
   {
     src: "/PARALLAX POSTERS/JNCO JEANS.jpg",
     meta: {
-      logo: null,
+      logo: "/POSTER LOGOS/JNCO JEANS.png",
       date: "2023",
       description:
         "Tribute to the iconic JNCO Jeans era,\na defining piece of 90s streetwear\nand youth counterculture identity.",
