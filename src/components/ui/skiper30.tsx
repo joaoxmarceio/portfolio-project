@@ -89,9 +89,9 @@ const posters: Poster[] = [
     src: "/PARALLAX POSTERS/STAR CHOSEN.jpg",
     meta: {
       logo: "/POSTER LOGOS/STARCHOSEN.png",
-      date: "2024",
+      date: "2025",
       description:
-        "A visual identity built around\nthe idea of being chosen by stars,\nblending fate with creative direction.",
+        "O ARQUÉTIPO DO \"TOLO\" É O COMPASSO\nCRIATIVO DESSA OBRA, QUE BRINCA COM O\nCONTRASTE DO CAMPO E A NARRATIVA COSMOLÓGICA",
     },
   },
   {
@@ -271,8 +271,8 @@ const Skiper30 = () => {
                       src={posters[selected].meta.logo!}
                       alt="poster logo"
                       style={{
-                        maxWidth: "220px",
-                        maxHeight: "110px",
+                        maxWidth: "330px",
+                        maxHeight: "165px",
                         width: "auto",
                         height: "auto",
                         objectFit: "contain",
@@ -294,7 +294,7 @@ const Skiper30 = () => {
                       fontSize: "10px",
                       whiteSpace: "pre-line",
                       textAlign: "center",
-                      lineHeight: 1.55,
+                      lineHeight: 1.01,
                     }}
                   >
                     {posters[selected].meta.description}
