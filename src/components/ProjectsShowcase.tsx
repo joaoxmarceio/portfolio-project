@@ -791,19 +791,6 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                      }}
                   >
                     {proj.title}
-                    {safeActiveIdx === idx && (
-                      <motion.div
-                        layoutId={`dot-indicator-${categoryName}`}
-                        transition={{ duration: 0.2 }}
-                        className="bg-white absolute rounded-full size-1"
-                        style={{
-                          left: isLeft ? '-12px' : 'auto',
-                          right: isLeft ? 'auto' : '-12px',
-                          top: '50%',
-                          transform: 'translateY(-50%)',
-                        }}
-                      />
-                    )}
                   </motion.li>
                 ))}
               </ul>
