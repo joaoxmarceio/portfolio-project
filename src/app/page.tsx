@@ -119,7 +119,7 @@ export default function Home() {
             Diretor criativo
           </p>
           <a className="portfolio-signature" href="/">
-            <span>©</span>JoãoMarcelo
+            <span>©</span>João Marcelo
           </a>
           <p>2026</p>
         </header>
@@ -208,7 +208,7 @@ export default function Home() {
         </nav>
 
         <p className="portfolio-footer-copy">
-          © 2026 JoãoMarcelo. Todos os direitos reservados.
+          © 2026 João Marcelo. Todos os direitos reservados.
         </p>
       </footer>
     </main>
