@@ -22,6 +22,7 @@ interface Project {
   imageScale?: number;
   imageStyle?: React.CSSProperties;
   logo?: string;
+  invertLogo?: boolean;
 }
 
 const projects: Project[] = [
@@ -30,6 +31,7 @@ const projects: Project[] = [
     id: 8,
     title: 'ZETTA',
     logo: '/PROJECT LOGOS/LOGO ZETTA.webp',
+    invertLogo: true,
     subTitle: 'Manual de Identidade Zetta',
     img: '/PROJECTS/branding_guidelines/zetta_brand_kit/1.jpg',
     desc1: 'Manual técnico e diretrizes visuais criadas para a marca Zetta.',
@@ -857,6 +859,7 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                       src={displayProject.logo}
                       alt={displayProject.title}
                       className="h-10 md:h-14 w-auto object-contain"
+                      style={displayProject.invertLogo ? { filter: 'brightness(0) invert(1)' } : undefined}
                     />
                   </motion.div>
                 ) : (
