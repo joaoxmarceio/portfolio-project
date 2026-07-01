@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "©JOÃO MARCELO",
   description: "Portfolio website built with Next.js and Tailwind CSS.",
   icons: {
     icon: "/favicon.svg",
