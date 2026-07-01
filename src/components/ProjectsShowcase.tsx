@@ -830,7 +830,6 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             onClick={() => setActiveProject(null)}
-            onMouseLeave={() => setActiveProject(null)}
             className={`w-full mx-auto cursor-pointer py-12 transition-all duration-500 ease-in-out ${
               isZoomed ? 'max-w-6xl' : 'max-w-3xl'
             }`}
