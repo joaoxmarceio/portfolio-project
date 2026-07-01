@@ -9,12 +9,12 @@ const socialLinks = [
   {
     className: "portfolio-social-behance",
     icons: ["/figma-behance.svg"],
-    href: "#contact",
+    href: "https://www.behance.net/joaoxmarcelo",
     label: "Behance",
   },
   {
     className: "portfolio-social-instagram",
-    href: "#contact",
+    href: "https://www.instagram.com/joaomarceio/",
     icons: [
       "/figma-social-3.svg",
       "/figma-social-4.svg",
@@ -24,13 +24,13 @@ const socialLinks = [
   },
   {
     className: "portfolio-social-linkedin",
-    href: "#contact",
+    href: "https://www.linkedin.com/in/jmsantospoli/",
     icons: ["/figma-social-2.svg"],
     label: "LinkedIn",
   },
   {
     className: "portfolio-social-whatsapp",
-    href: "#contact",
+    href: "https://wa.me/5516991985132",
     icons: ["/figma-social-1.svg"],
     label: "WhatsApp",
   },
@@ -164,6 +164,8 @@ export default function Home() {
                   className={`portfolio-social-link ${link.className}`}
                   href={link.href}
                   key={link.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {link.icons.map((icon) => (
                     <img alt="" key={icon} src={icon} />
@@ -199,6 +201,8 @@ export default function Home() {
               className={`portfolio-footer-social-link portfolio-footer-${link.label.toLowerCase()}`}
               href={link.href}
               key={link.label}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {link.icons.map((icon) => (
                 <img alt="" key={icon} src={icon} />
