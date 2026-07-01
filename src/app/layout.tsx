@@ -5,7 +5,9 @@ export const metadata: Metadata = {
   title: "Portfolio",
   description: "Portfolio website built with Next.js and Tailwind CSS.",
   icons: {
-    icon: "/FAVICON SITE/FAVICON SITE.svg",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 
