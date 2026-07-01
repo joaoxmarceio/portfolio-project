@@ -641,6 +641,31 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const [isZoomed, setIsZoomed] = useState<boolean>(false);
   const constraintsRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<any>(null);
+
+  const handleMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+    }
+    closeTimeoutRef.current = setTimeout(() => {
+      setActiveProject(null);
+    }, 1200);
+  };
+
+  React.useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const currentProject = catProjects.find((p) => p.id === activeProject);
 
@@ -830,6 +855,8 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             onClick={() => setActiveProject(null)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             className={`w-full mx-auto cursor-pointer py-12 transition-all duration-500 ease-in-out ${
               isZoomed ? 'max-w-6xl' : 'max-w-3xl'
             }`}
