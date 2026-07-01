@@ -21,6 +21,7 @@ interface Project {
   objectPosition?: string;
   imageScale?: number;
   imageStyle?: React.CSSProperties;
+  logo?: string;
 }
 
 const projects: Project[] = [
@@ -28,6 +29,7 @@ const projects: Project[] = [
   {
     id: 8,
     title: 'ZETTA',
+    logo: '/PROJECT LOGOS/LOGO ZETTA.webp',
     subTitle: 'Manual de Identidade Zetta',
     img: '/PROJECTS/branding_guidelines/zetta_brand_kit/1.jpg',
     desc1: 'Manual técnico e diretrizes visuais criadas para a marca Zetta.',
@@ -50,6 +52,7 @@ const projects: Project[] = [
   {
     id: 26,
     title: 'LOUD®',
+    logo: '/PROJECT LOGOS/LOGO LOUD.webp',
     subTitle: 'Identity Manual',
     img: '/PROJECTS/branding_guidelines/loud_brand_guidelines/1.jpg',
     desc1: 'Manual de identidade visual desenvolvido para a LOUD®.',
@@ -67,6 +70,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: 'EcoFunding™',
+    logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     subTitle: 'Manual de Identidade Visual',
     img: '/PROJECTS/branding_guidelines/eco_funding_branding_kit/1.jpg',
     desc1: 'Manual de Identidade Visual completo desenvolvido para o projeto Eco Funding.',
@@ -89,6 +93,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: 'Moirarte®',
+    logo: '/PROJECT LOGOS/LOGO MOIRARTE.webp',
     subTitle: 'Manual de Marca',
     img: '/PROJECTS/branding_guidelines/moirarte/1.jpg',
     desc1: 'Projeto de branding para a Moirarte, apresentando as inspirações do logotipo, variações cromáticas e regras de assinatura visual.',
@@ -110,6 +115,7 @@ const projects: Project[] = [
   {
     id: 7,
     title: 'Sucorama',
+    logo: '/PROJECT LOGOS/LOGO SUCORAMA.webp',
     subTitle: 'Manual de Identidade Sucorama',
     img: '/PROJECTS/branding_guidelines/sucorama_brand_identity/manual_de_identidade_sucorama_1.jpg',
     desc1: 'Guia visual e manual prático desenvolvido para a identidade visual da Sucorama.',
@@ -126,6 +132,7 @@ const projects: Project[] = [
   {
     id: 9,
     title: 'ESPORTSBET.IO',
+    logo: '/PROJECT LOGOS/LOGO ESPORTSBET.IO.webp',
     subTitle: 'Estudo de Caso de Marca',
     img: '/PROJECTS/case_study/esb_case_study/1.jpg',
     desc1: 'Apresentação detalhada da reestruturação da marca ESB, cobrindo desde a pesquisa conceitual até as peças publicitárias finais.',
@@ -147,6 +154,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: 'NEXT',
+    logo: '/PROJECT LOGOS/LOGO NEXT.webp',
     subTitle: 'Brand Guidelines',
     img: '/PROJECTS/branding_guidelines/manual_next/cover.jpg',
     desc1: 'Diretrizes de marca para o ecossistema Next. Apresenta o grid construtivo do logotipo e o comportamento tipográfico oficial.',
@@ -165,6 +173,7 @@ const projects: Project[] = [
   {
     id: 6,
     title: 'Altitude 1100 Café',
+    logo: '/PROJECT LOGOS/LOGO CAFE ALTITUDE.webp',
     subTitle: 'Manual de Identidade do Café',
     img: '/PROJECTS/branding_guidelines/manual_de_identidade_cafe_altitude1100/1.jpg',
     desc1: 'Manual de Identidade de marca criado para a marca de Café Altitude 1100.',
@@ -201,6 +210,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'INOWAVE®',
+    logo: '/PROJECT LOGOS/LOGO INOWAVE.webp',
     subTitle: 'Manual de Identidade Visual',
     img: '/PROJECTS/branding_guidelines/inowave_brand_guidelines/capa.jpg',
     desc1: 'Manual de identidade visual desenvolvido para a Inowave. O projeto aborda a construção da marca, paleta de cores institucional, regras de aplicação tipográfica e diagramação.',
@@ -226,6 +236,7 @@ const projects: Project[] = [
   {
     id: 20,
     title: 'WANDRMEDIA',
+    logo: '/PROJECT LOGOS/LOGO WANDRMEDIA.png',
     subTitle: 'Marketing Landing Page Layout',
     img: '/PROJECTS/ux_ui/wandrmedia_landing_page.jpg',
     desc1: 'Landing page projetada para a agência WandrMedia, destacando depoimentos de clientes e portfólio visual.',
@@ -239,6 +250,7 @@ const projects: Project[] = [
   {
     id: 10,
     title: 'EcoFunding™ Tokens',
+    logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     subTitle: 'Estudo de Tokens do Projeto',
     img: '/PROJECTS/case_study/ecofunding_tokens/render.jpg',
     desc1: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma EcoFunding, incluindo renders em 3D e telas desktop.',
@@ -266,6 +278,7 @@ const projects: Project[] = [
   {
     id: 19,
     title: 'GGEZ MEDIA™',
+    logo: '/PROJECT LOGOS/LOGO GGEZ.png',
     subTitle: 'Gaming Portal UI Design',
     img: '/PROJECTS/ux_ui/ggez_website.jpg',
     desc1: 'Portal de notícias e campeonatos gamer GGEZ. Traz cores escuras de alto contraste e componentes dedicados à comunidade de e-sports.',
@@ -279,6 +292,7 @@ const projects: Project[] = [
   {
     id: 17,
     title: 'Digitus',
+    logo: '/PROJECT LOGOS/LOGO DIGITUS.webp',
     subTitle: 'Landing Page & Dashboard Design',
     img: '/PROJECTS/ux_ui/digitus_website.jpg',
     desc1: 'Concepção visual do website institucional Digitus. O layout traz foco em usabilidade, contraste elevado e visualização limpa de dados.',
@@ -292,6 +306,7 @@ const projects: Project[] = [
   {
     id: 21,
     title: 'Corban Fintech',
+    logo: '/PROJECT LOGOS/FINTECH CORBAN.png',
     subTitle: 'Digital Banking UI Design',
     img: '/PROJECTS/ux_ui/website_fintech_corban.jpg',
     desc1: 'Portal corporativo para a Fintech Corban, aliando solidez de segurança bancária a uma linguagem visual limpa e amigável.',
@@ -305,6 +320,7 @@ const projects: Project[] = [
   {
     id: 18,
     title: 'Flying Studio',
+    logo: '/PROJECT LOGOS/LOGO FLYING STUDIO.webp',
     subTitle: 'Corporate Website Concept',
     img: '/PROJECTS/ux_ui/flying_studio.jpg',
     desc1: 'Estudo de interface para o Flying Studio, integrando animações dinâmicas e grades geométricas no frontend.',
@@ -318,6 +334,7 @@ const projects: Project[] = [
   {
     id: 23,
     title: 'VALORANT® SOVA Twitch Layout',
+    logo: '/PROJECT LOGOS/SOVA.png',
     subTitle: 'Overlays e Painéis da Twitch',
     img: '/PROJECTS/ux_ui/sova/sova.png',
     desc1: 'Kit completo de branding e identidade visual para streamers desenvolvido para o canal do Sova.',
@@ -342,6 +359,7 @@ const projects: Project[] = [
   {
     id: 22,
     title: 'Mepo Website',
+    logo: '/PROJECT LOGOS/LOGO MEPO.webp',
     subTitle: 'E-commerce UI/UX Layout',
     img: '/PROJECTS/ux_ui/website_mepo.jpg',
     desc1: 'Interface minimalista para e-commerce de moda, focada na exibição das peças e facilidade no fluxo de checkout.',
@@ -357,6 +375,7 @@ const projects: Project[] = [
   {
     id: 12,
     title: 'Arcnova®',
+    logo: '/PROJECT LOGOS/LOGO ARCNOVA.png',
     subTitle: 'Pitch Deck Corporativo',
     img: '/PROJECTS/decks/arcnova_deck/1.jpg',
     desc1: 'Lindo deck de slides estruturado para a Arcnova, apresentando metas, cases e soluções tecnológicas da marca.',
@@ -376,6 +395,7 @@ const projects: Project[] = [
   {
     id: 14,
     title: 'Twitch® Khleo Thomas',
+    logo: '/PROJECT LOGOS/LOGO TWITCH KHLEO THOMAS.png',
     subTitle: 'Pitch Deck Comercial',
     img: '/PROJECTS/decks/khleo_thomas_pitch_deck/1.jpg',
     desc1: 'Pitch deck comercial criado para apresentação de projetos de entretenimento de Khleo Thomas.',
@@ -397,6 +417,7 @@ const projects: Project[] = [
   {
     id: 27,
     title: 'Apresentação EMASFI',
+    logo: '/PROJECT LOGOS/LOGO APRESENTAÇÃO EMASFI.png',
     subTitle: 'Pitch Presentation',
     img: '/PROJECTS/decks/emasfi_deck/emasfi_page_1.jpg',
     desc1: 'Apresentação de slides comercial desenvolvida para a EMASFI.',
@@ -420,6 +441,7 @@ const projects: Project[] = [
   {
     id: 13,
     title: 'Beatriz Evangelista | Portfólio',
+    logo: '/PROJECT LOGOS/LOGO BEATRIZ EVANGELISTA.png',
     subTitle: 'Apresentação de Portfólio',
     img: '/PROJECTS/decks/portfolio_beatriz_evangelista/1.jpg',
     desc1: 'Portfólio comercial diagramado em slides para apresentação de projetos de design de interiores e arquitetura.',
@@ -443,6 +465,7 @@ const projects: Project[] = [
   {
     id: 15,
     title: 'NEX Playground™ | Khleo Thomas',
+    logo: '/PROJECT LOGOS/LOGO NEX PLAYGROUND.webp',
     subTitle: 'Playground Presentation Deck',
     img: '/PROJECTS/decks/nex_playground_deck/1.jpg',
     desc1: 'Deck de apresentação promocional para o ecossistema Nex Playground.',
@@ -462,6 +485,7 @@ const projects: Project[] = [
   {
     id: 28,
     title: 'EcoFunding™ Pitch Deck',
+    logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     subTitle: 'Investor Deck Presentation',
     img: '/PROJECTS/decks/ecofounding_pitch_deck/ecofunding_deck_page_1.jpg',
     desc1: 'Deck de apresentação estruturado para investidores da plataforma EcoFunding.',
@@ -487,6 +511,7 @@ const projects: Project[] = [
   {
     id: 11,
     title: 'Acelerador Racing | Jantar de 20 Anos',
+    logo: '/PROJECT LOGOS/1x/LOGO ACELERADOR RACING.webp',
     subTitle: 'Pitch Deck de Negócios',
     img: '/PROJECTS/decks/acelerador_apresentacao/1.png',
     desc1: 'Apresentação institucional e comercial desenvolvida para captação e aceleração de startups.',
@@ -822,12 +847,26 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
 
               {/* Title Section */}
               <div className="relative h-20 md:h-24 flex items-end">
-                <motion.h1
-                  className="absolute text-5xl md:text-[64px] font-normal tracking-[-0.03em] text-white"
-                  layoutId={`text-header-${displayProject?.id}`}
-                >
-                  {displayProject?.title}
-                </motion.h1>
+                {displayProject?.logo ? (
+                  <motion.div
+                    layoutId={`text-header-${displayProject.id}`}
+                    className="absolute bottom-0 left-0 flex items-end"
+                    style={{ height: '100%' }}
+                  >
+                    <img
+                      src={displayProject.logo}
+                      alt={displayProject.title}
+                      className="h-10 md:h-14 w-auto object-contain"
+                    />
+                  </motion.div>
+                ) : (
+                  <motion.h1
+                    className="absolute text-5xl md:text-[64px] font-normal tracking-[-0.03em] text-white"
+                    layoutId={`text-header-${displayProject?.id}`}
+                  >
+                    {displayProject?.title}
+                  </motion.h1>
+                )}
               </div>
 
               {/* Sub Title & Text Below */}
