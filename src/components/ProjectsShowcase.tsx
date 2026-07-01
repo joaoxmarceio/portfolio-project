@@ -56,7 +56,7 @@ const projects: Project[] = [
     id: 26,
     title: 'LOUD®',
     logo: '/PROJECT LOGOS/LOGO LOUD.webp',
-    logoHeight: 'h-14 md:h-20',
+    logoHeight: 'h-20 md:h-28',
     subTitle: 'Identity Manual',
     img: '/PROJECTS/branding_guidelines/loud_brand_guidelines/1.jpg',
     desc1: 'Manual de identidade visual desenvolvido para a LOUD®.',
@@ -75,7 +75,7 @@ const projects: Project[] = [
     id: 5,
     title: 'Ecofuding™',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
-    logoHeight: 'h-14 md:h-20',
+    logoHeight: 'h-20 md:h-28',
     subTitle: 'Manual de Identidade Visual',
     img: '/PROJECTS/branding_guidelines/eco_funding_branding_kit/1.jpg',
     desc1: 'Manual de Identidade Visual completo desenvolvido para o projeto Ecofuding.',
@@ -196,7 +196,7 @@ const projects: Project[] = [
     id: 2,
     title: 'Agiliza',
     subTitle: 'Identity Guidelines',
-    img: '/PROJECTS/branding_guidelines/agiliza/1.jpg',
+    img: '/PROJECTS/branding_guidelines/AGILIZA/1.jpg',
     desc1: 'Manual de aplicação de marca desenvolvido para a Agiliza, detalhando a paleta cromática, área de proteção e aplicação em diferentes fundos.',
     desc2: 'Foco na versatilidade da marca para garantir legibilidade e impacto visual em todas as mídias.',
     behanceUrl: 'https://www.behance.net',
@@ -205,11 +205,11 @@ const projects: Project[] = [
     objectPosition: 'top',
     imageScale: 1.06,
     galleryImages: [
-      '/PROJECTS/branding_guidelines/agiliza/1.jpg',
-      '/PROJECTS/branding_guidelines/agiliza/2.jpg',
-      '/PROJECTS/branding_guidelines/agiliza/3.jpg',
-      '/PROJECTS/branding_guidelines/agiliza/4.jpg',
-      '/PROJECTS/branding_guidelines/agiliza/5.jpg',
+      '/PROJECTS/branding_guidelines/AGILIZA/1.jpg',
+      '/PROJECTS/branding_guidelines/AGILIZA/2.jpg',
+      '/PROJECTS/branding_guidelines/AGILIZA/3.jpg',
+      '/PROJECTS/branding_guidelines/AGILIZA/4.jpg',
+      '/PROJECTS/branding_guidelines/AGILIZA/5.jpg',
     ],
   },
   {
@@ -256,7 +256,7 @@ const projects: Project[] = [
     id: 10,
     title: 'Ecofuding™ Tokens',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
-    logoHeight: 'h-14 md:h-20',
+    logoHeight: 'h-20 md:h-28',
     subTitle: 'Estudo de Tokens do Projeto',
     img: '/PROJECTS/case_study/ecofunding_tokens/render.jpg',
     desc1: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofuding, incluindo renders em 3D e telas desktop.',
@@ -285,7 +285,7 @@ const projects: Project[] = [
     id: 19,
     title: 'GGEZ MEDIA™',
     logo: '/PROJECT LOGOS/LOGO GGEZ.png',
-    logoHeight: 'h-16 md:h-24',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Gaming Portal UI Design',
     img: '/PROJECTS/ux_ui/ggez_website.jpg',
     desc1: 'Portal de notícias e campeonatos gamer GGEZ. Traz cores escuras de alto contraste e componentes dedicados à comunidade de e-sports.',
@@ -314,7 +314,7 @@ const projects: Project[] = [
     id: 21,
     title: 'Corban Fintech',
     logo: '/PROJECT LOGOS/FINTECH CORBAN.png',
-    logoHeight: 'h-16 md:h-24',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Digital Banking UI Design',
     img: '/PROJECTS/ux_ui/website_fintech_corban.jpg',
     desc1: 'Portal corporativo para a Fintech Corban, aliando solidez de segurança bancária a uma linguagem visual limpa e amigável.',
@@ -329,7 +329,7 @@ const projects: Project[] = [
     id: 18,
     title: 'Flying Studio',
     logo: '/PROJECT LOGOS/LOGO FLYING STUDIO.webp',
-    logoHeight: 'h-16 md:h-24',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Corporate Website Concept',
     img: '/PROJECTS/ux_ui/flying_studio.jpg',
     desc1: 'Estudo de interface para o Flying Studio, integrando animações dinâmicas e grades geométricas no frontend.',
@@ -344,7 +344,7 @@ const projects: Project[] = [
     id: 23,
     title: 'VALORANT® SOVA Twitch Layout',
     logo: '/PROJECT LOGOS/SOVA.png',
-    logoHeight: 'h-16 md:h-24',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Overlays e Painéis da Twitch',
     img: '/PROJECTS/ux_ui/sova/sova.png',
     desc1: 'Kit completo de branding e identidade visual para streamers desenvolvido para o canal do Sova.',
@@ -386,7 +386,7 @@ const projects: Project[] = [
     id: 12,
     title: 'Arcnova®',
     logo: '/PROJECT LOGOS/LOGO ARCNOVA.png',
-    logoHeight: 'h-16 md:h-24',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Pitch Deck Corporativo',
     img: '/PROJECTS/decks/arcnova_deck/1.jpg',
     desc1: 'Lindo deck de slides estruturado para a Arcnova, apresentando metas, cases e soluções tecnológicas da marca.',
@@ -407,7 +407,7 @@ const projects: Project[] = [
     id: 14,
     title: 'Twitch® Khleo Thomas',
     logo: '/PROJECT LOGOS/LOGO TWITCH KHLEO THOMAS.png',
-    logoHeight: 'h-16 md:h-24',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Pitch Deck Comercial',
     img: '/PROJECTS/decks/khleo_thomas_pitch_deck/1.jpg',
     desc1: 'Pitch deck comercial criado para apresentação de projetos de entretenimento de Khleo Thomas.',
@@ -454,7 +454,7 @@ const projects: Project[] = [
     id: 13,
     title: 'Beatriz Evangelista | Portfólio',
     logo: '/PROJECT LOGOS/LOGO BEATRIZ EVANGELISTA.png',
-    logoHeight: 'h-16 md:h-24',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Apresentação de Portfólio',
     img: '/PROJECTS/decks/portfolio_beatriz_evangelista/1.jpg',
     desc1: 'Portfólio comercial diagramado em slides para apresentação de projetos de design de interiores e arquitetura.',
@@ -479,7 +479,7 @@ const projects: Project[] = [
     id: 15,
     title: 'NEX Playground™ | Khleo Thomas',
     logo: '/PROJECT LOGOS/LOGO NEX PLAYGROUND.webp',
-    logoHeight: 'h-16 md:h-24',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Playground Presentation Deck',
     img: '/PROJECTS/decks/nex_playground_deck/1.jpg',
     desc1: 'Deck de apresentação promocional para o ecossistema Nex Playground.',
@@ -500,7 +500,7 @@ const projects: Project[] = [
     id: 28,
     title: 'Ecofuding™ Pitch Deck',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
-    logoHeight: 'h-14 md:h-20',
+    logoHeight: 'h-20 md:h-28',
     subTitle: 'Investor Deck Presentation',
     img: '/PROJECTS/decks/ecofounding_pitch_deck/ecofunding_deck_page_1.jpg',
     desc1: 'Deck de apresentação estruturado para investidores da plataforma Ecofuding.',
@@ -526,8 +526,8 @@ const projects: Project[] = [
   {
     id: 11,
     title: 'Acelerador Racing | Jantar de 20 Anos',
-    logo: '/PROJECT LOGOS/1x/LOGO ACELERADOR RACING.webp',
-    logoHeight: 'h-16 md:h-24',
+    logo: '/PROJECT LOGOS/LOGO ACELERADOR RACING.webp',
+    logoHeight: 'h-24 md:h-32',
     subTitle: 'Pitch Deck de Negócios',
     img: '/PROJECTS/decks/acelerador_apresentacao/1.png',
     desc1: 'Apresentação institucional e comercial desenvolvida para captação e aceleração de startups.',
@@ -888,7 +888,7 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
               </button>
 
               {/* Title Section */}
-              <div className="relative h-20 md:h-24 flex items-end">
+              <div className="relative h-28 md:h-36 flex items-end">
                 {displayProject?.logo ? (
                   <motion.div
                     layoutId={`text-header-${displayProject.id}`}
@@ -898,7 +898,7 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                     <img
                       src={displayProject.logo}
                       alt={displayProject.title}
-                      className={`${displayProject.logoHeight || 'h-10 md:h-14'} w-auto object-contain`}
+                      className={`${displayProject.logoHeight || 'h-14 md:h-20'} w-auto object-contain`}
                       style={displayProject.invertLogo ? { filter: 'brightness(0) invert(1)' } : undefined}
                     />
                   </motion.div>

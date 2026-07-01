@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Portfolio website built with Next.js and Tailwind CSS.",
+  icons: {
+    icon: "/FAVICON SITE/FAVICON SITE.svg",
+  },
 };
 
 export default function RootLayout({
