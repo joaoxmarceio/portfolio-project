@@ -258,7 +258,7 @@ const projects: Project[] = [
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     logoHeight: 'h-20 md:h-28',
     subTitle: 'Estudo de Tokens do Projeto',
-    img: '/PROJECTS/case_study/ecofunding_tokens/render.jpg',
+    img: '/PROJECTS/case_study/ecofunding_tokens/documento_tokens_1.jpg',
     desc1: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofuding, incluindo renders em 3D e telas desktop.',
     desc2: 'Layout de alta fidelidade integrando a linguagem de blockchain ao ecossistema verde do projeto.',
     behanceUrl: 'https://www.behance.net',
