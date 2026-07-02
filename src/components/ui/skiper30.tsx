@@ -133,7 +133,7 @@ const posters: Poster[] = [
 ];
 
 /* ─── Main component ──────────────────────────────────────────────── */
-const Skiper30 = () => {
+const Skiper30 = ({ lang = 'pt' }: { lang?: 'pt' | 'en' }) => {
   const gallery = useRef<HTMLDivElement>(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   const [selected, setSelected] = useState<number | null>(null);
@@ -297,7 +297,9 @@ const Skiper30 = () => {
                       lineHeight: 1.01,
                     }}
                   >
-                    {posters[selected].meta.description}
+                    {selected === 7 && lang === 'en'
+                      ? "THE \"FOOL\" ARCHETYPE IS THE CREATIVE\nCOMPASS OF THIS WORK, PLAYING WITH\nTHE CONTRAST OF THE FIELD AND THE COSMOLOGICAL NARRATIVE"
+                      : posters[selected].meta.description}
                   </p>
                 </div>
               </div>

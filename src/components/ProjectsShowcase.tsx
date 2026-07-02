@@ -632,7 +632,7 @@ interface Category {
   projects: Project[];
 }
 
-export default function ProjectsShowcase() {
+export default function ProjectsShowcase({ lang = 'pt' }: { lang?: 'pt' | 'en' }) {
   return (
     <div className="w-full bg-[#121212] flex flex-col">
       {categoriesData.map((category, idx) => (
@@ -642,20 +642,176 @@ export default function ProjectsShowcase() {
           projects={category.projects}
           isLeft={idx % 2 !== 0} // Interleave sections (0 is right, 1 is left, 2 is right, etc.)
           categoryId={category.id}
+          lang={lang}
         />
       ))}
     </div>
   );
 }
 
+const categoryTranslationMap: Record<string, { pt: string; en: string }> = {
+  'IDENTIDADE VISUAL': { pt: 'IDENTIDADE VISUAL', en: 'VISUAL IDENTITY' },
+  'UX/UI': { pt: 'UX/UI', en: 'UX/UI' },
+  'DECKS': { pt: 'DECKS', en: 'PITCH DECKS' },
+  'MÍDIAS SOCIAIS E FLYERS': { pt: 'MÍDIAS SOCIAIS E FLYERS', en: 'SOCIAL MEDIA & FLYERS' }
+};
+
+const projectTranslations: Record<number, {
+  subTitle: { pt: string; en: string };
+  desc1: { pt: string; en: string };
+  desc2: { pt: string; en: string };
+}> = {
+  8: {
+    subTitle: { pt: 'Manual de Identidade Zetta', en: 'Zetta Identity Manual' },
+    desc1: { pt: 'Manual técnico e diretrizes visuais criadas para a marca Zetta.', en: 'Technical manual and visual guidelines created for the Zetta brand.' },
+    desc2: { pt: 'O projeto foca no uso correto do logotipo, tipografia e comportamento cromático.', en: 'The project focuses on the correct use of the logo, typography, and chromatic behavior.' }
+  },
+  26: {
+    subTitle: { pt: 'Manual de Identidade Visual LOUD', en: 'LOUD Identity Manual' },
+    desc1: { pt: 'Manual de identidade visual desenvolvido para a LOUD®.', en: 'Visual identity manual developed for LOUD®.' },
+    desc2: { pt: 'Define paleta cromática secundária, variações autorizadas de logotipo e aplicações físicas e digitais da marca.', en: 'Defines secondary color palette, authorized logo variations, and physical and digital applications of the brand.' }
+  },
+  9: {
+    subTitle: { pt: 'Manual de Identidade Visual Ecofunding', en: 'Ecofunding Identity Manual' },
+    desc1: { pt: 'Manual de Identidade Visual completo desenvolvido para o projeto Ecofunding.', en: 'Complete Visual Identity manual developed for the Ecofunding project.' },
+    desc2: { pt: 'Foco na fusão conceitual de ativos ecológicos e tecnologia Web3.', en: 'Focus on the conceptual fusion of ecological assets and Web3 technology.' }
+  },
+  25: {
+    subTitle: { pt: 'Estudo de Marca Moirarte', en: 'Moirarte Brand Study' },
+    desc1: { pt: 'Projeto de branding para a Moirarte, apresentando as inspirações do logotipo, variações cromáticas e regras de assinatura visual.', en: 'Branding project for Moirarte, presenting the logo inspirations, chromatic variations, and visual signature rules.' },
+    desc2: { pt: 'Garante o alinhamento estético sofisticado exigido pelo posicionamento de mercado da marca.', en: 'Ensures the sophisticated aesthetic alignment required by the brand\'s market positioning.' }
+  },
+  24: {
+    subTitle: { pt: 'Guia Visual Sucorama', en: 'Sucorama Visual Guide' },
+    desc1: { pt: 'Guia visual e manual prático desenvolvido para a identidade visual da Sucorama.', en: 'Visual guide and practical manual developed for the visual identity of Sucorama.' },
+    desc2: { pt: 'Definições estéticas focadas em expressar naturalidade e energia saudável.', en: 'Aesthetic definitions focused on expressing naturalness and healthy energy.' }
+  },
+  23: {
+    subTitle: { pt: 'Estudo de Marca ESB', en: 'ESB Brand Study' },
+    desc1: { pt: 'Apresentação detalhada da reestruturação da marca ESB, cobrindo desde a pesquisa conceitual até as peças publicitárias finais.', en: 'Detailed presentation of the ESB brand restructuring, covering from conceptual research to the final advertising pieces.' },
+    desc2: { pt: 'Estética alinhada com as melhores práticas de design de alto nível.', en: 'Aesthetics aligned with the best practices of high-level design.' }
+  },
+  22: {
+    subTitle: { pt: 'Manual de Identidade Next', en: 'Next Identity Manual' },
+    desc1: { pt: 'Diretrizes de marca para o ecossistema Next. Apresenta o grid construtivo do logotipo e o comportamento tipográfico oficial.', en: 'Brand guidelines for the Next ecosystem. It presents the logo constructive grid and the official typographic behavior.' },
+    desc2: { pt: 'Design limpo e técnico orientado para tecnologia de ponta.', en: 'Clean and technical design oriented for cutting-edge technology.' }
+  },
+  21: {
+    subTitle: { pt: 'Estudo de Marca Altitude 1100', en: 'Altitude 1100 Brand Study' },
+    desc1: { pt: 'Manual de Identidade de marca criado para a marca de Café Altitude 1100.', en: 'Brand Identity manual created for the Altitude 1100 Coffee brand.' },
+    desc2: { pt: 'Combinação clássica e rústica para traduzir a origem do grão selecionado.', en: 'Classic and rustic combination to translate the origin of the selected bean.' }
+  },
+  20: {
+    subTitle: { pt: 'Estudo de Marca Agiliza', en: 'Agiliza Brand Study' },
+    desc1: { pt: 'Manual de aplicação de marca desenvolvido para a Agiliza, detalhando a paleta cromática, área de proteção e aplicação em diferentes fundos.', en: 'Brand application manual developed for Agiliza, detailing the color palette, protection zone, and application on different backgrounds.' },
+    desc2: { pt: 'Diretrizes focadas em usabilidade e forte apelo visual.', en: 'Guidelines focused on usability and strong visual appeal.' }
+  },
+  27: {
+    subTitle: { pt: 'Manual de Identidade Inowave', en: 'Inowave Identity Manual' },
+    desc1: { pt: 'Manual de identidade visual desenvolvido para a Inowave. O projeto aborda a construção da marca, paleta de cores institucional, regras de aplicação tipográfica e diagramação.', en: 'Visual identity manual developed for Inowave. The project covers brand construction, institutional color palette, typographic application rules, and layout.' },
+    desc2: { pt: 'Desenvolvido para representar inovação tecnológica de forma minimalista.', en: 'Developed to represent technological innovation in a minimalist way.' }
+  },
+  1: {
+    subTitle: { pt: 'Estudo de Caso de Landing Page', en: 'Landing Page Case Study' },
+    desc1: { pt: 'Landing page projetada para a agência WandrMedia, destacando depoimentos de clientes e portfólio visual.', en: 'Landing page designed for the WandrMedia agency, highlighting client testimonials and a visual portfolio.' },
+    desc2: { pt: 'Layout responsivo e moderno otimizado para conversões.', en: 'Responsive and modern layout optimized for conversions.' }
+  },
+  10: {
+    subTitle: { pt: 'Estudo de Tokens do Projeto', en: 'Project Tokens Study' },
+    desc1: { pt: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofuding, incluindo renders em 3D e telas desktop.', en: 'Creative design of NFTs and utility Tokens for the Ecofuding platform, including 3D renders and desktop screens.' },
+    desc2: { pt: 'Layout de alta fidelidade integrando a linguagem de blockchain ao ecossistema verde do projeto.', en: 'High-fidelity layout integrating blockchain language with the project\'s green ecosystem.' }
+  },
+  2: {
+    subTitle: { pt: 'Portal Gamer de e-Sports', en: 'Gamer e-Sports Portal' },
+    desc1: { pt: 'Portal de notícias e campeonatos gamer GGEZ. Traz cores escuras de alto contraste e componentes dedicados à comunidade de e-sports.', en: 'GGEZ gamer news and tournament portal. It features high-contrast dark colors and components dedicated to the e-sports community.' },
+    desc2: { pt: 'Layout moderno e intuitivo ideal para leitura dinâmica de atualizações do ecossistema gamer.', en: 'Modern and intuitive layout ideal for dynamic reading of gaming ecosystem updates.' }
+  },
+  3: {
+    subTitle: { pt: 'Estudo de Interface Corporativa', en: 'Corporate Interface Study' },
+    desc1: { pt: 'Concepção visual do website institucional Digitus. O layout traz foco em usabilidade, contraste elevado e visualização limpa de dados.', en: 'Visual design of the Digitus institutional website. The layout focuses on usability, high contrast, and clean data visualization.' },
+    desc2: { pt: 'Desenvolvido com foco no segmento corporativo e soluções B2B.', en: 'Developed with a focus on the corporate segment and B2B solutions.' }
+  },
+  4: {
+    subTitle: { pt: 'Portal Financeiro Fintech', en: 'Fintech Financial Portal' },
+    desc1: { pt: 'Portal corporativo para a Fintech Corban, aliando solidez de segurança bancária a uma linguagem visual limpa e amigável.', en: 'Corporate portal for Corban Fintech, combining the solidity of banking security with a clean and friendly visual language.' },
+    desc2: { pt: 'Experiência focada no usuário final do setor financeiro moderno.', en: 'Experience focused on the end user of the modern financial sector.' }
+  },
+  5: {
+    subTitle: { pt: 'Estudo de Interface Geométrica', en: 'Geometric Interface Study' },
+    desc1: { pt: 'Estudo de interface para o Flying Studio, integrando animações dinâmicas e grades geométricas no frontend.', en: 'Interface study for Flying Studio, integrating dynamic animations and geometric grids in the frontend.' },
+    desc2: { pt: 'Proposta estética que celebra a proporção e a composição de forma inovadora.', en: 'Aesthetic proposal celebrating proportion and composition in an innovative way.' }
+  },
+  6: {
+    subTitle: { pt: 'Kit de Streamer e Redes Sociais', en: 'Streamer & Social Media Kit' },
+    desc1: { pt: 'Kit completo de branding e identidade visual para streamers desenvolvido para o canal do Sova.', en: 'Complete branding and visual identity kit for streamers developed for Sova\'s channel.' },
+    desc2: { pt: 'Desenvolvido para criar uma conexão profunda com o público gamer através de assets dinâmicos.', en: 'Developed to create a deep connection with the gaming audience through dynamic assets.' }
+  },
+  7: {
+    subTitle: { pt: 'Estudo de Interface de E-commerce', en: 'E-commerce Interface Study' },
+    desc1: { pt: 'Interface minimalista para e-commerce de moda, focada na exibição das peças e facilidade no fluxo de checkout.', en: 'Minimalist interface for fashion e-commerce, focused on displaying items and ease in the checkout flow.' },
+    desc2: { pt: 'Projetado para maximizar a conversão com design limpo e navegação ágil.', en: 'Designed to maximize conversion with clean design and navigation.' }
+  },
+  15: {
+    subTitle: { pt: 'Apresentação Institucional Arcnova', en: 'Arcnova Institutional Presentation' },
+    desc1: { pt: 'Lindo deck de slides estruturado para a Arcnova, apresentando metas, cases e soluções tecnológicas da marca.', en: 'Beautiful slide deck structured for Arcnova, presenting goals, cases, and technological solutions of the brand.' },
+    desc2: { pt: 'Estilo clean e tecnológico focado em investidores e clientes corporativos.', en: 'Clean and technological style focused on investors and corporate clients.' }
+  },
+  11: {
+    subTitle: { pt: 'Pitch Deck Comercial', en: 'Commercial Pitch Deck' },
+    desc1: { pt: 'Pitch deck comercial criado para apresentação de projetos de entretenimento de Khleo Thomas.', en: 'Commercial pitch deck created for the presentation of Khleo Thomas\' entertainment projects.' },
+    desc2: { pt: 'Design corporativo e elegante elaborado para aproximar marcas de entretenimento.', en: 'Corporate and elegant design crafted to bring entertainment brands together.' }
+  },
+  12: {
+    subTitle: { pt: 'Pitch Deck Comercial EMASFI', en: 'EMASFI Commercial Pitch Deck' },
+    desc1: { pt: 'Apresentação de slides comercial desenvolvida para a EMASFI.', en: 'Commercial slide deck developed for EMASFI.' },
+    desc2: { pt: 'Layout profissional com dados claros para prospecção de novos negócios.', en: 'Professional layout with clear data for prospecting new businesses.' }
+  },
+  13: {
+    subTitle: { pt: 'Portfólio em Slides', en: 'Portfolio in Slides' },
+    desc1: { pt: 'Portfólio comercial diagramado em slides para apresentação de projetos de design de interiores e arquitetura.', en: 'Commercial portfolio layed out in slides for presentation of interior design and architecture projects.' },
+    desc2: { pt: 'Apresentação limpa valorizando renders de alta fidelidade e estudos volumétricos.', en: 'Clean presentation emphasizing high-fidelity renders and volumetric studies.' }
+  },
+  14: {
+    subTitle: { pt: 'Pitch Deck Nex Playground', en: 'Nex Playground Pitch Deck' },
+    desc1: { pt: 'Deck de apresentação promocional para o ecossistema Nex Playground.', en: 'Promotional presentation deck for the Nex Playground ecosystem.' },
+    desc2: { pt: 'Estética voltada ao público gamer e casual de alta fidelidade gráfica.', en: 'Aesthetics geared towards gaming and casual audience of high graphic fidelity.' }
+  },
+  16: {
+    subTitle: { pt: 'Pitch Deck para Investidores', en: 'Pitch Deck for Investors' },
+    desc1: { pt: 'Deck de apresentação estruturado para investidores da plataforma Ecofuding.', en: 'Structured presentation deck for investors of the Ecofunding platform.' },
+    desc2: { pt: 'Dados ambientais e modelos de tokenomics exibidos de maneira moderna e atraente.', en: 'Environmental data and tokenomics models displayed in a modern and attractive way.' }
+  },
+  17: {
+    subTitle: { pt: 'Pitch Deck de Aceleração', en: 'Acceleration Pitch Deck' },
+    desc1: { pt: 'Apresentação institucional e comercial desenvolvida para captação e aceleração de startups.', en: 'Institutional and commercial presentation developed for startup sourcing and acceleration.' },
+    desc2: { pt: 'Design premium focado em prender a atenção e transmitir clareza em propostas de valor.', en: 'Premium design focused on capturing attention and conveying clarity in value propositions.' }
+  },
+  18: {
+    subTitle: { pt: 'Workshop de Fotografia', en: 'Photography Workshop' },
+    desc1: { pt: 'Pacote de layouts promocionais criado para divulgação do Workshop do fotógrafo Rafael Edison nas redes sociais.', en: 'Package of promotional layouts created for the promotion of photographer Rafael Edison\'s Workshop on social media.' },
+    desc2: { pt: 'Flyers que exploram enquadramento fotográfico, luzes dramáticas e tipografia arrojada.', en: 'Flyers that explore photographic framing, dramatic lights, and bold typography.' }
+  },
+  19: {
+    subTitle: { pt: 'Workshop de Marketing Digital', en: 'Digital Marketing Workshop' },
+    desc1: { pt: 'Peças publicitárias desenvolvidas para o Workshop Tarricone, focado em desenvolvimento de marca e marketing digital.', en: 'Advertising pieces developed for the Tarricone Workshop, focused on brand development and digital marketing.' },
+    desc2: { pt: 'Identidade vibrante desenvolvida para captação nas redes sociais.', en: 'Vibrant identity developed for user acquisition on social media.' }
+  },
+  30: {
+    subTitle: { pt: 'Flyers de Eventos Noturnos', en: 'Nightlife Event Flyers' },
+    desc1: { pt: 'Série de flyers desenvolvidos para festas e eventos noturnos, explorando tipografia urbana, montagens dinâmicas e cores vibrantes.', en: 'Series of flyers developed for parties and nightlife events, exploring urban typography, dynamic montages, and vibrant colors.' },
+    desc2: { pt: 'Direção de arte focada no público jovem e na cultura noturna urbana.', en: 'Art direction focused on the youth audience and urban nightlife culture.' }
+  }
+};
+
 interface CategoryBlockProps {
   categoryName: string;
   projects: Project[];
   isLeft: boolean;
   categoryId: string;
+  lang: 'pt' | 'en';
 }
 
-function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, categoryId }: CategoryBlockProps) {
+function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, categoryId, lang }: CategoryBlockProps) {
   const [activeIdx, setActiveIdx] = useState<number>(0);
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const [isZoomed, setIsZoomed] = useState<boolean>(false);
@@ -693,6 +849,20 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
     lastProjectRef.current = currentProject;
   }
   const displayProject = currentProject || lastProjectRef.current;
+
+  const trans = displayProject ? projectTranslations[displayProject.id] : null;
+  const projectSubTitle = trans ? trans.subTitle[lang] : displayProject?.subTitle;
+  const projectDesc1 = trans ? trans.desc1[lang] : displayProject?.desc1;
+  const projectDesc2 = trans ? trans.desc2[lang] : displayProject?.desc2;
+
+  const isEn = lang === 'en';
+  const labelClose = isEn ? 'CLOSE' : 'FECHAR';
+  const labelBackToTop = isEn ? 'BACK TO TOP' : 'VOLTE PARA CIMA';
+  const labelClient = isEn ? 'Client' : 'Cliente';
+  const labelRole = isEn ? 'Role' : 'Função';
+  const labelYear = isEn ? 'Year' : 'Ano';
+  const labelTools = isEn ? 'Tools' : 'Ferramentas';
+  const labelDesignDirection = isEn ? 'Design & Direction' : 'Design & Direção';
 
   const safeActiveIdx = activeIdx >= 0 && activeIdx < catProjects.length ? activeIdx : 0;
 
@@ -843,7 +1013,7 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                 <li className={`flex w-full items-center gap-2 text-[8px] font-mono uppercase tracking-widest text-white/40 mb-2 ${
                   isLeft ? 'flex-row' : 'flex-row-reverse'
                 }`}>
-                  <span>{categoryName}</span>
+                  <span>{categoryTranslationMap[categoryName]?.[lang] || categoryName}</span>
                   <span className="bg-white/20 h-[1px] flex-1" />
                 </li>
 
@@ -889,7 +1059,7 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                 onClick={() => setActiveProject(null)}
                 className="self-end flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-white/50 hover:text-white transition-colors cursor-pointer"
               >
-                <X className="size-4" /> FECHAR
+                <X className="size-4" /> {labelClose}
               </button>
 
               {/* Title Section */}
@@ -921,14 +1091,14 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
               <div className="w-full flex flex-col gap-4 mt-2">
                 <div className="w-full flex items-center gap-2">
                   <h2 className="text-white text-xl md:text-2xl font-light tracking-tight">
-                    {displayProject?.subTitle}
+                    {projectSubTitle}
                   </h2>
                   <div className="bg-white/20 h-[1px] flex-1 rounded-full" />
                 </div>
 
                 <div className="text-white/60 flex flex-col gap-3 text-sm leading-relaxed">
-                  <p>{displayProject?.desc1}</p>
-                  <p>{displayProject?.desc2}</p>
+                  <p>{projectDesc1}</p>
+                  <p>{projectDesc2}</p>
                 </div>
               </div>
 
@@ -999,19 +1169,19 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
               {/* Project Details / Metadata Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-8 mt-12 mb-8">
                 <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">Cliente</span>
+                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">{labelClient}</span>
                   <span className="text-sm font-light text-white">{displayProject?.title}</span>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">Função</span>
-                  <span className="text-sm font-light text-white">Design & Direção</span>
+                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">{labelRole}</span>
+                  <span className="text-sm font-light text-white">{labelDesignDirection}</span>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">Ano</span>
+                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">{labelYear}</span>
                   <span className="text-sm font-light text-white">2026</span>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">Ferramentas</span>
+                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">{labelTools}</span>
                   <span className="text-sm font-light text-white">Photoshop, Illustrator</span>
                 </div>
               </div>
@@ -1029,13 +1199,13 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                   }}
                   className="flex items-center gap-2 text-white/50 hover:text-white transition-colors cursor-pointer"
                 >
-                  <ArrowUp className="size-4" /> VOLTE PARA CIMA
+                  <ArrowUp className="size-4" /> {labelBackToTop}
                 </button>
                 <button
                   onClick={() => setActiveProject(null)}
                   className="flex items-center gap-2 text-white/50 hover:text-white transition-colors cursor-pointer"
                 >
-                  <X className="size-4" /> FECHAR
+                  <X className="size-4" /> {labelClose}
                 </button>
               </div>
             </div>
