@@ -312,6 +312,7 @@ img {
   margin-left: 18.5%;
 }
 
+.portfolio-title-group.portfolio-title-en h1 span:nth-child(2),
 .portfolio-title-group.portfolio-title-en h1 span:nth-child(3) {
   margin-left: 11.5%;
 }
