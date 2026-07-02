@@ -145,10 +145,10 @@ const Skiper30 = () => {
 
   const { height } = dimension;
   const shouldParallax = dimension.width >= 1024;
-  const y  = useTransform(scrollYProgress, [0, 1], [0, height * 2.3]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 2.7]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 2.5]);
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 2.6]);
+  const y  = useTransform(scrollYProgress, [0, 1], [0, height * 0.2]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 0.4]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 0.3]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 0.5]);
 
   /* resize + lenis */
   useEffect(() => {
@@ -192,7 +192,7 @@ const Skiper30 = () => {
       <main className="w-full bg-[#121212] text-white">
         <div
           ref={gallery}
-          className="relative box-border grid grid-cols-2 gap-3 overflow-visible bg-[#121212] px-5 pt-5 pb-8 sm:grid-cols-3 sm:gap-4 sm:px-6 sm:py-12 md:grid-cols-4 lg:flex lg:h-[175vh] lg:gap-[2vw] lg:overflow-hidden lg:p-[2vw]"
+          className="relative box-border grid grid-cols-2 gap-3 overflow-visible bg-[#121212] px-5 pt-5 pb-8 sm:grid-cols-3 sm:gap-4 sm:px-6 sm:py-12 md:grid-cols-4 lg:flex lg:h-[115vh] lg:gap-[2vw] lg:overflow-hidden lg:p-[2vw]"
         >
           <Column posters={posters.slice(0, 3)}  y={y}  offset={0}  onSelect={setSelected} isParallax={shouldParallax} />
           <Column posters={posters.slice(3, 6)}  y={y2} offset={3}  onSelect={setSelected} isParallax={shouldParallax} />
@@ -333,7 +333,7 @@ const Column = ({ posters, y, offset, onSelect, isParallax }: ColumnProps) => (
   <motion.div
     className={`relative flex min-w-0 flex-col gap-3 sm:gap-4 ${
       isParallax
-        ? "-top-[45%] w-1/4 min-w-[250px] gap-[2vw] first:top-[-50%] [&:nth-child(2)]:top-[-65%] [&:nth-child(3)]:top-[-55%] [&:nth-child(4)]:top-[-60%]"
+        ? "-top-[45%] w-1/4 min-w-[250px] gap-[2vw] first:top-[-10%] [&:nth-child(2)]:top-[-20%] [&:nth-child(3)]:top-[-15%] [&:nth-child(4)]:top-[-25%]"
         : ""
     }`}
     style={isParallax ? { y } : undefined}
