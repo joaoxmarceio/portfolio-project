@@ -56,8 +56,8 @@ const contentTranslations = {
     role1: "Graphic Designer",
     role2: "Creative Director",
     heroTitle1: "Expanding",
-    heroTitle2: "Horizons",
-    heroTitle3: "Creative",
+    heroTitle2: "Creative",
+    heroTitle3: "Horizons",
     since: "Since 2020",
     intro: "My name is João Marcelo, and I have been innovating in the creative field for over 6 years. This website compiles some of my best works, case studies, and a bit of my journey as a designer, while expressing my creative vision of the world I live in, see, and hear.",
     navHome: "Home",
@@ -209,7 +209,7 @@ export default function Home() {
           <img alt="" className="portfolio-character" src="/figma-3dman-transparent.png" />
         </div>
 
-        <div className="portfolio-title-group">
+        <div className={`portfolio-title-group ${lang === 'en' ? 'portfolio-title-en' : ''}`}>
           <h1>
             <span>{t.heroTitle1}</span>
             <span>{t.heroTitle2}</span>
