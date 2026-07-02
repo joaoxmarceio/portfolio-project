@@ -280,6 +280,10 @@ img {
   will-change: transform;
 }
 
+.portfolio-no-wrap {
+  white-space: nowrap;
+}
+
 .portfolio-title-group {
   position: absolute;
   z-index: 20;
@@ -556,7 +560,7 @@ img {
 @media (max-width: 900px) {
   .portfolio-hero {
     height: auto;
-    min-height: 860px;
+    min-height: 880px;
     padding: 28px 24px 44px;
   }
 
@@ -572,15 +576,14 @@ img {
   }
 
   .portfolio-copyright {
-    top: -70px;
-    left: -230px;
-    font-size: 560px;
+    display: none;
   }
 
   .portfolio-character {
-    top: 190px;
-    left: -150px;
-    width: 530px;
+    z-index: 10;
+    top: 230px;
+    left: clamp(-108px, -12vw, -72px);
+    width: clamp(360px, 52vw, 430px);
     height: auto;
   }
 
@@ -588,17 +591,21 @@ img {
     position: relative;
     top: auto;
     left: auto;
-    width: auto;
-    margin-left: 0;
-    padding-top: 132px;
+    width: min(100%, 660px);
+    margin-left: auto;
+    padding-top: 118px;
   }
 
   .portfolio-title-group h1 {
-    font-size: clamp(58px, 13.5vw, 112px);
+    font-size: clamp(60px, 10vw, 82px);
+    line-height: 0.9;
+    text-align: right;
   }
 
   .portfolio-title-group p {
     position: static;
+    margin-top: 18px;
+    text-align: right;
   }
 
   .portfolio-intro {
@@ -610,15 +617,16 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 48px;
-    margin-top: 170px;
+    gap: 42px;
+    margin-top: 150px;
   }
 
   .portfolio-intro > p {
     position: static;
-    width: min(100%, 597px);
+    width: min(100%, 460px);
     margin-right: 0;
-    font-size: 10.4px;
+    font-size: 11px;
+    line-height: 1.28;
   }
 
   .portfolio-actions {
@@ -681,39 +689,34 @@ img {
 
 @media (max-width: 560px) {
   .portfolio-hero {
-    min-height: 1080px;
+    min-height: 480px;
     padding: 22px 20px 40px;
   }
 
   .portfolio-header {
-    grid-template-columns: 1fr;
-    gap: 14px;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+    font-size: 9px;
   }
 
-  .portfolio-header,
-  .portfolio-header p:last-child,
-  .portfolio-signature {
-    text-align: left;
-  }
-
-  .portfolio-copyright {
+  .portfolio-character-wrap {
     display: none;
   }
 
   .portfolio-character {
-    top: 350px;
-    left: -125px;
-    width: 360px;
-    height: auto;
+    display: none;
   }
 
   .portfolio-title-group {
     padding-top: 92px;
+    margin-left: 0;
+    width: min(100%, 340px);
   }
 
   .portfolio-title-group h1 {
-    font-size: clamp(36px, 11.4vw, 44px);
+    font-size: clamp(36px, 11.4vw, 45px);
     line-height: 0.95;
+    text-align: left;
   }
 
   .portfolio-title-group h1 span:nth-child(2),
@@ -722,19 +725,21 @@ img {
   }
 
   .portfolio-title-group p {
-    margin-top: 16px;
+    margin-top: 14px;
     font-size: 14px;
     text-align: left;
   }
 
   .portfolio-intro {
     align-items: flex-start;
-    gap: 36px;
-    margin-top: 540px;
+    gap: 28px;
+    margin-top: 28px;
   }
 
   .portfolio-intro > p {
-    max-width: 310px;
+    max-width: 286px;
+    font-size: 10.8px;
+    line-height: 1.32;
     text-align: left;
   }
 

@@ -605,24 +605,29 @@ const projects: Project[] = [
 
 const categoriesData: Category[] = [
   {
+    id: 'identidade-visual',
     name: 'IDENTIDADE VISUAL',
     projects: projects.filter((p) => p.category === 'BRANDING'),
   },
   {
+    id: 'ux-ui',
     name: 'UX/UI',
     projects: projects.filter((p) => p.category === 'UX_UI'),
   },
   {
+    id: 'decks',
     name: 'DECKS',
     projects: projects.filter((p) => p.category === 'DECKS'),
   },
   {
+    id: 'midias-sociais-e-flyers',
     name: 'MÍDIAS SOCIAIS E FLYERS',
     projects: projects.filter((p) => p.category === 'FLYERS'),
   },
 ];
 
 interface Category {
+  id: string;
   name: string;
   projects: Project[];
 }
@@ -636,7 +641,7 @@ export default function ProjectsShowcase() {
           categoryName={category.name}
           projects={category.projects}
           isLeft={idx % 2 !== 0} // Interleave sections (0 is right, 1 is left, 2 is right, etc.)
-          categoryId={`category-block-${idx}`}
+          categoryId={category.id}
         />
       ))}
     </div>
@@ -749,13 +754,13 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
       ref={constraintsRef}
       className={`relative w-full bg-[#121212] border-b border-white/5 flex justify-center px-6 lg:px-16 select-none transition-all duration-300 ${
         activeProject !== null
-          ? 'py-24 min-h-screen items-start'
-          : 'py-16 h-[70vh] min-h-[490px] items-center overflow-hidden'
+          ? 'py-20 md:py-24 min-h-screen items-start'
+          : 'py-12 md:py-16 lg:h-[70vh] lg:min-h-[490px] items-center overflow-hidden'
       }`}
     >
       <AnimatePresence mode="wait">
         {activeProject === null ? (
-          <div className={`w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-16 relative min-h-[350px] ${
+          <div className={`w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16 relative lg:min-h-[350px] ${
             isLeft ? 'lg:flex-row-reverse' : 'lg:flex-row'
           }`}>
             {/* Desktop Active Image (Flex side-by-side layout) */}
@@ -847,7 +852,7 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                      key={proj.id}
                      layoutId={`text-header-${proj.id}`}
                      style={{ opacity: safeActiveIdx === idx ? 1 : 0.5 }}
-                     className={`relative flex w-full cursor-pointer items-center text-[17px] font-normal tracking-[-0.03em] leading-tight text-white py-0.5 whitespace-nowrap ${
+                     className={`relative flex w-full cursor-pointer items-center text-[15px] md:text-[17px] font-normal leading-tight text-white py-0.5 whitespace-normal lg:whitespace-nowrap ${
                        isLeft ? 'justify-start text-left' : 'justify-end text-right'
                      }`}
                      onMouseEnter={() => setActiveIdx(idx)}

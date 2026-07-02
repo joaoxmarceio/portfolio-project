@@ -149,11 +149,22 @@ export default function Home() {
             atuo há mais de 6 anos. Esse website compila alguns dos meus
             melhores trabalhos e seus estudos de caso e um pouco da minha
             jornada como designer, além de expressar minha visão criativa acerca
-            do mundo que eu vivo, enxergo e ouço.
+            do mundo que eu vivo, <span className="portfolio-no-wrap">enxergo e ouço.</span>
           </p>
 
           <div className="portfolio-actions">
-            <a aria-label="Ir para projetos" className="portfolio-arrow" href="#work">
+            <a
+              aria-label="Ir para projetos"
+              className="portfolio-arrow"
+              href="#work"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#work");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
+            >
               <img alt="" src="/figma-arrow.svg" />
             </a>
 
@@ -188,7 +199,17 @@ export default function Home() {
       <footer className="portfolio-footer" id="contact">
         <nav aria-label="Navegação do rodapé" className="portfolio-footer-nav">
           {footerNavLinks.map((link) => (
-            <a href={link.href} key={link.href}>
+            <a
+              href={link.href}
+              key={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.href);
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
+            >
               {link.label}
             </a>
           ))}
