@@ -24,6 +24,7 @@ interface Project {
   logo?: string;
   invertLogo?: boolean;
   logoHeight?: string;
+  gridImages?: string[];
 }
 
 const projects: Project[] = [
@@ -357,13 +358,15 @@ const projects: Project[] = [
       '/PROJECTS/ux_ui/sova/onlinesova.png',
       '/PROJECTS/ux_ui/sova/offlinesova.png',
       '/PROJECTS/ux_ui/sova/facecam.png',
+      '/PROJECTS/ux_ui/sova/pannelswebcam.png',
+    ],
+    gridImages: [
       '/PROJECTS/ux_ui/sova/paineldonate.png',
       '/PROJECTS/ux_ui/sova/painellojinha.png',
       '/PROJECTS/ux_ui/sova/painelpcspecs.png',
       '/PROJECTS/ux_ui/sova/painelsobremim.png',
       '/PROJECTS/ux_ui/sova/painelsubs.png',
       '/PROJECTS/ux_ui/sova/paineltwitter.png',
-      '/PROJECTS/ux_ui/sova/pannelswebcam.png',
     ],
   },
   {
@@ -1165,6 +1168,34 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                   );
                 })}
               </div>
+
+              {/* Grid Images (Contêiner para painéis menores com tamanho controlado) */}
+              {displayProject?.gridImages && (
+                <div className="w-full mt-8">
+                  <h4 className="text-[10px] font-medium uppercase tracking-widest text-white/40 mb-4 text-left">
+                    {lang === 'pt' ? 'Painéis da Twitch' : 'Twitch Panels'}
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
+                    {displayProject.gridImages.map((imgUrl, idx) => (
+                      <motion.div
+                        key={imgUrl}
+                        className="relative overflow-hidden rounded-lg border border-white/5 bg-[#1c1c1c]/40 backdrop-blur-md p-4 flex items-center justify-center cursor-default"
+                        whileHover={{ scale: 1.03, borderColor: 'rgba(255,255,255,0.1)' }}
+                        transition={{ type: "spring", stiffness: 60, damping: 10 }}
+                      >
+                        <motion.img
+                          src={imgUrl}
+                          alt={`${displayProject?.title} Panel ${idx + 1}`}
+                          className="max-h-[60px] w-auto object-contain pointer-events-none"
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.05 * idx + 0.1 }}
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Project Details / Metadata Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-8 mt-12 mb-8">
