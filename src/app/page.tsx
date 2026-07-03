@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { Skiper30 } from "../components/ui/skiper30";
 import ProjectsShowcase from "../components/ProjectsShowcase";
 import ShinyText from "../components/ShinyText";
@@ -46,11 +47,20 @@ const contentTranslations = {
     since: "Desde 2020",
     intro: "Me chamo João Marcelo e venho inovando no campo criativo em que atuo há mais de 6 anos. Esse website compila alguns dos meus melhores trabalhos e seus estudos de caso e um pouco da minha jornada como designer, além de expressar minha visão criativa acerca do mundo que eu vivo, enxergo e ouço.",
     navHome: "Home",
+    navAbout: "Sobre mim",
     navVisual: "Identidade visual",
     navUxUi: "UX/UI",
     navDecks: "Decks",
     navFlyers: "Mídias sociais e flyers",
-    allRightsReserved: "Todos os direitos reservados."
+    allRightsReserved: "Todos os direitos reservados.",
+    aboutTitle: "Sobre mim",
+    aboutText: "Sou designer gráfico e diretor criativo focado em desenvolver identidades visuais de forte impacto e soluções de design inovadoras. Ao longo da minha carreira, busquei unir a excelência estética com a precisão conceitual, ajudando marcas a expressarem sua essência única por meio de narrativas visuais marcantes, autênticas e inesquecíveis.",
+    aboutRoleLabel: "Atualmente atuando em:",
+    aboutRoleVal: "Diretor criativo em GGEZ Media",
+    aboutAvailabilityLabel: "Disponibilidade atual:",
+    aboutAvailabilityVal: "Trabalhos remotos e presenciais",
+    aboutLocationLabel: "Localizado em:",
+    aboutLocationVal: "Franca | Brasil 🇧🇷"
   },
   en: {
     role1: "Graphic Designer",
@@ -61,11 +71,20 @@ const contentTranslations = {
     since: "Since 2020",
     intro: "My name is João Marcelo, and I have been innovating in the creative field for over 6 years. This website compiles some of my best works, case studies, and a bit of my journey as a designer, while expressing my creative vision of the world I live in, see, and hear.",
     navHome: "Home",
+    navAbout: "About me",
     navVisual: "Visual Identity",
     navUxUi: "UX/UI",
     navDecks: "Pitch Decks",
     navFlyers: "Social Media & Flyers",
-    allRightsReserved: "All rights reserved."
+    allRightsReserved: "All rights reserved.",
+    aboutTitle: "About me",
+    aboutText: "I am a graphic designer and creative director focused on developing high-impact visual identities and innovative design solutions. Throughout my career, I have sought to unite aesthetic excellence with conceptual precision, helping brands express their unique essence through striking, authentic, and unforgettable visual narratives.",
+    aboutRoleLabel: "Currently working as:",
+    aboutRoleVal: "Creative Director at GGEZ Media",
+    aboutAvailabilityLabel: "Current availability:",
+    aboutAvailabilityVal: "Remote and on-site work",
+    aboutLocationLabel: "Located in:",
+    aboutLocationVal: "Franca | Brazil 🇧🇷"
   }
 };
 
@@ -95,6 +114,7 @@ export default function Home() {
 
   const footerNavLinks = [
     { href: "#home", label: t.navHome },
+    { href: "#about", label: t.navAbout },
     { href: "#identidade-visual", label: t.navVisual },
     { href: "#ux-ui", label: t.navUxUi },
     { href: "#decks", label: t.navDecks },
@@ -261,6 +281,52 @@ export default function Home() {
 
       <section className="portfolio-sticky-scroll" id="work">
         <Skiper30 lang={lang} />
+      </section>
+
+      <section className="portfolio-about" id="about">
+        <div className="portfolio-about-container">
+          <motion.div
+            className="portfolio-about-image-wrap"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ type: "spring", stiffness: 50, damping: 15 }}
+          >
+            <motion.img
+              src="/joaomarcelo-profile.jpg"
+              alt="João Marcelo"
+              className="portfolio-about-image"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 60, damping: 10 }}
+            />
+          </motion.div>
+          
+          <motion.div
+            className="portfolio-about-content"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.1 }}
+          >
+            <h2 className="portfolio-about-title">{t.aboutTitle}</h2>
+            <p className="portfolio-about-text">{t.aboutText}</p>
+            
+            <div className="portfolio-about-meta">
+              <div className="portfolio-about-meta-item">
+                <span className="portfolio-about-meta-label">{t.aboutRoleLabel}</span>
+                <span className="portfolio-about-meta-value">{t.aboutRoleVal}</span>
+              </div>
+              <div className="portfolio-about-meta-item">
+                <span className="portfolio-about-meta-label">{t.aboutAvailabilityLabel}</span>
+                <span className="portfolio-about-meta-value">{t.aboutAvailabilityVal}</span>
+              </div>
+              <div className="portfolio-about-meta-item">
+                <span className="portfolio-about-meta-label">{t.aboutLocationLabel}</span>
+                <span className="portfolio-about-meta-value">{t.aboutLocationVal}</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       <section className="relative w-full min-h-screen bg-[#121212] overflow-hidden">

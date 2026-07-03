@@ -757,3 +757,142 @@ img {
     padding-inline: 20px;
   }
 }
+
+/* --- ABOUT SECTION --- */
+.portfolio-about {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  padding: 100px 34px;
+}
+
+.portfolio-about-container {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 80px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.portfolio-about-image-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: #1e1e1e;
+}
+
+.portfolio-about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-about-title {
+  margin: 0 0 20px 0;
+  font-family: var(--font-halenoir);
+  font-size: clamp(32px, 3.5vw, 42px);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+.portfolio-about-text {
+  margin: 0 0 36px 0;
+  font-family: var(--font-halenoir);
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 620px;
+}
+
+.portfolio-about-meta {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-about-meta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-about-meta-label {
+  font-family: var(--font-halenoir);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+}
+
+.portfolio-about-meta-value {
+  font-family: var(--font-halenoir);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive about section */
+@media (max-width: 900px) {
+  .portfolio-about {
+    padding: 80px 24px;
+  }
+
+  .portfolio-about-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    max-width: 580px;
+  }
+
+  .portfolio-about-image-wrap {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .portfolio-about-title {
+    text-align: center;
+  }
+
+  .portfolio-about-text {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .portfolio-about-meta-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 0;
+  }
+
+  .portfolio-about-meta-value {
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .portfolio-about {
+    padding: 60px 20px;
+  }
+}
