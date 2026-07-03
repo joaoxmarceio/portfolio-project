@@ -293,7 +293,7 @@ export default function Home() {
             transition={{ type: "spring", stiffness: 50, damping: 15 }}
           >
             <motion.img
-              src="/joaomarcelo-profile.jpg?v=2"
+              src="/joaomarcelo-profile.jpg?v=3"
               alt="João Marcelo"
               className="portfolio-about-image"
               whileHover={{ scale: 1.05 }}
