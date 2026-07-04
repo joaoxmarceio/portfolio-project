@@ -5,9 +5,9 @@ export const metadata: Metadata = {
   title: "©JOÃO MARCELO | Creative Director",
   description: "Selected work in brand identity, art direction, campaigns, UX/UI, landing pages and B2B presentations.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/favicon.svg?v=2",
+    shortcut: "/favicon.svg?v=2",
+    apple: "/favicon.svg?v=2",
   },
   openGraph: {
     title: "©JOÃO MARCELO | Creative Director",

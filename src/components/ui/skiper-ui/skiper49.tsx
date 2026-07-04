@@ -267,7 +267,7 @@ const Skiper49 = ({ lang = "pt" }: Skiper49Props) => {
                       src={carouselPosters[selected].meta.logo!}
                       alt="poster logo"
                       onError={() => setLogoError(true)}
-                      className="max-w-[280px] max-h-[140px] w-auto h-auto object-contain pointer-events-none mb-1"
+                      className="max-w-[420px] max-h-[210px] w-auto h-auto object-contain pointer-events-none mb-1"
                     />
                   )}
 

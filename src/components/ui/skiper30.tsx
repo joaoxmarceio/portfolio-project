@@ -273,8 +273,8 @@ const Skiper30 = ({ lang = 'pt' }: { lang?: 'pt' | 'en' }) => {
                       alt="poster logo"
                       onError={() => setLogoError(true)}
                       style={{
-                        maxWidth: "330px",
-                        maxHeight: "165px",
+                        maxWidth: "495px",
+                        maxHeight: "248px",
                         width: "auto",
                         height: "auto",
                         objectFit: "contain",
