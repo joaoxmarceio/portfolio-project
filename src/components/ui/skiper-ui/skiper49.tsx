@@ -1,0 +1,211 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import React from "react";
+import {
+  Autoplay,
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/effect-cards";
+
+import { cn } from "@/lib/utils";
+
+const Skiper49 = () => {
+  const images = [
+    {
+      src: "/PROJECTS/branding_guidelines/zetta_brand_kit/1.jpg",
+      alt: "ZETTA Brand Kit",
+    },
+    {
+      src: "/PROJECTS/branding_guidelines/loud_brand_guidelines/1.jpg",
+      alt: "LOUD Brand Guidelines",
+    },
+    {
+      src: "/PROJECTS/branding_guidelines/eco_funding_branding_kit/1.jpg",
+      alt: "Eco Funding Branding",
+    },
+    {
+      src: "/PROJECTS/branding_guidelines/MOIRARTE/1.jpg",
+      alt: "Moirarte Branding Guidelines",
+    },
+    {
+      src: "/PROJECTS/ux_ui/wandrmedia_landing_page.jpg",
+      alt: "Wandr Media Landing Page",
+    },
+    {
+      src: "/PROJECTS/ux_ui/ggez_website.jpg",
+      alt: "GGEZ Media Website",
+    },
+    {
+      src: "/PROJECTS/ux_ui/digitus_website.jpg",
+      alt: "Digitus E-sports Website",
+    },
+    {
+      src: "/PROJECTS/decks/khleo_thomas_pitch_deck/1.jpg",
+      alt: "Khleo Thomas Pitch Deck",
+    },
+  ];
+
+  return (
+    <div className="flex h-full w-full items-center justify-center overflow-hidden bg-transparent">
+      <Carousel_003 className="" images={images} showPagination showNavigation loop />
+    </div>
+  );
+};
+
+export { Skiper49 };
+
+const Carousel_003 = ({
+  images,
+  className,
+  showPagination = false,
+  showNavigation = false,
+  loop = true,
+  autoplay = false,
+  spaceBetween = 0,
+}: {
+  images: { src: string; alt: string }[];
+  className?: string;
+  showPagination?: boolean;
+  showNavigation?: boolean;
+  loop?: boolean;
+  autoplay?: boolean;
+  spaceBetween?: number;
+}) => {
+  const css = `
+  .Carousal_003 {
+    width: 100%;
+    height: 400px;
+    padding-bottom: 60px !important;
+  }
+  
+  .Carousal_003 .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 520px;
+    max-width: 85vw;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #fff !important;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background-color: #fff !important;
+  }
+`;
+  return (
+    <motion.div
+      initial={{ opacity: 0, translateY: 20 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{
+        duration: 0.3,
+        delay: 0.5,
+      }}
+      className={cn("relative w-full max-w-4xl px-5", className)}
+    >
+      <style>{css}</style>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        className="w-full"
+      >
+        <Swiper
+          spaceBetween={spaceBetween}
+          autoplay={
+            autoplay
+              ? {
+                  delay: 1500,
+                  disableOnInteraction: true,
+                }
+              : false
+          }
+          effect="coverflow"
+          grabCursor={true}
+          slidesPerView="auto"
+          centeredSlides={true}
+          loop={loop}
+          coverflowEffect={{
+            rotate: 40,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={
+            showPagination
+              ? {
+                  clickable: true,
+                }
+              : false
+          }
+          navigation={
+            showNavigation
+              ? {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                }
+              : false
+          }
+          className="Carousal_003"
+          modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index} className="">
+              <img
+                className="h-full w-full object-cover"
+                src={image.src}
+                alt={image.alt}
+              />
+            </SwiperSlide>
+          ))}
+          {showNavigation && (
+            <div>
+              <div className="swiper-button-next after:hidden">
+                <ChevronRightIcon className="h-6 w-6 text-white" />
+              </div>
+              <div className="swiper-button-prev after:hidden">
+                <ChevronLeftIcon className="h-6 w-6 text-white" />
+              </div>
+            </div>
+          )}
+        </Swiper>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export { Carousel_003 };
+
+/**
+ * Skiper 49 Carousel_003 — React + Swiper
+ * Built with Swiper.js - Read docs to learn more https://swiperjs.com/
+ * Illustrations by AarzooAly - https://x.com/AarzooAly
+ *
+ * License & Usage:
+ * - Free to use and modify in both personal and commercial projects.
+ * - Attribution to Skiper UI is required when using the free version.
+ * - No attribution required with Skiper UI Pro.
+ *
+ * Feedback and contributions are welcome.
+ *
+ * Author: @gurvinder-singh02
+ * Website: https://gxuri.me
+ * Twitter: https://x.com/Gur__vi
+ */

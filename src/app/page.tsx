@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Skiper30 } from "../components/ui/skiper30";
+import { Skiper49 } from "../components/ui/skiper-ui/skiper49";
 import ProjectsShowcase from "../components/ProjectsShowcase";
 import ShinyText from "../components/ShinyText";
 
@@ -331,6 +332,20 @@ export default function Home() {
 
       <section className="relative w-full min-h-screen bg-[#121212] overflow-hidden">
         <ProjectsShowcase lang={lang} />
+      </section>
+
+      <section className="relative w-full bg-[#121212] py-20 overflow-hidden flex flex-col items-center justify-center border-t border-white/5">
+        <div className="w-full max-w-7xl px-6 md:px-12 mb-10 text-center">
+          <h2 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-4">
+            {lang === 'pt' ? 'Mais Projetos' : 'More Projects'}
+          </h2>
+          <p className="text-sm font-light text-white/50 max-w-xl mx-auto">
+            {lang === 'pt' 
+              ? 'Uma visão geral de outros cases, identidades visuais e criações do meu acervo de design.' 
+              : 'A general overview of other cases, visual identities, and creations from my design archive.'}
+          </p>
+        </div>
+        <Skiper49 />
       </section>
 
       <footer className="portfolio-footer" id="contact">
