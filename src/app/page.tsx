@@ -345,7 +345,7 @@ export default function Home() {
               : 'A general overview of other cases, visual identities, and creations from my design archive.'}
           </p>
         </div>
-        <Skiper49 />
+        <Skiper49 lang={lang} />
       </section>
 
       <footer className="portfolio-footer" id="contact">

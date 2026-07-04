@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Autoplay,
   EffectCoverflow,
@@ -18,45 +18,281 @@ import "swiper/css/effect-cards";
 
 import { cn } from "@/lib/utils";
 
-const Skiper49 = () => {
-  const images = [
-    {
-      src: "/PROJECTS/branding_guidelines/zetta_brand_kit/1.jpg",
-      alt: "ZETTA Brand Kit",
-    },
-    {
-      src: "/PROJECTS/branding_guidelines/loud_brand_guidelines/1.jpg",
-      alt: "LOUD Brand Guidelines",
-    },
-    {
-      src: "/PROJECTS/branding_guidelines/eco_funding_branding_kit/1.jpg",
-      alt: "Eco Funding Branding",
-    },
-    {
-      src: "/PROJECTS/branding_guidelines/MOIRARTE/1.jpg",
-      alt: "Moirarte Branding Guidelines",
-    },
-    {
-      src: "/PROJECTS/ux_ui/wandrmedia_landing_page.jpg",
-      alt: "Wandr Media Landing Page",
-    },
-    {
-      src: "/PROJECTS/ux_ui/ggez_website.jpg",
-      alt: "GGEZ Media Website",
-    },
-    {
-      src: "/PROJECTS/ux_ui/digitus_website.jpg",
-      alt: "Digitus E-sports Website",
-    },
-    {
-      src: "/PROJECTS/decks/khleo_thomas_pitch_deck/1.jpg",
-      alt: "Khleo Thomas Pitch Deck",
-    },
-  ];
+interface PosterMeta {
+  logo: string | null;
+  date: string;
+  description: {
+    pt: string;
+    en: string;
+  };
+}
+
+interface CarouselPoster {
+  src: string;
+  alt: string;
+  meta: PosterMeta;
+}
+
+const carouselPosters: CarouselPoster[] = [
+  {
+    src: "/POSTERS CAROUSEL/EMBALO.jpg",
+    alt: "Embalo Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/EMBALO.png",
+      date: "2024",
+      description: {
+        pt: "Composição tipográfica expressando ritmo e movimento para a cultura da música contemporânea.",
+        en: "Typographic composition expressing rhythm and movement for contemporary music culture."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/BEAUTIFUL.jpg",
+    alt: "Beautiful Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/BEAUTIFUL.png",
+      date: "2023",
+      description: {
+        pt: "Estudo visual minimalista sobre contraste de formas, estética e equilíbrio editorial.",
+        en: "Minimalist visual study on form contrast, aesthetics, and editorial balance."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/BOTTEGA.jpg",
+    alt: "Bottega Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/BOTTEGA.png",
+      date: "2024",
+      description: {
+        pt: "Design editorial inspirado no luxo e herança da marca artesanal italiana Bottega.",
+        en: "Editorial design inspired by the luxury and heritage of the Italian artisan brand Bottega."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/ADOPT A PUSS.jpg",
+    alt: "Adopt a Puss Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/ADOPT A PUSS.png",
+      date: "2024",
+      description: {
+        pt: "Pôster ilustrativo e afetuoso criado para a conscientização sobre adoção de animais.",
+        en: "Illustrative and warm poster designed for pet adoption awareness campaigns."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/BE STELLAR.jpg",
+    alt: "Be Stellar Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/BE STELLAR.png",
+      date: "2025",
+      description: {
+        pt: "Narrativa visual de ficção científica combinando grids limpos e estética retrô-futurista.",
+        en: "Sci-fi visual narrative combining clean grids and retro-futuristic aesthetics."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/CAPA LAST.jpg",
+    alt: "Capa Last Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/DITADO ANTIGO.png",
+      date: "2023",
+      description: {
+        pt: "Experimento de design de pôster brincando com tipografia pesada e espaço negativo.",
+        en: "Poster design experiment playing with heavy typography and negative space."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/FASHION MATTERS.jpg",
+    alt: "Fashion Matters Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/FASHION MATTERS.png",
+      date: "2023",
+      description: {
+        pt: "Estética de alta costura traduzida em diagramação e tipografia de revista de moda.",
+        en: "High-fashion aesthetic translated into editorial typography and layout styles."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/FXCKIT.jpg",
+    alt: "Fxckit Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/FXCKIT.png",
+      date: "2024",
+      description: {
+        pt: "Design rebelde e de alto contraste explorando tipografia urbana experimental.",
+        en: "Rebellious high-contrast design exploring experimental urban typography."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/ILLUSION.jpg",
+    alt: "Illusion Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/ILLUSION.png",
+      date: "2024",
+      description: {
+        pt: "Composição inspirada em ilusões de ótica e distorções gráficas contemporâneas.",
+        en: "Composition inspired by optical illusions and contemporary graphic distortions."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/LIVING MACHINE.jpg",
+    alt: "Living Machine Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/LIVING MACHINE.png",
+      date: "2024",
+      description: {
+        pt: "Investigação gráfica sobre a relação entre arquitetura industrial e tecnologia.",
+        en: "Graphic investigation on the relationship between industrial architecture and technology."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/TOPS.jpg",
+    alt: "Tops Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/TOPS.png",
+      date: "2023",
+      description: {
+        pt: "Pôster tipográfico minimalista explorando pesos de fonte e hierarquia de leitura.",
+        en: "Minimalist typographic poster exploring font weights and reading hierarchy."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/TRYOUT.jpg",
+    alt: "Tryout Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/TRYOUT.png",
+      date: "2024",
+      description: {
+        pt: "Experimentação visual de texturas gráficas, grids distorcidos e composições livres.",
+        en: "Visual experimentation of graphic textures, distorted grids, and free compositions."
+      }
+    }
+  },
+  {
+    src: "/POSTERS CAROUSEL/oceanman.png",
+    alt: "Ocean Man Poster",
+    meta: {
+      logo: "/POSTERS CAROUSEL/LOGOS/OCEAN MAN.png",
+      date: "2024",
+      description: {
+        pt: "Homenagem à cultura do surf e exploração oceânica com tipografia personalizada.",
+        en: "Tribute to surf culture and ocean exploration featuring custom typography."
+      }
+    }
+  }
+];
+
+interface Skiper49Props {
+  lang?: "pt" | "en";
+}
+
+const Skiper49 = ({ lang = "pt" }: Skiper49Props) => {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  // Escape key to close zoom modal
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelected(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   return (
     <div className="flex h-full w-full items-center justify-center overflow-hidden bg-transparent">
-      <Carousel_003 className="" images={images} showPagination showNavigation loop />
+      <Carousel_003 
+        className="" 
+        images={carouselPosters} 
+        showPagination 
+        showNavigation 
+        loop 
+        onSelectSlide={(index) => setSelected(index)}
+      />
+
+      {/* ── Lightbox Modal ── */}
+      <AnimatePresence>
+        {selected !== null && (
+          /* backdrop */
+          <motion.div
+            key="backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setSelected(null)}
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 cursor-zoom-out"
+          >
+            {/* poster card */}
+            <motion.div
+              key="card"
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1,    opacity: 1 }}
+              exit={{ scale: 0.92,    opacity: 0 }}
+              transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+              onClick={(e) => e.stopPropagation()}
+              className="group relative max-h-[85vh] max-w-[85vw] leading-none"
+            >
+              {/* image */}
+              <img
+                src={carouselPosters[selected].src}
+                alt={carouselPosters[selected].alt}
+                className="block max-h-[85vh] max-w-[85vw] w-auto h-auto select-none rounded-sm border border-white/5"
+              />
+
+              {/* hover overlay */}
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none sm:pointer-events-auto"
+                style={{ backgroundColor: "rgba(0,0,0,0.75)" }}
+              >
+                <div className="flex flex-col items-center gap-2">
+                  {/* logo (only if available) */}
+                  {carouselPosters[selected].meta.logo && (
+                    <img
+                      src={carouselPosters[selected].meta.logo!}
+                      alt="poster logo"
+                      className="max-w-[280px] max-h-[140px] w-auto h-auto object-contain pointer-events-none"
+                    />
+                  )}
+
+                  {/* date */}
+                  <p style={infoStyle}>{carouselPosters[selected].meta.date}</p>
+
+                  {/* copyright */}
+                  <p style={infoStyle}>©JOÃOMARCELO</p>
+
+                  {/* description */}
+                  <p
+                    style={{
+                      ...infoStyle,
+                      fontSize: "10px",
+                      whiteSpace: "pre-line",
+                      textAlign: "center",
+                      lineHeight: 1.2,
+                      maxWidth: "320px",
+                      padding: "0 10px",
+                    }}
+                  >
+                    {lang === "pt" 
+                      ? carouselPosters[selected].meta.description.pt 
+                      : carouselPosters[selected].meta.description.en}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
@@ -70,31 +306,45 @@ const Carousel_003 = ({
   showNavigation = false,
   loop = true,
   autoplay = false,
-  spaceBetween = 0,
+  spaceBetween = 16,
+  onSelectSlide,
 }: {
-  images: { src: string; alt: string }[];
+  images: CarouselPoster[];
   className?: string;
   showPagination?: boolean;
   showNavigation?: boolean;
   loop?: boolean;
   autoplay?: boolean;
   spaceBetween?: number;
+  onSelectSlide: (index: number) => void;
 }) => {
   const css = `
   .Carousal_003 {
     width: 100%;
-    height: 400px;
+    height: 520px;
     padding-bottom: 60px !important;
   }
   
   .Carousal_003 .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 520px;
+    height: 100%;
+    width: auto;
     max-width: 85vw;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.08);
+    background: transparent;
+    cursor: zoom-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Carousal_003 .swiper-slide img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    user-select: none;
   }
 
   .swiper-pagination-bullet {
@@ -107,7 +357,24 @@ const Carousel_003 = ({
     opacity: 1 !important;
     background-color: #fff !important;
   }
-`;
+
+  .swiper-button-next, .swiper-button-prev {
+    color: #fff !important;
+    width: 44px !important;
+    height: 44px !important;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    opacity: 1;
+  }
+
+  .swiper-button-next::after, .swiper-button-prev::after {
+    display: none !important;
+  }
+  `;
+
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 20 }}
@@ -116,7 +383,7 @@ const Carousel_003 = ({
         duration: 0.3,
         delay: 0.5,
       }}
-      className={cn("relative w-full max-w-4xl px-5", className)}
+      className={cn("relative w-full max-w-7xl px-5", className)}
     >
       <style>{css}</style>
 
@@ -131,7 +398,7 @@ const Carousel_003 = ({
           autoplay={
             autoplay
               ? {
-                  delay: 1500,
+                  delay: 2000,
                   disableOnInteraction: true,
                 }
               : false
@@ -142,9 +409,9 @@ const Carousel_003 = ({
           centeredSlides={true}
           loop={loop}
           coverflowEffect={{
-            rotate: 40,
-            stretch: 0,
-            depth: 100,
+            rotate: 15,
+            stretch: -10,
+            depth: 80,
             modifier: 1,
             slideShadows: true,
           }}
@@ -167,9 +434,8 @@ const Carousel_003 = ({
           modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index} className="">
+            <SwiperSlide key={index} onClick={() => onSelectSlide(index)}>
               <img
-                className="h-full w-full object-cover"
                 src={image.src}
                 alt={image.alt}
               />
@@ -177,11 +443,11 @@ const Carousel_003 = ({
           ))}
           {showNavigation && (
             <div>
-              <div className="swiper-button-next after:hidden">
-                <ChevronRightIcon className="h-6 w-6 text-white" />
+              <div className="swiper-button-next">
+                <ChevronRightIcon strokeWidth={1.5} className="h-8 w-8 text-white" />
               </div>
-              <div className="swiper-button-prev after:hidden">
-                <ChevronLeftIcon className="h-6 w-6 text-white" />
+              <div className="swiper-button-prev">
+                <ChevronLeftIcon strokeWidth={1.5} className="h-8 w-8 text-white" />
               </div>
             </div>
           )}
@@ -193,19 +459,12 @@ const Carousel_003 = ({
 
 export { Carousel_003 };
 
-/**
- * Skiper 49 Carousel_003 — React + Swiper
- * Built with Swiper.js - Read docs to learn more https://swiperjs.com/
- * Illustrations by AarzooAly - https://x.com/AarzooAly
- *
- * License & Usage:
- * - Free to use and modify in both personal and commercial projects.
- * - Attribution to Skiper UI is required when using the free version.
- * - No attribution required with Skiper UI Pro.
- *
- * Feedback and contributions are welcome.
- *
- * Author: @gurvinder-singh02
- * Website: https://gxuri.me
- * Twitter: https://x.com/Gur__vi
- */
+const infoStyle: React.CSSProperties = {
+  margin: 0,
+  fontSize: "12px",
+  fontFamily: "var(--font-halenoir), sans-serif",
+  color: "rgba(255,255,255,0.5)",
+  textTransform: "uppercase",
+  letterSpacing: "0.2em",
+  fontWeight: 400,
+};

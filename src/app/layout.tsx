@@ -2,12 +2,34 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "©JOÃO MARCELO",
-  description: "Portfolio website built with Next.js and Tailwind CSS.",
+  title: "©JOÃO MARCELO | Creative Director",
+  description: "Selected work in brand identity, art direction, campaigns, UX/UI, landing pages and B2B presentations.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
     apple: "/favicon.svg",
+  },
+  openGraph: {
+    title: "©JOÃO MARCELO | Creative Director",
+    description: "Selected work in brand identity, art direction, campaigns, UX/UI, landing pages and B2B presentations.",
+    url: "https://www.joaomarceio.com.br",
+    siteName: "João Marcelo Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "João Marcelo Portfolio",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "©JOÃO MARCELO | Creative Director",
+    description: "Selected work in brand identity, art direction, campaigns, UX/UI, landing pages and B2B presentations.",
+    images: ["/og-image.jpg"],
   },
 };
 
