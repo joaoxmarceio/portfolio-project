@@ -251,7 +251,7 @@ const Skiper49 = ({ lang = "pt" }: Skiper49Props) => {
               <img
                 src={carouselPosters[selected].src}
                 alt={carouselPosters[selected].alt}
-                className="block max-h-[85vh] max-w-[85vw] w-auto h-auto select-none rounded-sm border border-white/5"
+                className="block max-h-[85vh] max-w-[85vw] w-auto h-auto select-none"
               />
 
               {/* hover overlay */}
@@ -315,9 +315,6 @@ const Carousel_003 = ({
     height: 100%;
     width: auto;
     max-width: 85vw;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.08);
     background: transparent;
     cursor: zoom-in;
     display: flex;
