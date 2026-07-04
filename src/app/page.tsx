@@ -336,13 +336,13 @@ export default function Home() {
 
       <section className="relative w-full bg-[#121212] py-20 overflow-hidden flex flex-col items-center justify-center border-t border-white/5">
         <div className="w-full max-w-7xl px-6 md:px-12 mb-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-4">
-            {lang === 'pt' ? 'Mais Projetos' : 'More Projects'}
+          <h2 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-4 uppercase">
+            {lang === 'pt' ? 'POSTERS AUTORAIS' : 'CREATIVE POSTERS'}
           </h2>
           <p className="text-sm font-light text-white/50 max-w-xl mx-auto">
             {lang === 'pt' 
-              ? 'Uma visão geral de outros cases, identidades visuais e criações do meu acervo de design.' 
-              : 'A general overview of other cases, visual identities, and creations from my design archive.'}
+              ? 'Uma galeria de alguns dos meus pôsters autorais feitos nos últimos anos. Muitos outros podem ser encontrados no meu perfil do Instagram @joaomarceio.' 
+              : 'A gallery of some of my creative posters made in recent years. Many others can be found on my Instagram profile @joaomarceio.'}
           </p>
         </div>
         <Skiper49 lang={lang} />

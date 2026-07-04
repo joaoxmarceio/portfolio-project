@@ -1,65 +1,59 @@
 "use client";
 
-import {
-  AnimatePresence,
-  motion,
-  MotionValue,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence, MotionValue } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
 
-/* ─── Poster data ─────────────────────────────────────────────────── */
-type PosterMeta = {
+interface PosterMeta {
   logo: string | null;
   date: string;
   description: string;
-};
+}
 
-type Poster = {
+interface Poster {
   src: string;
   meta: PosterMeta;
-};
+}
 
 const posters: Poster[] = [
   {
-    src: "/PARALLAX POSTERS/STUSSY.jpg",
+    src: "/PARALLAX%20POSTERS/STUSSY.jpg",
     meta: {
-      logo: "/POSTER LOGOS/STUSSY.png",
+      logo: "/POSTER%20LOGOS/STUSSY.png",
       date: "2023",
       description:
         "Inspired by decades of streetwear\nculture, celebrating the iconic Stüssy\nbrand and its enduring creative legacy.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/DREAM.jpg",
+    src: "/PARALLAX%20POSTERS/DREAM.jpg",
     meta: {
-      logo: "/POSTER LOGOS/DREAM.png",
+      logo: "/POSTER%20LOGOS/DREAM.png",
       date: "2023",
       description:
         "A surreal visual exploring ambition\nand the pursuit of creative dreams\nthrough bold graphic language.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/OLD SAYING.jpg",
+    src: "/PARALLAX%20POSTERS/OLD%20SAYING.jpg",
     meta: {
-      logo: "/POSTER LOGOS/OLD SAYING.png",
+      logo: "/POSTER%20LOGOS/OLD%20SAYING.png",
       date: "2022",
       description:
         "Typography-driven composition inspired\nby timeless phrases and the wisdom\nhidden in everyday expression.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/ASFALTOREC.jpg",
+    src: "/PARALLAX%20POSTERS/ASFALTOREC.jpg",
     meta: {
-      logo: "/POSTER LOGOS/ASFALTOREC.png",
+      logo: "/POSTER%20LOGOS/ASFALTOREC.png",
       date: "2023",
       description:
         "Raw street energy translated into\nbold visuals for Asfalto Records,\ncelebrating underground music culture.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/NEXA.jpg",
+    src: "/PARALLAX%20POSTERS/NEXA.jpg",
     meta: {
       logo: null,
       date: "2023",
@@ -68,63 +62,63 @@ const posters: Poster[] = [
     },
   },
   {
-    src: "/PARALLAX POSTERS/PELUK.jpg",
+    src: "/PARALLAX%20POSTERS/PELUK.jpg",
     meta: {
-      logo: "/POSTER LOGOS/PELUK.png",
+      logo: "/POSTER%20LOGOS/PELUK.png",
       date: "2024",
       description:
         "A vibrant celebration of Latin culture,\nblending warmth and bold aesthetics\ninto a striking visual narrative.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/STUSSY X NIKE.jpg",
+    src: "/PARALLAX%20POSTERS/STUSSY%20X%20NIKE.jpg",
     meta: {
-      logo: "/POSTER LOGOS/STUSSY X NIKE.png",
+      logo: "/POSTER%20LOGOS/STUSSY%20X%20NIKE.png",
       date: "2023",
       description:
         "Tribute to the legendary collaboration\nbetween Stüssy and Nike, two icons\nshaping street culture for decades.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/STAR CHOSEN.jpg",
+    src: "/PARALLAX%20POSTERS/STAR%20CHOSEN.jpg",
     meta: {
-      logo: "/POSTER LOGOS/STARCHOSEN.png",
+      logo: "/POSTER%20LOGOS/STARCHOSEN.png",
       date: "2025",
       description:
         "O ARQUÉTIPO DO \"TOLO\" É O COMPASSO\nCRIATIVO DESSA OBRA, QUE BRINCA COM O\nCONTRASTE DO CAMPO E A NARRATIVA COSMOLÓGICA",
     },
   },
   {
-    src: "/PARALLAX POSTERS/Y2K.jpg",
+    src: "/PARALLAX%20POSTERS/Y2K.jpg",
     meta: {
-      logo: "/POSTER LOGOS/Y2K.png",
+      logo: "/POSTER%20LOGOS/Y2K.png",
       date: "2022",
       description:
         "Nostalgic Y2K aesthetics reimagined\nfor a new generation, capturing\nthe chaos and optimism of that era.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/DON'T YOU REALIZE.jpg",
+    src: "/PARALLAX%20POSTERS/DON'T%20YOU%20REALIZE.jpg",
     meta: {
-      logo: "/POSTER LOGOS/DON'T YOU REALIZE.png",
+      logo: "/POSTER%20LOGOS/DON'T%20YOU%20REALIZE.png",
       date: "2023",
       description:
         "An introspective composition questioning\nperception and awareness, using stark\ncontrast to provoke emotional response.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/FUTURE.jpg",
+    src: "/PARALLAX%20POSTERS/FUTURE.jpg",
     meta: {
-      logo: "/POSTER LOGOS/FUTURE.png",
+      logo: "/POSTER%20LOGOS/FUTURE.png",
       date: "2024",
       description:
         "Bold typographic statement about\nthe future and who holds the power\nto decide what comes next.",
     },
   },
   {
-    src: "/PARALLAX POSTERS/JNCO JEANS.jpg",
+    src: "/PARALLAX%20POSTERS/JNCO%20JEANS.jpg",
     meta: {
-      logo: "/POSTER LOGOS/JNCO JEANS.png",
+      logo: "/POSTER%20LOGOS/JNCO%20JEANS.png",
       date: "2023",
       description:
         "Tribute to the iconic JNCO Jeans era,\na defining piece of 90s streetwear\nand youth counterculture identity.",
@@ -137,6 +131,7 @@ const Skiper30 = ({ lang = 'pt' }: { lang?: 'pt' | 'en' }) => {
   const gallery = useRef<HTMLDivElement>(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   const [selected, setSelected] = useState<number | null>(null);
+  const [logoError, setLogoError] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: gallery,
@@ -185,6 +180,11 @@ const Skiper30 = ({ lang = 'pt' }: { lang?: 'pt' | 'en' }) => {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  // Reset logo error on selecting a new poster
+  useEffect(() => {
+    setLogoError(false);
+  }, [selected]);
 
   return (
     <>
@@ -266,41 +266,25 @@ const Skiper30 = ({ lang = 'pt' }: { lang?: 'pt' | 'en' }) => {
                     gap: "4px",
                   }}
                 >
-                  {/* logo (only if available) */}
-                  {posters[selected].meta.logo && (
+                  {/* logo (only if available and has no load errors) */}
+                  {posters[selected].meta.logo && !logoError && (
                     <img
                       src={posters[selected].meta.logo!}
                       alt="poster logo"
+                      onError={() => setLogoError(true)}
                       style={{
                         maxWidth: "330px",
                         maxHeight: "165px",
                         width: "auto",
                         height: "auto",
                         objectFit: "contain",
+                        marginBottom: "4px",
                       }}
                     />
                   )}
 
-                  {/* date */}
-                  <p style={infoStyle}>{posters[selected].meta.date}</p>
-
-                  {/* copyright */}
-                  <p style={infoStyle}>©JOÃOMARCELO</p>
-
-                  {/* description */}
-                  <p
-                    style={{
-                      ...infoStyle,
-                      fontSize: "10px",
-                      whiteSpace: "pre-line",
-                      textAlign: "center",
-                      lineHeight: 1.01,
-                    }}
-                  >
-                    {selected === 7 && lang === 'en'
-                      ? "THE \"FOOL\" ARCHETYPE IS THE CREATIVE\nCOMPASS OF THIS WORK, PLAYING WITH\nTHE CONTRAST OF THE FIELD AND THE COSMOLOGICAL NARRATIVE"
-                      : posters[selected].meta.description}
-                  </p>
+                  {/* copyright only */}
+                  <p style={infoStyle}>©JOÃO MARCELO</p>
                 </div>
               </div>
             </motion.div>

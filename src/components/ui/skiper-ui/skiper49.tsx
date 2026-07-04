@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import {
   Autoplay,
@@ -35,10 +34,10 @@ interface CarouselPoster {
 
 const carouselPosters: CarouselPoster[] = [
   {
-    src: "/POSTERS CAROUSEL/EMBALO.jpg",
+    src: "/POSTERS%20CAROUSEL/EMBALO.jpg",
     alt: "Embalo Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/EMBALO.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/EMBALO.png",
       date: "2024",
       description: {
         pt: "Composição tipográfica expressando ritmo e movimento para a cultura da música contemporânea.",
@@ -47,10 +46,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/BEAUTIFUL.jpg",
+    src: "/POSTERS%20CAROUSEL/BEAUTIFUL.jpg",
     alt: "Beautiful Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/BEAUTIFUL.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/BEAUTIFUL.png",
       date: "2023",
       description: {
         pt: "Estudo visual minimalista sobre contraste de formas, estética e equilíbrio editorial.",
@@ -59,10 +58,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/BOTTEGA.jpg",
+    src: "/POSTERS%20CAROUSEL/BOTTEGA.jpg",
     alt: "Bottega Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/BOTTEGA.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/BOTTEGA.png",
       date: "2024",
       description: {
         pt: "Design editorial inspirado no luxo e herança da marca artesanal italiana Bottega.",
@@ -71,10 +70,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/ADOPT A PUSS.jpg",
+    src: "/POSTERS%20CAROUSEL/ADOPT%20A%20PUSS.jpg",
     alt: "Adopt a Puss Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/ADOPT A PUSS.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/ADOPT%20A%20PUSS.png",
       date: "2024",
       description: {
         pt: "Pôster ilustrativo e afetuoso criado para a conscientização sobre adoção de animais.",
@@ -83,10 +82,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/BE STELLAR.jpg",
+    src: "/POSTERS%20CAROUSEL/BE%20STELLAR.jpg",
     alt: "Be Stellar Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/BE STELLAR.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/BE%20STELLAR.png",
       date: "2025",
       description: {
         pt: "Narrativa visual de ficção científica combinando grids limpos e estética retrô-futurista.",
@@ -95,10 +94,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/CAPA LAST.jpg",
+    src: "/POSTERS%20CAROUSEL/CAPA%20LAST.jpg",
     alt: "Capa Last Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/DITADO ANTIGO.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/DITADO%20ANTIGO.png",
       date: "2023",
       description: {
         pt: "Experimento de design de pôster brincando com tipografia pesada e espaço negativo.",
@@ -107,10 +106,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/FASHION MATTERS.jpg",
+    src: "/POSTERS%20CAROUSEL/FASHION%20MATTERS.jpg",
     alt: "Fashion Matters Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/FASHION MATTERS.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/FASHION%20MATTERS.png",
       date: "2023",
       description: {
         pt: "Estética de alta costura traduzida em diagramação e tipografia de revista de moda.",
@@ -119,10 +118,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/FXCKIT.jpg",
+    src: "/POSTERS%20CAROUSEL/FXCKIT.jpg",
     alt: "Fxckit Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/FXCKIT.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/FXCKIT.png",
       date: "2024",
       description: {
         pt: "Design rebelde e de alto contraste explorando tipografia urbana experimental.",
@@ -131,10 +130,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/ILLUSION.jpg",
+    src: "/POSTERS%20CAROUSEL/ILLUSION.jpg",
     alt: "Illusion Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/ILLUSION.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/ILLUSION.png",
       date: "2024",
       description: {
         pt: "Composição inspirada em ilusões de ótica e distorções gráficas contemporâneas.",
@@ -143,10 +142,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/LIVING MACHINE.jpg",
+    src: "/POSTERS%20CAROUSEL/LIVING%20MACHINE.jpg",
     alt: "Living Machine Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/LIVING MACHINE.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/LIVING%20MACHINE.png",
       date: "2024",
       description: {
         pt: "Investigação gráfica sobre a relação entre arquitetura industrial e tecnologia.",
@@ -155,10 +154,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/TOPS.jpg",
+    src: "/POSTERS%20CAROUSEL/TOPS.jpg",
     alt: "Tops Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/TOPS.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/TOPS.png",
       date: "2023",
       description: {
         pt: "Pôster tipográfico minimalista explorando pesos de fonte e hierarquia de leitura.",
@@ -167,10 +166,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/TRYOUT.jpg",
+    src: "/POSTERS%20CAROUSEL/TRYOUT.jpg",
     alt: "Tryout Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/TRYOUT.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/TRYOUT.png",
       date: "2024",
       description: {
         pt: "Experimentação visual de texturas gráficas, grids distorcidos e composições livres.",
@@ -179,10 +178,10 @@ const carouselPosters: CarouselPoster[] = [
     }
   },
   {
-    src: "/POSTERS CAROUSEL/oceanman.png",
+    src: "/POSTERS%20CAROUSEL/oceanman.png",
     alt: "Ocean Man Poster",
     meta: {
-      logo: "/POSTERS CAROUSEL/LOGOS/OCEAN MAN.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/OCEAN%20MAN.png",
       date: "2024",
       description: {
         pt: "Homenagem à cultura do surf e exploração oceânica com tipografia personalizada.",
@@ -198,6 +197,7 @@ interface Skiper49Props {
 
 const Skiper49 = ({ lang = "pt" }: Skiper49Props) => {
   const [selected, setSelected] = useState<number | null>(null);
+  const [logoError, setLogoError] = useState(false);
 
   // Escape key to close zoom modal
   useEffect(() => {
@@ -207,6 +207,11 @@ const Skiper49 = ({ lang = "pt" }: Skiper49Props) => {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  // Reset logo error on selecting a new poster
+  useEffect(() => {
+    setLogoError(false);
+  }, [selected]);
 
   return (
     <div className="flex h-full w-full items-center justify-center overflow-hidden bg-transparent">
@@ -256,37 +261,18 @@ const Skiper49 = ({ lang = "pt" }: Skiper49Props) => {
                 style={{ backgroundColor: "rgba(0,0,0,0.75)" }}
               >
                 <div className="flex flex-col items-center gap-2">
-                  {/* logo (only if available) */}
-                  {carouselPosters[selected].meta.logo && (
+                  {/* logo (only if available and has no load errors) */}
+                  {carouselPosters[selected].meta.logo && !logoError && (
                     <img
                       src={carouselPosters[selected].meta.logo!}
                       alt="poster logo"
-                      className="max-w-[280px] max-h-[140px] w-auto h-auto object-contain pointer-events-none"
+                      onError={() => setLogoError(true)}
+                      className="max-w-[280px] max-h-[140px] w-auto h-auto object-contain pointer-events-none mb-1"
                     />
                   )}
 
-                  {/* date */}
-                  <p style={infoStyle}>{carouselPosters[selected].meta.date}</p>
-
-                  {/* copyright */}
-                  <p style={infoStyle}>©JOÃOMARCELO</p>
-
-                  {/* description */}
-                  <p
-                    style={{
-                      ...infoStyle,
-                      fontSize: "10px",
-                      whiteSpace: "pre-line",
-                      textAlign: "center",
-                      lineHeight: 1.2,
-                      maxWidth: "320px",
-                      padding: "0 10px",
-                    }}
-                  >
-                    {lang === "pt" 
-                      ? carouselPosters[selected].meta.description.pt 
-                      : carouselPosters[selected].meta.description.en}
-                  </p>
+                  {/* copyright only */}
+                  <p style={infoStyle}>©JOÃO MARCELO</p>
                 </div>
               </div>
             </motion.div>
@@ -444,10 +430,14 @@ const Carousel_003 = ({
           {showNavigation && (
             <div>
               <div className="swiper-button-next">
-                <ChevronRightIcon strokeWidth={1.5} className="h-8 w-8 text-white" />
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </div>
               <div className="swiper-button-prev">
-                <ChevronLeftIcon strokeWidth={1.5} className="h-8 w-8 text-white" />
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
               </div>
             </div>
           )}
