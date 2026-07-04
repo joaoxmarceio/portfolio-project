@@ -36,6 +36,12 @@ const socialLinks = [
     icons: ["/figma-social-1.svg"],
     label: "WhatsApp",
   },
+  {
+    className: "portfolio-social-email",
+    href: "mailto:contato@joaomarceio.com.br",
+    icons: ["/email-icon.svg"],
+    label: "E-mail",
+  },
 ];
 
 const contentTranslations = {
