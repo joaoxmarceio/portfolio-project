@@ -49,7 +49,7 @@ const carouselPosters: CarouselPoster[] = [
     src: "/POSTERS%20CAROUSEL/BEAUTIFUL.jpg",
     alt: "Beautiful Poster",
     meta: {
-      logo: "/POSTERS%20CAROUSEL/LOGOS/BEAUTIFUL.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/BEAUTIFUL.png?v=2",
       date: "2023",
       description: {
         pt: "Estudo visual minimalista sobre contraste de formas, estética e equilíbrio editorial.",
@@ -181,7 +181,7 @@ const carouselPosters: CarouselPoster[] = [
     src: "/POSTERS%20CAROUSEL/oceanman.png",
     alt: "Ocean Man Poster",
     meta: {
-      logo: "/POSTERS%20CAROUSEL/LOGOS/OCEAN%20MAN.png",
+      logo: "/POSTERS%20CAROUSEL/LOGOS/OCEAN%20MAN.png?v=2",
       date: "2024",
       description: {
         pt: "Homenagem à cultura do surf e exploração oceânica com tipografia personalizada.",
