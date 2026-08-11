@@ -696,6 +696,41 @@ img {
   }
 }
 
+/* Keep the editorial desktop composition inside narrower laptop viewports. */
+@media (min-width: 901px) and (max-width: 1439px) {
+  .portfolio-copyright {
+    left: clamp(-259px, -20.2vw, -160px);
+    font-size: clamp(540px, 54.7vw, 700px);
+  }
+
+  .portfolio-character {
+    top: clamp(88px, 8.3vw, 106px);
+    left: clamp(-86px, -6.72vw, -58px);
+  }
+
+  .portfolio-title-group {
+    top: clamp(150px, 11.6vw, 167px);
+    left: clamp(294px, 26.2vw, 377px);
+    width: min(72.5vw, 989px);
+  }
+
+  .portfolio-title-group h1 {
+    font-size: clamp(112px, 10.7vw, 150px);
+  }
+
+  .portfolio-title-group p {
+    top: clamp(350px, 29.2vw, 420px);
+    right: 0;
+    font-size: clamp(16px, 1.4vw, 20px);
+  }
+
+  .portfolio-intro > p {
+    right: clamp(26px, 3.7vw, 47px);
+    left: auto;
+    width: min(46.6vw, 597px);
+  }
+}
+
 @media (max-width: 560px) {
   .portfolio-hero {
     min-height: 480px;
