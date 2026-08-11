@@ -672,7 +672,7 @@ img {
 /* A single fluid composition keeps every desktop viewport in balance. */
 @media (min-width: 901px) {
   .portfolio-hero {
-    height: clamp(720px, min(56vw, 100dvh), 920px);
+    height: clamp(720px, min(56vw, 100dvh), 1440px);
     min-height: 720px;
   }
 
@@ -685,25 +685,26 @@ img {
   .portfolio-copyright {
     top: clamp(84px, 10vh, 106px);
     left: clamp(-230px, -16vw, -140px);
-    font-size: clamp(450px, min(42vw, 65vh), 620px);
+    font-size: clamp(450px, min(42vw, 65vh), 900px);
   }
 
   .portfolio-character {
-    top: clamp(84px, 10vh, 110px);
+    top: clamp(72px, 10vh, 96px);
     left: clamp(-88px, -6vw, -48px);
     width: auto;
-    height: clamp(430px, min(43vw, 76dvh), 660px);
+    height: clamp(460px, min(50vw, 85dvh), 1100px);
   }
 
   .portfolio-title-group {
-    top: clamp(130px, 15vh, 168px);
+    top: clamp(108px, 15vh, 136px);
     right: clamp(48px, 7vw, 150px);
-    left: auto;
-    width: min(58vw, 850px);
+    left: clamp(220px, 23vw, 450px);
+    width: auto;
   }
 
   .portfolio-title-group h1 {
-    font-size: clamp(74px, min(8.2vw, 12vh), 132px);
+    font-size: clamp(86px, min(10.2vw, 21.4dvh), 400px);
+    line-height: 0.84;
     text-align: right;
   }
 
@@ -715,13 +716,13 @@ img {
   .portfolio-title-group p {
     position: static;
     right: 0;
-    margin-top: clamp(12px, 1.8vh, 18px);
+    margin-top: clamp(10px, 1.4vh, 14px);
     font-size: clamp(14px, 1.1vw, 18px);
   }
 
   .portfolio-intro {
     top: auto;
-    bottom: clamp(64px, 10vh, 104px);
+    bottom: clamp(56px, 8vh, 84px);
     height: 128px;
   }
 
@@ -740,6 +741,12 @@ img {
 
   .portfolio-socials {
     right: clamp(48px, 7vw, 150px);
+  }
+}
+
+@media (min-width: 1900px) and (min-height: 940px) {
+  .portfolio-title-group h1 {
+    font-size: clamp(86px, min(11vw, calc(39.7dvh - 155px)), 400px);
   }
 }
 
