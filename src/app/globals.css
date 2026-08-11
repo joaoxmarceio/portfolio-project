@@ -697,12 +697,19 @@ img {
 
   .portfolio-title-group {
     top: clamp(130px, 15vh, 168px);
-    left: clamp(300px, 30vw, 500px);
-    width: min(61vw, 860px);
+    right: clamp(48px, 7vw, 150px);
+    left: auto;
+    width: min(58vw, 850px);
   }
 
   .portfolio-title-group h1 {
     font-size: clamp(74px, min(8.2vw, 12vh), 132px);
+    text-align: right;
+  }
+
+  .portfolio-title-group h1 span:nth-child(2),
+  .portfolio-title-group h1 span:nth-child(3) {
+    margin-left: 0;
   }
 
   .portfolio-title-group p {
@@ -720,9 +727,9 @@ img {
 
   .portfolio-intro > p {
     top: 0;
-    right: clamp(32px, 8vw, 150px);
+    right: clamp(48px, 7vw, 150px);
     left: auto;
-    width: min(40vw, 560px);
+    width: min(38vw, 560px);
     font-size: clamp(11px, 0.75vw, 13px);
   }
 
@@ -732,7 +739,7 @@ img {
   }
 
   .portfolio-socials {
-    right: clamp(30px, 3.5vw, 56px);
+    right: clamp(48px, 7vw, 150px);
   }
 }
 
