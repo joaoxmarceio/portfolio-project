@@ -715,7 +715,7 @@ img {
   .portfolio-intro {
     top: auto;
     bottom: clamp(64px, 10vh, 104px);
-    height: 72px;
+    height: 128px;
   }
 
   .portfolio-intro > p {
