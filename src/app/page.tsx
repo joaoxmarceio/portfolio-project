@@ -286,8 +286,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="portfolio-sticky-scroll" id="work">
-        <Skiper30 lang={lang} />
+      <section className="relative w-full min-h-screen bg-[#121212] overflow-hidden" id="work">
+        <ProjectsShowcase lang={lang} />
       </section>
 
       <section className="portfolio-about" id="about">
@@ -336,8 +336,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative w-full min-h-screen bg-[#121212] overflow-hidden">
-        <ProjectsShowcase lang={lang} />
+      <section className="portfolio-sticky-scroll">
+        <Skiper30 lang={lang} />
       </section>
 
       <section className="relative w-full bg-[#121212] py-20 overflow-hidden flex flex-col items-center justify-center border-t border-white/5">
