@@ -220,7 +220,6 @@ const Skiper49 = ({ lang = "pt" }: Skiper49Props) => {
         images={carouselPosters} 
         showPagination 
         showNavigation 
-        loop 
         onSelectSlide={(index) => setSelected(index)}
       />
 
@@ -290,7 +289,7 @@ const Carousel_003 = ({
   className,
   showPagination = false,
   showNavigation = false,
-  loop = true,
+  loop = false,
   autoplay = false,
   spaceBetween = 16,
   onSelectSlide,
