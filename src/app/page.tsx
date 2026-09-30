@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { Skiper30 } from "../components/ui/skiper30";
-import { Skiper49 } from "../components/ui/skiper-ui/skiper49";
-import WorkGrid from "@/components/work/WorkGrid";
+import ProjectsCollage from "@/components/collage/ProjectsCollage";
+import AboutCollage from "@/components/collage/AboutCollage";
+import PosterRoom from "@/components/collage/PosterRoom";
+import ContactCollage from "@/components/collage/ContactCollage";
+import { KineticMarquee, useScrollSkew } from "@/components/collage/Kinetic";
 import ShinyText from "../components/ShinyText";
 
 const socialLinks = [
@@ -53,10 +54,6 @@ const contentTranslations = {
     heroTitle3: "Criativos",
     since: "Desde 2020",
     intro: "Me chamo João Marcelo e venho inovando no campo criativo em que atuo há mais de 6 anos. Esse website compila alguns dos meus melhores trabalhos e seus estudos de caso e um pouco da minha jornada como designer, além de expressar minha visão criativa acerca do mundo que eu vivo, enxergo e ouço.",
-    navHome: "Home",
-    navAbout: "Sobre mim",
-    navWork: "Projetos",
-    allRightsReserved: "Todos os direitos reservados.",
     aboutTitle: "Sobre mim",
     aboutText: "Sou designer gráfico e diretor criativo focado em desenvolver identidades visuais de forte impacto e soluções de design inovadoras. Ao longo da minha carreira, busquei unir a excelência estética com a precisão conceitual, ajudando marcas a expressarem sua essência única por meio de narrativas visuais marcantes, autênticas e inesquecíveis.",
     aboutRoleLabel: "Atualmente atuando em:",
@@ -74,10 +71,6 @@ const contentTranslations = {
     heroTitle3: "Horizons",
     since: "Since 2020",
     intro: "My name is João Marcelo, and I have been innovating in the creative field for over 6 years. This website compiles some of my best works, case studies, and a bit of my journey as a designer, while expressing my creative vision of the world I live in, see, and hear.",
-    navHome: "Home",
-    navAbout: "About me",
-    navWork: "Work",
-    allRightsReserved: "All rights reserved.",
     aboutTitle: "About me",
     aboutText: "I am a graphic designer and creative director focused on developing high-impact visual identities and innovative design solutions. Throughout my career, I have sought to unite aesthetic excellence with conceptual precision, helping brands express their unique essence through striking, authentic, and unforgettable visual narratives.",
     aboutRoleLabel: "Currently working as:",
@@ -113,11 +106,7 @@ export default function Home() {
 
   const t = contentTranslations[lang];
 
-  const footerNavLinks = [
-    { href: "#home", label: t.navHome },
-    { href: "#work", label: t.navWork },
-    { href: "#about", label: t.navAbout },
-  ];
+  useScrollSkew();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -277,112 +266,33 @@ export default function Home() {
         </div>
       </section>
 
-      <WorkGrid lang={lang} />
+      <KineticMarquee
+        rows={[
+          lang === 'pt'
+            ? ['Identidade visual', 'UX/UI', 'Decks', 'Mídias sociais', 'Pôsteres']
+            : ['Visual identity', 'UX/UI', 'Decks', 'Social media', 'Posters'],
+          lang === 'pt'
+            ? ['Direção criativa', 'Design gráfico', 'Desde 2020', 'Franca, Brasil']
+            : ['Creative direction', 'Graphic design', 'Since 2020', 'Franca, Brazil'],
+        ]}
+      />
 
-      <section className="portfolio-about" id="about">
-        <div className="portfolio-about-container">
-          <motion.div
-            className="portfolio-about-image-wrap"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ type: "spring", stiffness: 50, damping: 15 }}
-          >
-            <motion.img
-              src="/joaomarcelo-profile.jpg?v=4"
-              alt="João Marcelo"
-              className="portfolio-about-image"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 60, damping: 10 }}
-            />
-          </motion.div>
-          
-          <motion.div
-            className="portfolio-about-content"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.1 }}
-          >
-            <h2 className="portfolio-about-title">{t.aboutTitle}</h2>
-            <p className="portfolio-about-text">{t.aboutText}</p>
-            
-            <div className="portfolio-about-meta">
-              <div className="portfolio-about-meta-item">
-                <span className="portfolio-about-meta-label">{t.aboutRoleLabel}</span>
-                <span className="portfolio-about-meta-value">{t.aboutRoleVal}</span>
-              </div>
-              <div className="portfolio-about-meta-item">
-                <span className="portfolio-about-meta-label">{t.aboutAvailabilityLabel}</span>
-                <span className="portfolio-about-meta-value">{t.aboutAvailabilityVal}</span>
-              </div>
-              <div className="portfolio-about-meta-item">
-                <span className="portfolio-about-meta-label">{t.aboutLocationLabel}</span>
-                <span className="portfolio-about-meta-value">{t.aboutLocationVal}</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <ProjectsCollage lang={lang} />
 
-      <section className="portfolio-sticky-scroll">
-        <Skiper30 lang={lang} />
-      </section>
+      <AboutCollage
+        lang={lang}
+        copy={{
+          text: t.aboutText,
+          role: [t.aboutRoleLabel, t.aboutRoleVal],
+          availability: [t.aboutAvailabilityLabel, t.aboutAvailabilityVal],
+          location: [t.aboutLocationLabel, t.aboutLocationVal.replace(' 🇧🇷', '')],
+          since: t.since,
+        }}
+      />
 
-      <section className="relative w-full bg-[#121212] py-20 overflow-hidden flex flex-col items-center justify-center border-t border-white/5">
-        <div className="w-full max-w-7xl px-6 md:px-12 mb-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-4 uppercase">
-            {lang === 'pt' ? 'POSTERS AUTORAIS' : 'CREATIVE POSTERS'}
-          </h2>
-          <p className="text-sm font-light text-white/50 max-w-xl mx-auto">
-            {lang === 'pt' 
-              ? 'Uma galeria de alguns dos meus pôsters autorais feitos nos últimos anos. Muitos outros podem ser encontrados no meu perfil do Instagram @joaomarceio.' 
-              : 'A gallery of some of my creative posters made in recent years. Many others can be found on my Instagram profile @joaomarceio.'}
-          </p>
-        </div>
-        <Skiper49 lang={lang} />
-      </section>
+      <PosterRoom lang={lang} />
 
-      <footer className="portfolio-footer" id="contact">
-        <nav aria-label="Navegação do rodapé" className="portfolio-footer-nav">
-          {footerNavLinks.map((link) => (
-            <a
-              href={link.href}
-              key={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                const target = document.querySelector(link.href);
-                if (target) {
-                  target.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <nav aria-label="Redes sociais" className="portfolio-footer-socials">
-          {socialLinks.map((link) => (
-            <a
-              aria-label={link.label}
-              className={`portfolio-footer-social-link portfolio-footer-${link.label.toLowerCase()}`}
-              href={link.href}
-              key={link.label}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.icons.map((icon) => (
-                <img alt="" key={icon} src={icon} />
-              ))}
-            </a>
-          ))}
-        </nav>
-
-        <p className="portfolio-footer-copy">
-          © 2026 João Marcelo. {t.allRightsReserved}
-        </p>
-      </footer>
+      <ContactCollage lang={lang} links={socialLinks.map(({ href, label }) => ({ href, label }))} />
     </main>
   );
 }

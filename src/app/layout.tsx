@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./collage.css";
 
 export const metadata: Metadata = {
   title: "©JOÃO MARCELO | Creative Director",
