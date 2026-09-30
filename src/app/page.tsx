@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Skiper30 } from "../components/ui/skiper30";
 import { Skiper49 } from "../components/ui/skiper-ui/skiper49";
-import ProjectsShowcase from "../components/ProjectsShowcase";
+import WorkGrid from "@/components/work/WorkGrid";
 import ShinyText from "../components/ShinyText";
 
 const socialLinks = [
@@ -55,10 +55,7 @@ const contentTranslations = {
     intro: "Me chamo João Marcelo e venho inovando no campo criativo em que atuo há mais de 6 anos. Esse website compila alguns dos meus melhores trabalhos e seus estudos de caso e um pouco da minha jornada como designer, além de expressar minha visão criativa acerca do mundo que eu vivo, enxergo e ouço.",
     navHome: "Home",
     navAbout: "Sobre mim",
-    navVisual: "Identidade visual",
-    navUxUi: "UX/UI",
-    navDecks: "Decks",
-    navFlyers: "Mídias sociais e flyers",
+    navWork: "Projetos",
     allRightsReserved: "Todos os direitos reservados.",
     aboutTitle: "Sobre mim",
     aboutText: "Sou designer gráfico e diretor criativo focado em desenvolver identidades visuais de forte impacto e soluções de design inovadoras. Ao longo da minha carreira, busquei unir a excelência estética com a precisão conceitual, ajudando marcas a expressarem sua essência única por meio de narrativas visuais marcantes, autênticas e inesquecíveis.",
@@ -79,10 +76,7 @@ const contentTranslations = {
     intro: "My name is João Marcelo, and I have been innovating in the creative field for over 6 years. This website compiles some of my best works, case studies, and a bit of my journey as a designer, while expressing my creative vision of the world I live in, see, and hear.",
     navHome: "Home",
     navAbout: "About me",
-    navVisual: "Visual Identity",
-    navUxUi: "UX/UI",
-    navDecks: "Pitch Decks",
-    navFlyers: "Social Media & Flyers",
+    navWork: "Work",
     allRightsReserved: "All rights reserved.",
     aboutTitle: "About me",
     aboutText: "I am a graphic designer and creative director focused on developing high-impact visual identities and innovative design solutions. Throughout my career, I have sought to unite aesthetic excellence with conceptual precision, helping brands express their unique essence through striking, authentic, and unforgettable visual narratives.",
@@ -121,11 +115,8 @@ export default function Home() {
 
   const footerNavLinks = [
     { href: "#home", label: t.navHome },
+    { href: "#work", label: t.navWork },
     { href: "#about", label: t.navAbout },
-    { href: "#identidade-visual", label: t.navVisual },
-    { href: "#ux-ui", label: t.navUxUi },
-    { href: "#decks", label: t.navDecks },
-    { href: "#midias-sociais-e-flyers", label: t.navFlyers },
   ];
 
   useEffect(() => {
@@ -286,9 +277,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative w-full min-h-screen bg-[#121212] overflow-hidden" id="work">
-        <ProjectsShowcase lang={lang} />
-      </section>
+      <WorkGrid lang={lang} />
 
       <section className="portfolio-about" id="about">
         <div className="portfolio-about-container">
