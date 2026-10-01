@@ -428,7 +428,7 @@ export const projects: Project[] = [
   {
     id: 27,
     title: 'Apresentação EMASFI',
-    logo: '/PROJECT LOGOS/LOGO APRESENTAÇÃO EMASFI.png',
+    logo: '/PROJECT LOGOS/LOGO APRESENTAÇÃO EMASFI.png',
     subTitle: 'Pitch Presentation',
     img: '/PROJECTS/decks/emasfi_deck/emasfi_page_1.jpg',
     desc1: 'Apresentação de slides comercial desenvolvida para a EMASFI.',
@@ -768,3 +768,7 @@ export const workOrder: number[] = [
   8, 19, 26, 12, 23, 4, 16, 9, 10, 3, 14, 17, 5, 18,
   24, 1, 20, 15, 7, 21, 13, 6, 22, 28, 2, 27, 11, 25,
 ];
+
+export const orderedProjects: Project[] = workOrder
+  .map((id) => projects.find((p) => p.id === id))
+  .filter((p): p is Project => Boolean(p));

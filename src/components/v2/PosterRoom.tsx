@@ -74,10 +74,11 @@ export default function PosterRoom({ lang }: { lang: Lang }) {
   const close = useCallback(() => setOpen(null), []);
 
   return (
-    <section className="room" id="posters" aria-labelledby="room-title">
+    <section className="room" id="posters" data-surface="dark" aria-labelledby="room-title">
       <div className="room-head">
-        <h2 id="room-title" className="room-title">
-          {pt ? 'Pôsteres autorais' : 'Personal posters'}
+        <h2 id="room-title" className="v2-title room-title">
+          <span className="f-sans">{pt ? 'Pôsteres' : 'Personal'}</span>{' '}
+          <span className="f-serif is-accent">{pt ? 'autorais' : 'posters'}</span>
           <sup>{posters.length}</sup>
         </h2>
         <p className="room-note">

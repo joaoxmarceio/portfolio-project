@@ -1,11 +1,16 @@
 'use client';
 
 import { useEffect, useRef, useState } from "react";
-import ProjectsCollage from "@/components/collage/ProjectsCollage";
-import AboutCollage from "@/components/collage/AboutCollage";
-import PosterRoom from "@/components/collage/PosterRoom";
-import ContactCollage from "@/components/collage/ContactCollage";
-import { KineticMarquee, useScrollSkew } from "@/components/collage/Kinetic";
+import PosterRoom from "@/components/v2/PosterRoom";
+import SmoothScroll from "@/components/v2/SmoothScroll";
+import SiteHeader from "@/components/v2/SiteHeader";
+import IntroMarquee from "@/components/v2/IntroMarquee";
+import Manifesto from "@/components/v2/Manifesto";
+import WorkTrack from "@/components/v2/WorkTrack";
+import Split from "@/components/v2/Split";
+import Clients from "@/components/v2/Clients";
+import Socials from "@/components/v2/Socials";
+import SiteFooter from "@/components/v2/SiteFooter";
 import ShinyText from "../components/ShinyText";
 
 const socialLinks = [
@@ -105,8 +110,7 @@ export default function Home() {
   };
 
   const t = contentTranslations[lang];
-
-  useScrollSkew();
+  const socials = socialLinks.map(({ href, label }) => ({ href, label }));
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -171,7 +175,9 @@ export default function Home() {
 
   return (
     <main className="portfolio-shell">
-      <section ref={heroRef} className="portfolio-hero" id="home">
+      <SmoothScroll />
+      <SiteHeader lang={lang} onLang={changeLang} socials={socials} />
+      <section ref={heroRef} className="portfolio-hero" id="home" data-surface="dark">
         <header className="portfolio-header">
           <p>
             {t.role1}
@@ -266,33 +272,14 @@ export default function Home() {
         </div>
       </section>
 
-      <KineticMarquee
-        rows={[
-          lang === 'pt'
-            ? ['Identidade visual', 'UX/UI', 'Decks', 'Mídias sociais', 'Pôsteres']
-            : ['Visual identity', 'UX/UI', 'Decks', 'Social media', 'Posters'],
-          lang === 'pt'
-            ? ['Direção criativa', 'Design gráfico', 'Desde 2020', 'Franca, Brasil']
-            : ['Creative direction', 'Graphic design', 'Since 2020', 'Franca, Brazil'],
-        ]}
-      />
-
-      <ProjectsCollage lang={lang} />
-
-      <AboutCollage
-        lang={lang}
-        copy={{
-          text: t.aboutText,
-          role: [t.aboutRoleLabel, t.aboutRoleVal],
-          availability: [t.aboutAvailabilityLabel, t.aboutAvailabilityVal],
-          location: [t.aboutLocationLabel, t.aboutLocationVal.replace(' 🇧🇷', '')],
-          since: t.since,
-        }}
-      />
-
+      <IntroMarquee lang={lang} />
+      <Manifesto lang={lang} since={t.since} />
+      <WorkTrack lang={lang} />
+      <Split lang={lang} />
       <PosterRoom lang={lang} />
-
-      <ContactCollage lang={lang} links={socialLinks.map(({ href, label }) => ({ href, label }))} />
+      <Clients lang={lang} />
+      <Socials lang={lang} instagram={socialLinks.find((l) => l.label === "Instagram")!.href} />
+      <SiteFooter lang={lang} socials={socials} />
     </main>
   );
 }
