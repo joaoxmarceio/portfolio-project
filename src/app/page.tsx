@@ -38,7 +38,7 @@ const socialLinks = [
   },
   {
     className: "portfolio-social-email",
-    href: "mailto:contato@joaomarceio.com.br",
+    href: "mailto:joaomarcelopoli@gmail.com",
     icons: ["/email-icon.svg"],
     label: "E-mail",
   },
@@ -52,7 +52,7 @@ const contentTranslations = {
     heroTitle2: "Horizontes",
     heroTitle3: "Criativos",
     since: "Desde 2020",
-    intro: "Me chamo João Marcelo e venho inovando no campo criativo em que atuo há mais de 6 anos. Esse website compila alguns dos meus melhores trabalhos e seus estudos de caso e um pouco da minha jornada como designer, além de expressar minha visão criativa acerca do mundo que eu vivo, enxergo e ouço.",
+    intro: "Sou o João Marcelo, designer gráfico e diretor de arte. Desde 2020 faço identidade visual, social media, apresentações e interfaces. Aqui estão alguns desses trabalhos e uma parte dos meus pôsteres autorais.",
     navHome: "Home",
     navAbout: "Sobre mim",
     navVisual: "Identidade visual",
@@ -61,13 +61,13 @@ const contentTranslations = {
     navFlyers: "Mídias sociais e flyers",
     allRightsReserved: "Todos os direitos reservados.",
     aboutTitle: "Sobre mim",
-    aboutText: "Sou designer gráfico e diretor criativo focado em desenvolver identidades visuais de forte impacto e soluções de design inovadoras. Ao longo da minha carreira, busquei unir a excelência estética com a precisão conceitual, ajudando marcas a expressarem sua essência única por meio de narrativas visuais marcantes, autênticas e inesquecíveis.",
+    aboutText: "Sou designer gráfico e diretor de arte. Desde abril de 2021 trabalho remoto para a GGEZ Media, uma produtora americana de vídeo e design, em campanhas, social media, decks e landing pages. Antes disso pegava projetos por conta própria, e entre 2022 e 2023 fui designer pleno numa produtora de eventos aqui em Franca. Trabalho com Photoshop, Illustrator, InDesign e Figma.",
     aboutRoleLabel: "Atualmente atuando em:",
     aboutRoleVal: "Diretor criativo em GGEZ Media",
     aboutAvailabilityLabel: "Disponibilidade atual:",
     aboutAvailabilityVal: "Trabalhos remotos e presenciais",
     aboutLocationLabel: "Localizado em:",
-    aboutLocationVal: "Franca | Brasil 🇧🇷"
+    aboutLocationVal: "Franca, SP | Brasil"
   },
   en: {
     role1: "Graphic Designer",
@@ -76,7 +76,7 @@ const contentTranslations = {
     heroTitle2: "Creative",
     heroTitle3: "Horizons",
     since: "Since 2020",
-    intro: "My name is João Marcelo, and I have been innovating in the creative field for over 6 years. This website compiles some of my best works, case studies, and a bit of my journey as a designer, while expressing my creative vision of the world I live in, see, and hear.",
+    intro: "I'm João Marcelo, a graphic designer and art director. Since 2020 I've worked on brand identity, social media, presentations and interfaces. Here you'll find some of that work, plus a selection of my personal posters.",
     navHome: "Home",
     navAbout: "About me",
     navVisual: "Visual Identity",
@@ -85,13 +85,13 @@ const contentTranslations = {
     navFlyers: "Social Media & Flyers",
     allRightsReserved: "All rights reserved.",
     aboutTitle: "About me",
-    aboutText: "I am a graphic designer and creative director focused on developing high-impact visual identities and innovative design solutions. Throughout my career, I have sought to unite aesthetic excellence with conceptual precision, helping brands express their unique essence through striking, authentic, and unforgettable visual narratives.",
+    aboutText: "I'm a graphic designer and art director. Since April 2021 I've worked remotely with GGEZ Media, a US video and design studio, on campaigns, social media, decks and landing pages. Before that I took on projects on my own, and from 2022 to 2023 I was a mid-level designer at an events company in Franca. I work in Photoshop, Illustrator, InDesign and Figma.",
     aboutRoleLabel: "Currently working as:",
     aboutRoleVal: "Creative Director at GGEZ Media",
     aboutAvailabilityLabel: "Current availability:",
     aboutAvailabilityVal: "Remote and on-site work",
     aboutLocationLabel: "Located in:",
-    aboutLocationVal: "Franca | Brazil 🇧🇷"
+    aboutLocationVal: "Franca, SP | Brazil"
   }
 };
 
@@ -343,11 +343,11 @@ export default function Home() {
       <section className="relative w-full bg-[#121212] py-20 overflow-hidden flex flex-col items-center justify-center border-t border-white/5">
         <div className="w-full max-w-7xl px-6 md:px-12 mb-10 text-center">
           <h2 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-4 uppercase">
-            {lang === 'pt' ? 'POSTERS AUTORAIS' : 'CREATIVE POSTERS'}
+            {lang === 'pt' ? 'PÔSTERES AUTORAIS' : 'CREATIVE POSTERS'}
           </h2>
           <p className="text-sm font-light text-white/50 max-w-xl mx-auto">
             {lang === 'pt' 
-              ? 'Uma galeria de alguns dos meus pôsters autorais feitos nos últimos anos. Muitos outros podem ser encontrados no meu perfil do Instagram @joaomarceio.' 
+              ? 'Uma galeria de alguns dos meus pôsteres autorais feitos nos últimos anos. Muitos outros podem ser encontrados no meu perfil do Instagram @joaomarceio.' 
               : 'A gallery of some of my creative posters made in recent years. Many others can be found on my Instagram profile @joaomarceio.'}
           </p>
         </div>

@@ -74,12 +74,12 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: 'Ecofuding™',
+    title: 'Ecofunding™',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     logoHeight: 'h-20 md:h-28',
     subTitle: 'Manual de Identidade Visual',
     img: '/PROJECTS/branding_guidelines/eco_funding_branding_kit/1.jpg',
-    desc1: 'Manual de Identidade Visual completo desenvolvido para o projeto Ecofuding.',
+    desc1: 'Manual de Identidade Visual completo desenvolvido para o projeto Ecofunding.',
     desc2: 'Apresenta a consolidação dos grids, tipografias, grafismos secundários e renders promocionais.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
@@ -139,10 +139,10 @@ const projects: Project[] = [
     id: 9,
     title: 'ESPORTSBET.IO',
     logo: '/PROJECT LOGOS/LOGO ESPORTSBET.IO.webp',
-    subTitle: 'Estudo de Caso de Marca',
+    subTitle: 'Estudo de caso Esportsbet.io',
     img: '/PROJECTS/case_study/esb_case_study/1.jpg',
-    desc1: 'Apresentação detalhada da reestruturação da marca ESB, cobrindo desde a pesquisa conceitual até as peças publicitárias finais.',
-    desc2: 'Demonstra a aplicação prática da marca em papelaria, uniformes e fachadas físicas.',
+    desc1: 'Case feito na GGEZ Media para a Esportsbet.io, plataforma de apostas em e-sports com cripto: perfis nas redes, thumbnails, artes de promoção e sorteios e telas de live.',
+    desc2: 'Inclui infográficos de palpites para campeonatos como LCS, LCK, ESL Pro League e PGL Major.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -255,12 +255,12 @@ const projects: Project[] = [
   },
   {
     id: 10,
-    title: 'Ecofuding™ Tokens',
+    title: 'Ecofunding™ Tokens',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     logoHeight: 'h-20 md:h-28',
     subTitle: 'Estudo de Tokens do Projeto',
     img: '/PROJECTS/case_study/ecofunding_tokens/documento_tokens_1.jpg',
-    desc1: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofuding, incluindo renders em 3D e telas desktop.',
+    desc1: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofunding, incluindo renders em 3D e telas desktop.',
     desc2: 'Layout de alta fidelidade integrando a linguagem de blockchain ao ecossistema verde do projeto.',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
@@ -316,7 +316,7 @@ const projects: Project[] = [
     title: 'Corban Fintech',
     logo: '/PROJECT LOGOS/FINTECH CORBAN.png',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Digital Banking UI Design',
+    subTitle: 'Digital Banking UI Concept',
     img: '/PROJECTS/ux_ui/website_fintech_corban.jpg',
     desc1: 'Portal corporativo para a Fintech Corban, aliando solidez de segurança bancária a uma linguagem visual limpa e amigável.',
     desc2: 'Integra fluxos claros de simulação de crédito e benefícios.',
@@ -347,18 +347,18 @@ const projects: Project[] = [
     logo: '/PROJECT LOGOS/SOVA.png',
     logoHeight: 'h-24 md:h-32',
     subTitle: 'Overlays e Painéis da Twitch',
-    img: '/PROJECTS/ux_ui/sova/sova.png',
+    img: '/PROJECTS/ux_ui/sova/sova.jpg',
     desc1: 'Kit completo de branding e identidade visual para streamers desenvolvido para o canal do Sova.',
     desc2: 'Inclui overlays de webcam, telas offline, painéis de spec do PC, redes sociais, sub e donate.',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
     galleryImages: [
-      '/PROJECTS/ux_ui/sova/sova.png',
-      '/PROJECTS/ux_ui/sova/onlinesova.png',
-      '/PROJECTS/ux_ui/sova/offlinesova.png',
+      '/PROJECTS/ux_ui/sova/sova.jpg',
+      '/PROJECTS/ux_ui/sova/onlinesova.jpg',
+      '/PROJECTS/ux_ui/sova/offlinesova.jpg',
       '/PROJECTS/ux_ui/sova/facecam.png',
-      '/PROJECTS/ux_ui/sova/pannelswebcam.png',
+      '/PROJECTS/ux_ui/sova/pannelswebcam.jpg',
     ],
     gridImages: [
       '/PROJECTS/ux_ui/sova/paineldonate.png',
@@ -390,10 +390,10 @@ const projects: Project[] = [
     title: 'Arcnova®',
     logo: '/PROJECT LOGOS/LOGO ARCNOVA.png',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Pitch Deck Corporativo',
+    subTitle: 'Apresentação da agência Arcnova',
     img: '/PROJECTS/decks/arcnova_deck/1.jpg',
-    desc1: 'Lindo deck de slides estruturado para a Arcnova, apresentando metas, cases e soluções tecnológicas da marca.',
-    desc2: 'Alinhamento visual rigoroso com a paleta de cores corporativa, tipografia bold e diagramação estrita.',
+    desc1: 'Apresentação da Arcnova, agência criada em 2025, com valores, serviços e equipe.',
+    desc2: 'Paleta laranja e preto, com títulos grandes em caixa alta.',
     behanceUrl: 'https://www.behance.net',
     category: 'DECKS',
     isLandscape: true,
@@ -433,10 +433,10 @@ const projects: Project[] = [
     id: 27,
     title: 'Apresentação EMASFI',
     logo: '/PROJECT LOGOS/LOGO APRESENTAÇÃO EMASFI.png',
-    subTitle: 'Pitch Presentation',
+    subTitle: 'Slides para evento',
     img: '/PROJECTS/decks/emasfi_deck/emasfi_page_1.jpg',
-    desc1: 'Apresentação de slides comercial desenvolvida para a EMASFI.',
-    desc2: 'Estilo moderno e corporativo focado em captar investimentos e apresentar indicadores chave.',
+    desc1: 'Slides de telão para a festa de 25 anos do EMASFI Group: abertura, apresentação do CEO, depoimentos e a entrega da Moeda de Mérito aos funcionários.',
+    desc2: 'Azul e laranja da marca em todas as telas, com o símbolo da EMASFI como base dos grafismos.',
     behanceUrl: 'https://www.behance.net',
     category: 'DECKS',
     isLandscape: true,
@@ -458,10 +458,10 @@ const projects: Project[] = [
     title: 'Beatriz Evangelista | Portfólio',
     logo: '/PROJECT LOGOS/LOGO BEATRIZ EVANGELISTA.png',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Apresentação de Portfólio',
+    subTitle: 'Portfólio em slides',
     img: '/PROJECTS/decks/portfolio_beatriz_evangelista/1.jpg',
-    desc1: 'Portfólio comercial diagramado em slides para apresentação de projetos de design de interiores e arquitetura.',
-    desc2: 'Uso estratégico de espaços vazios e foco nas fotos dos projetos para destacar a qualidade técnica e refinamento estético.',
+    desc1: 'Portfólio em slides para Beatriz Evangelista, social media e estrategista de conteúdo, com a trajetória dela na Carmen Steffens e no Joel Jota.',
+    desc2: 'Inclui coberturas de eventos e cases com prints de resultados.',
     behanceUrl: 'https://www.behance.net',
     category: 'DECKS',
     isLandscape: true,
@@ -501,12 +501,12 @@ const projects: Project[] = [
   },
   {
     id: 28,
-    title: 'Ecofuding™ Pitch Deck',
+    title: 'Ecofunding™ Pitch Deck',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     logoHeight: 'h-20 md:h-28',
     subTitle: 'Investor Deck Presentation',
     img: '/PROJECTS/decks/ecofounding_pitch_deck/ecofunding_deck_page_1.jpg',
-    desc1: 'Deck de apresentação estruturado para investidores da plataforma Ecofuding.',
+    desc1: 'Deck de apresentação estruturado para investidores da plataforma Ecofunding.',
     desc2: 'Explica a visão, tecnologia, mercado e a distribuição de tokens do projeto.',
     behanceUrl: 'https://www.behance.net',
     category: 'DECKS',
@@ -531,25 +531,25 @@ const projects: Project[] = [
     title: 'Acelerador Racing | Jantar de 20 Anos',
     logo: '/PROJECT LOGOS/LOGO ACELERADOR RACING.webp',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Pitch Deck de Negócios',
-    img: '/PROJECTS/decks/acelerador_apresentacao/1.png',
-    desc1: 'Apresentação institucional e comercial desenvolvida para captação e aceleração de startups.',
-    desc2: 'Design limpo com gráficos minimalistas e infográficos intuitivos para retenção de atenção em pitch meetings.',
+    subTitle: 'Slides para evento',
+    img: '/PROJECTS/decks/acelerador_apresentacao/1.jpg',
+    desc1: 'Slides de telão para o jantar de 20 anos da Acelerador Racing: abertura, vídeos institucionais, apresentação de palestrantes e um talk show empresarial.',
+    desc2: 'A linguagem visual vem do automobilismo, com a bandeira quadriculada e o laranja da marca.',
     behanceUrl: 'https://www.behance.net',
     category: 'DECKS',
     isLandscape: true,
     galleryImages: [
-      '/PROJECTS/decks/acelerador_apresentacao/1.png',
+      '/PROJECTS/decks/acelerador_apresentacao/1.jpg',
       '/PROJECTS/decks/acelerador_apresentacao/2.png',
-      '/PROJECTS/decks/acelerador_apresentacao/3.png',
-      '/PROJECTS/decks/acelerador_apresentacao/4.png',
-      '/PROJECTS/decks/acelerador_apresentacao/5.png',
+      '/PROJECTS/decks/acelerador_apresentacao/3.jpg',
+      '/PROJECTS/decks/acelerador_apresentacao/4.jpg',
+      '/PROJECTS/decks/acelerador_apresentacao/5.jpg',
       '/PROJECTS/decks/acelerador_apresentacao/6-1.png',
       '/PROJECTS/decks/acelerador_apresentacao/6.png',
-      '/PROJECTS/decks/acelerador_apresentacao/7.png',
-      '/PROJECTS/decks/acelerador_apresentacao/8.png',
+      '/PROJECTS/decks/acelerador_apresentacao/7.jpg',
+      '/PROJECTS/decks/acelerador_apresentacao/8.jpg',
       '/PROJECTS/decks/acelerador_apresentacao/9.png',
-      '/PROJECTS/decks/acelerador_apresentacao/10.png',
+      '/PROJECTS/decks/acelerador_apresentacao/10.jpg',
     ],
   },
 
@@ -690,9 +690,9 @@ const projectTranslations: Record<number, {
     desc2: { pt: 'Definições estéticas focadas em expressar naturalidade e energia saudável.', en: 'Aesthetic definitions focused on expressing naturalness and healthy energy.' }
   },
   9: {
-    subTitle: { pt: 'Estudo de Marca ESB', en: 'ESB Brand Study' },
-    desc1: { pt: 'Apresentação detalhada da reestruturação da marca ESB, cobrindo desde a pesquisa conceitual até as peças publicitárias finais.', en: 'Detailed presentation of the ESB brand restructuring, covering from conceptual research to the final advertising pieces.' },
-    desc2: { pt: 'Estética alinhada com as melhores práticas de design de alto nível.', en: 'Aesthetics aligned with the best practices of high-level design.' }
+    subTitle: { pt: 'Estudo de caso Esportsbet.io', en: 'Esportsbet.io case study' },
+    desc1: { pt: 'Case feito na GGEZ Media para a Esportsbet.io, plataforma de apostas em e-sports com cripto: perfis nas redes, thumbnails, artes de promoção e sorteios e telas de live.', en: 'Case study from GGEZ Media for Esportsbet.io, a crypto esports betting platform: social profiles, thumbnails, promo and giveaway graphics, and stream screens.' },
+    desc2: { pt: 'Inclui infográficos de palpites para campeonatos como LCS, LCK, ESL Pro League e PGL Major.', en: 'Also includes prediction infographics for tournaments like LCS, LCK, ESL Pro League and the PGL Major.' }
   },
   3: {
     subTitle: { pt: 'Manual de Identidade Next', en: 'Next Identity Manual' },
@@ -721,7 +721,7 @@ const projectTranslations: Record<number, {
   },
   10: {
     subTitle: { pt: 'Estudo de Tokens do Projeto', en: 'Project Tokens Study' },
-    desc1: { pt: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofuding, incluindo renders em 3D e telas desktop.', en: 'Creative design of NFTs and utility Tokens for the Ecofuding platform, including 3D renders and desktop screens.' },
+    desc1: { pt: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofunding, incluindo renders em 3D e telas desktop.', en: 'Creative design of NFTs and utility Tokens for the Ecofunding platform, including 3D renders and desktop screens.' },
     desc2: { pt: 'Layout de alta fidelidade integrando a linguagem de blockchain ao ecossistema verde do projeto.', en: 'High-fidelity layout integrating blockchain language with the project\'s green ecosystem.' }
   },
   19: {
@@ -735,7 +735,7 @@ const projectTranslations: Record<number, {
     desc2: { pt: 'Desenvolvido com foco no segmento corporativo e soluções B2B.', en: 'Developed with a focus on the corporate segment and B2B solutions.' }
   },
   21: {
-    subTitle: { pt: 'Portal Financeiro Fintech', en: 'Fintech Financial Portal' },
+    subTitle: { pt: 'Conceito de portal fintech', en: 'Fintech portal concept' },
     desc1: { pt: 'Portal corporativo para a Fintech Corban, aliando solidez de segurança bancária a uma linguagem visual limpa e amigável.', en: 'Corporate portal for Corban Fintech, combining the solidity of banking security with a clean and friendly visual language.' },
     desc2: { pt: 'Experiência focada no usuário final do setor financeiro moderno.', en: 'Experience focused on the end user of the modern financial sector.' }
   },
@@ -755,9 +755,9 @@ const projectTranslations: Record<number, {
     desc2: { pt: 'Projetado para maximizar a conversão com design limpo e navegação ágil.', en: 'Designed to maximize conversion with clean design and navigation.' }
   },
   12: {
-    subTitle: { pt: 'Apresentação Institucional Arcnova', en: 'Arcnova Institutional Presentation' },
-    desc1: { pt: 'Lindo deck de slides estruturado para a Arcnova, apresentando metas, cases e soluções tecnológicas da marca.', en: 'Beautiful slide deck structured for Arcnova, presenting goals, cases, and technological solutions of the brand.' },
-    desc2: { pt: 'Estilo clean e tecnológico focado em investidores e clientes corporativos.', en: 'Clean and technological style focused on investors and corporate clients.' }
+    subTitle: { pt: 'Apresentação da agência Arcnova', en: 'Arcnova agency presentation' },
+    desc1: { pt: 'Apresentação da Arcnova, agência criada em 2025, com valores, serviços e equipe.', en: 'Presentation for Arcnova, an agency founded in 2025, covering its values, services and team.' },
+    desc2: { pt: 'Paleta laranja e preto, com títulos grandes em caixa alta.', en: 'Orange and black palette with large all-caps headlines.' }
   },
   14: {
     subTitle: { pt: 'Pitch Deck Comercial', en: 'Commercial Pitch Deck' },
@@ -765,14 +765,14 @@ const projectTranslations: Record<number, {
     desc2: { pt: 'Design corporativo e elegante elaborado para aproximar marcas de entretenimento.', en: 'Corporate and elegant design crafted to bring entertainment brands together.' }
   },
   27: {
-    subTitle: { pt: 'Pitch Deck Comercial EMASFI', en: 'EMASFI Commercial Pitch Deck' },
-    desc1: { pt: 'Apresentação de slides comercial desenvolvida para a EMASFI.', en: 'Commercial slide deck developed for EMASFI.' },
-    desc2: { pt: 'Layout profissional com dados claros para prospecção de novos negócios.', en: 'Professional layout with clear data for prospecting new businesses.' }
+    subTitle: { pt: 'Slides para evento', en: 'Event slides' },
+    desc1: { pt: 'Slides de telão para a festa de 25 anos do EMASFI Group: abertura, apresentação do CEO, depoimentos e a entrega da Moeda de Mérito aos funcionários.', en: 'Stage screen slides for EMASFI Group’s 25th anniversary celebration: opening, CEO introduction, testimonials and the Merit Coin awards for employees.' },
+    desc2: { pt: 'Azul e laranja da marca em todas as telas, com o símbolo da EMASFI como base dos grafismos.', en: 'Every screen uses the brand’s blue and orange, with the EMASFI symbol as the base for the graphics.' }
   },
   13: {
-    subTitle: { pt: 'Portfólio em Slides', en: 'Portfolio in Slides' },
-    desc1: { pt: 'Portfólio comercial diagramado em slides para apresentação de projetos de design de interiores e arquitetura.', en: 'Commercial portfolio layed out in slides for presentation of interior design and architecture projects.' },
-    desc2: { pt: 'Apresentação limpa valorizando renders de alta fidelidade e estudos volumétricos.', en: 'Clean presentation emphasizing high-fidelity renders and volumetric studies.' }
+    subTitle: { pt: 'Portfólio em slides', en: 'Slide portfolio' },
+    desc1: { pt: 'Portfólio em slides para Beatriz Evangelista, social media e estrategista de conteúdo, com a trajetória dela na Carmen Steffens e no Joel Jota.', en: 'Slide portfolio for Beatriz Evangelista, a social media manager and content strategist, covering her work at Carmen Steffens and Joel Jota.' },
+    desc2: { pt: 'Inclui coberturas de eventos e cases com prints de resultados.', en: 'Also includes event coverage and case studies with results screenshots.' }
   },
   15: {
     subTitle: { pt: 'Pitch Deck Nex Playground', en: 'Nex Playground Pitch Deck' },
@@ -781,13 +781,13 @@ const projectTranslations: Record<number, {
   },
   28: {
     subTitle: { pt: 'Pitch Deck para Investidores', en: 'Pitch Deck for Investors' },
-    desc1: { pt: 'Deck de apresentação estruturado para investidores da plataforma Ecofuding.', en: 'Structured presentation deck for investors of the Ecofunding platform.' },
+    desc1: { pt: 'Deck de apresentação estruturado para investidores da plataforma Ecofunding.', en: 'Structured presentation deck for investors of the Ecofunding platform.' },
     desc2: { pt: 'Dados ambientais e modelos de tokenomics exibidos de maneira moderna e atraente.', en: 'Environmental data and tokenomics models displayed in a modern and attractive way.' }
   },
   11: {
-    subTitle: { pt: 'Pitch Deck de Aceleração', en: 'Acceleration Pitch Deck' },
-    desc1: { pt: 'Apresentação institucional e comercial desenvolvida para captação e aceleração de startups.', en: 'Institutional and commercial presentation developed for startup sourcing and acceleration.' },
-    desc2: { pt: 'Design premium focado em prender a atenção e transmitir clareza em propostas de valor.', en: 'Premium design focused on capturing attention and conveying clarity in value propositions.' }
+    subTitle: { pt: 'Slides para evento', en: 'Event slides' },
+    desc1: { pt: 'Slides de telão para o jantar de 20 anos da Acelerador Racing: abertura, vídeos institucionais, apresentação de palestrantes e um talk show empresarial.', en: 'Stage screen slides for Acelerador Racing’s 20th anniversary dinner: opening, brand videos, speaker intros and a business talk show.' },
+    desc2: { pt: 'A linguagem visual vem do automobilismo, com a bandeira quadriculada e o laranja da marca.', en: 'The visual language comes from motorsport, with checkered flag shapes and the brand’s orange.' }
   },
   24: {
     subTitle: { pt: 'Workshop de Fotografia', en: 'Photography Workshop' },
@@ -861,11 +861,6 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
   const isEn = lang === 'en';
   const labelClose = isEn ? 'CLOSE' : 'FECHAR';
   const labelBackToTop = isEn ? 'BACK TO TOP' : 'VOLTE PARA CIMA';
-  const labelClient = isEn ? 'Client' : 'Cliente';
-  const labelRole = isEn ? 'Role' : 'Função';
-  const labelYear = isEn ? 'Year' : 'Ano';
-  const labelTools = isEn ? 'Tools' : 'Ferramentas';
-  const labelDesignDirection = isEn ? 'Design & Direction' : 'Design & Direção';
 
   const safeActiveIdx = activeIdx >= 0 && activeIdx < catProjects.length ? activeIdx : 0;
 
@@ -1196,26 +1191,6 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                   </div>
                 </div>
               )}
-
-              {/* Project Details / Metadata Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-8 mt-12 mb-8">
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">{labelClient}</span>
-                  <span className="text-sm font-light text-white">{displayProject?.title}</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">{labelRole}</span>
-                  <span className="text-sm font-light text-white">{labelDesignDirection}</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">{labelYear}</span>
-                  <span className="text-sm font-light text-white">2026</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-medium uppercase tracking-widest text-white/40">{labelTools}</span>
-                  <span className="text-sm font-light text-white">Photoshop, Illustrator</span>
-                </div>
-              </div>
 
               {/* Bottom Navigation: Volte para cima & Fechar */}
               <div className="flex justify-between items-center border-t border-white/10 pt-8 mt-4 text-xs font-medium uppercase tracking-widest">
