@@ -30,6 +30,41 @@ interface Project {
 const projects: Project[] = [
   // IDENTIDADE VISUAL
   {
+    id: 29,
+    title: 'BALUARTE®',
+    logo: '/PROJECT LOGOS/LOGO BALUARTE.png',
+    subTitle: 'Manual de identidade BALUARTE',
+    img: '/PROJECTS/branding_guidelines/baluarte/01.jpg',
+    desc1: 'Identidade visual da BALUARTE, produtora criativa de vídeo, imagem e motion. O conceito vem da arquitetura defensiva: o símbolo são dois blocos separados por uma seteira cortada a 45 graus, só com retas.',
+    desc2: 'O manual traz paleta, tipografia (Benzin e Monopack), aplicações em cartão, crachá, cartaz, telão e celular, e peças em motion.',
+    behanceUrl: 'https://www.behance.net/gallery/255491763/BALUARTE',
+    category: 'BRANDING',
+    isLandscape: false,
+    objectPosition: 'top',
+    imageScale: 1.06,
+    galleryImages: [
+      '/PROJECTS/branding_guidelines/baluarte/01.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/02.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/03.mp4',
+      '/PROJECTS/branding_guidelines/baluarte/04.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/05.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/06.mp4',
+      '/PROJECTS/branding_guidelines/baluarte/07.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/08.mp4',
+      '/PROJECTS/branding_guidelines/baluarte/09.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/10.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/11.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/12.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/13.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/14.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/15.mp4',
+      '/PROJECTS/branding_guidelines/baluarte/16.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/17.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/18.jpg',
+      '/PROJECTS/branding_guidelines/baluarte/19.jpg',
+    ],
+  },
+  {
     id: 8,
     title: 'ZETTA',
     logo: '/PROJECT LOGOS/LOGO ZETTA.webp',
@@ -664,6 +699,11 @@ const projectTranslations: Record<number, {
   desc1: { pt: string; en: string };
   desc2: { pt: string; en: string };
 }> = {
+  29: {
+    subTitle: { pt: 'Manual de identidade BALUARTE', en: 'BALUARTE identity manual' },
+    desc1: { pt: 'Identidade visual da BALUARTE, produtora criativa de vídeo, imagem e motion. O conceito vem da arquitetura defensiva: o símbolo são dois blocos separados por uma seteira cortada a 45 graus, só com retas.', en: 'Visual identity for BALUARTE, a creative production studio for video, image and motion. The concept comes from defensive architecture: the symbol is two blocks split by an arrow slit cut at 45 degrees, using only straight lines.' },
+    desc2: { pt: 'O manual traz paleta, tipografia (Benzin e Monopack), aplicações em cartão, crachá, cartaz, telão e celular, e peças em motion.', en: 'The manual covers the palette, typography (Benzin and Monopack), applications on business cards, badges, posters, screens and phones, plus motion pieces.' }
+  },
   8: {
     subTitle: { pt: 'Manual de identidade Zetta', en: 'Zetta identity manual' },
     desc1: { pt: 'Identidade visual da Zetta, marca de motos e scooters elétricas de Franca: logotipo, paleta, tipografia (Zalando e Space Grotesk) e grafismos.', en: 'Visual identity for Zetta, an electric motorbike and scooter brand from Franca: logo, palette, typography (Zalando and Space Grotesk) and graphic elements.' },
@@ -1143,6 +1183,26 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
                     } else {
                       borderClass = 'border-x border-white/5';
                     }
+                  }
+
+                  if (/\.(mp4|webm)$/i.test(imgUrl)) {
+                    return (
+                      <motion.video
+                        key={imgUrl}
+                        style={{ width: '100%', height: 'auto', display: 'block', ...borderRadiusStyle }}
+                        src={imgUrl}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        aria-label={`${displayProject?.title} Video ${i + 1}`}
+                        className={`w-full object-cover transition-all duration-300 ${borderClass}`}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 * i + 0.2 }}
+                      />
+                    );
                   }
 
                   return (
