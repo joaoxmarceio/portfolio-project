@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     siteName: "João Marcelo Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/og-image-v2.jpg",
+        width: 2400,
+        height: 1260,
         alt: "João Marcelo Portfolio",
       },
     ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "©JOÃO MARCELO | Creative Director",
     description: "Selected work in brand identity, art direction, campaigns, UX/UI, landing pages and B2B presentations.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image-v2.jpg"],
   },
 };
 
