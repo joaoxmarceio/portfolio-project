@@ -34,10 +34,10 @@ const projects: Project[] = [
     title: 'ZETTA',
     logo: '/PROJECT LOGOS/LOGO ZETTA.webp',
     invertLogo: true,
-    subTitle: 'Manual de Identidade Zetta',
+    subTitle: 'Manual de identidade Zetta',
     img: '/PROJECTS/branding_guidelines/zetta_brand_kit/1.jpg',
-    desc1: 'Manual técnico e diretrizes visuais criadas para a marca Zetta.',
-    desc2: 'Explora o conceito futurista corporativo em grids estritos para mídias impressas e digitais.',
+    desc1: 'Identidade visual da Zetta, marca de motos e scooters elétricas de Franca: logotipo, paleta, tipografia (Zalando e Space Grotesk) e grafismos.',
+    desc2: 'O manual mostra a marca aplicada em uniforme, loja, redes sociais e campanha.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -58,10 +58,10 @@ const projects: Project[] = [
     title: 'LOUD®',
     logo: '/PROJECT LOGOS/LOGO LOUD.webp',
     logoHeight: 'h-20 md:h-28',
-    subTitle: 'Identity Manual',
+    subTitle: 'Manual de identidade LOUD',
     img: '/PROJECTS/branding_guidelines/loud_brand_guidelines/1.jpg',
-    desc1: 'Manual de identidade visual desenvolvido para a LOUD®.',
-    desc2: 'Foco em alinhar a comunicação estética e regras de branding da organização esports.',
+    desc1: 'Manual visual da LOUD, organização brasileira de e-sports: cores (Vivid Green e White Pearl), tipografia Space Grotesk e peças para redes sociais.',
+    desc2: 'Inclui artes de vitória, apresentação de jogadores e anúncio de drop de roupas.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -77,10 +77,10 @@ const projects: Project[] = [
     title: 'Ecofunding™',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     logoHeight: 'h-20 md:h-28',
-    subTitle: 'Manual de Identidade Visual',
+    subTitle: 'Manual de identidade Ecofunding',
     img: '/PROJECTS/branding_guidelines/eco_funding_branding_kit/1.jpg',
-    desc1: 'Manual de Identidade Visual completo desenvolvido para o projeto Ecofunding.',
-    desc2: 'Apresenta a consolidação dos grids, tipografias, grafismos secundários e renders promocionais.',
+    desc1: 'Identidade visual da Ecofunding, plataforma de investimento em projetos com critérios ESG: símbolo, versões do logotipo, paleta verde e cinza e tipografia (Lexend e DM Sans).',
+    desc2: 'Aplicações em app, redes sociais, papelaria, jaqueta e painéis urbanos.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -100,10 +100,10 @@ const projects: Project[] = [
     id: 4,
     title: 'Moirarte®',
     logo: '/PROJECT LOGOS/LOGO MOIRARTE.webp',
-    subTitle: 'Manual de Marca',
+    subTitle: 'Manual de identidade Moirarte',
     img: '/PROJECTS/branding_guidelines/MOIRARTE/1.jpg',
-    desc1: 'Projeto de branding para a Moirarte, apresentando as inspirações do logotipo, variações cromáticas e regras de assinatura visual.',
-    desc2: 'Alinha estética refinada com solidez corporativa para destacar a atuação artística da marca.',
+    desc1: 'Manual de identidade da Moirarte, marca de string art. O nome junta o moiré, efeito de tramas sobrepostas, com as Moiras gregas, que tecem o fio da vida.',
+    desc2: 'Inclui símbolo inspirado em busto clássico, paleta, tipografia, grafismos, embalagem e um guia de direção fotográfica.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -122,10 +122,10 @@ const projects: Project[] = [
     id: 7,
     title: 'Sucorama',
     logo: '/PROJECT LOGOS/LOGO SUCORAMA.webp',
-    subTitle: 'Manual de Identidade Sucorama',
+    subTitle: 'Manual de identidade Sucorama',
     img: '/PROJECTS/branding_guidelines/sucorama_brand_identity/manual_de_identidade_sucorama_1.jpg',
-    desc1: 'Guia visual e manual prático desenvolvido para a identidade visual da Sucorama.',
-    desc2: 'Estruturação conceitual focada em dar vida e cor para a marca de sucos saudáveis.',
+    desc1: 'Manual de identidade da Sucorama, marca de suco de laranja natural: logotipo, paleta, tipografia (Lemonilla e Kodchasan) e posts para Instagram.',
+    desc2: 'Aplicações em garrafa, caixa de transporte, outdoor, ponto de ônibus e caminhão de entrega.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -161,10 +161,10 @@ const projects: Project[] = [
     id: 3,
     title: 'NEXT',
     logo: '/PROJECT LOGOS/LOGO NEXT.webp',
-    subTitle: 'Brand Guidelines',
+    subTitle: 'Manual de identidade NEXT',
     img: '/PROJECTS/branding_guidelines/manual_next/cover.jpg',
-    desc1: 'Diretrizes de marca para o ecossistema Next. Apresenta o grid construtivo do logotipo e o comportamento tipográfico oficial.',
-    desc2: 'Estruturação focada em guiar designers e desenvolvedores na manutenção da consistência visual da marca.',
+    desc1: 'Manual de identidade da NEXT Planejamento e Gestão, consultoria de gestão empresarial: logotipo, símbolo em X, paleta laranja e azul e tipografia Neue Haas Grotesk.',
+    desc2: 'Aplicações em papelaria, relógio, telão e materiais digitais.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -180,10 +180,10 @@ const projects: Project[] = [
     id: 6,
     title: 'Altitude 1100 Café',
     logo: '/PROJECT LOGOS/LOGO CAFE ALTITUDE.webp',
-    subTitle: 'Manual de Identidade do Café',
+    subTitle: 'Manual de identidade Altitude 1100',
     img: '/PROJECTS/branding_guidelines/manual_de_identidade_cafe_altitude1100/1.jpg',
-    desc1: 'Manual de Identidade de marca criado para a marca de Café Altitude 1100.',
-    desc2: 'Design visual integrado focado em expressar a tradição e aroma do café especial das montanhas.',
+    desc1: 'Manual de identidade do Café Altitude 1100, marca de café especial: símbolo de montanha, ilustrações de grãos e folhas, paleta e tipografia (Degular e Syne).',
+    desc2: 'Aplicações em copo, sacola, embalagem de grãos, papelaria e outdoor.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -196,10 +196,10 @@ const projects: Project[] = [
   {
     id: 2,
     title: 'Agiliza',
-    subTitle: 'Identity Guidelines',
+    subTitle: 'Manual de identidade Agiliza',
     img: '/PROJECTS/branding_guidelines/AGILIZA/1.jpg',
-    desc1: 'Manual de aplicação de marca desenvolvido para a Agiliza, detalhando a paleta cromática, área de proteção e aplicação em diferentes fundos.',
-    desc2: 'Foco na versatilidade da marca para garantir legibilidade e impacto visual em todas as mídias.',
+    desc1: 'Manual de identidade da Agiliza, empresa de soluções empresariais: logotipo, versões sobre fundos de cor, paleta (laranja-tropical, vermelho-marfim e azul-coral) e tipografia (Inter Tight e Tektur).',
+    desc2: 'Mostra a marca aplicada em site e peças digitais.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -217,10 +217,10 @@ const projects: Project[] = [
     id: 1,
     title: 'INOWAVE®',
     logo: '/PROJECT LOGOS/LOGO INOWAVE.webp',
-    subTitle: 'Manual de Identidade Visual',
+    subTitle: 'Manual de identidade Inowave',
     img: '/PROJECTS/branding_guidelines/inowave_brand_guidelines/capa.jpg',
-    desc1: 'Manual de identidade visual desenvolvido para a Inowave. O projeto aborda a construção da marca, paleta de cores institucional, regras de aplicação tipográfica e diagramação.',
-    desc2: 'Design minimalista corporativo com alta consistência estética para aplicações físicas e digitais.',
+    desc1: 'Manual de identidade da Inowave, agência de branding e marketing, de 2023. Design e lettering do logotipo por João Marcelo, ícone por Guilherme Poppi Pavão.',
+    desc2: 'Inclui paleta de quatro cores, tipografia Stretch Pro e aplicações em cartaz, outdoor, bottons e ecobag.',
     behanceUrl: 'https://www.behance.net',
     category: 'BRANDING',
     isLandscape: false,
@@ -243,10 +243,10 @@ const projects: Project[] = [
     id: 20,
     title: 'WANDRMEDIA',
     logo: '/PROJECT LOGOS/LOGO WANDRMEDIA.png',
-    subTitle: 'Marketing Landing Page Layout',
+    subTitle: 'Landing page WANDR Media',
     img: '/PROJECTS/ux_ui/wandrmedia_landing_page.jpg',
-    desc1: 'Landing page projetada para a agência WandrMedia, destacando depoimentos de clientes e portfólio visual.',
-    desc2: 'Diagramação focada em leitura rápida e conversão de novos contatos de negócios.',
+    desc1: 'Landing page da WANDR Media, agência de marketing em redes sociais para a cena de música eletrônica e festivais.',
+    desc2: 'A página apresenta a rede de influenciadores, os serviços e os vídeos curtos da agência.',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
@@ -258,10 +258,10 @@ const projects: Project[] = [
     title: 'Ecofunding™ Tokens',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     logoHeight: 'h-20 md:h-28',
-    subTitle: 'Estudo de Tokens do Projeto',
+    subTitle: 'Projeto Genesis e tokens',
     img: '/PROJECTS/case_study/ecofunding_tokens/documento_tokens_1.jpg',
-    desc1: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofunding, incluindo renders em 3D e telas desktop.',
-    desc2: 'Layout de alta fidelidade integrando a linguagem de blockchain ao ecossistema verde do projeto.',
+    desc1: 'Direção de arte do Projeto Genesis, da Ecofunding: a moeda NFT Ecofounder e os tokens Ecoland, Ecoland Slice e Ecocarbon.',
+    desc2: 'Renders 3D feitos no Blender, com variações de ângulo e versões para o site.',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
@@ -287,10 +287,10 @@ const projects: Project[] = [
     title: 'GGEZ MEDIA™',
     logo: '/PROJECT LOGOS/LOGO GGEZ.png',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Gaming Portal UI Design',
+    subTitle: 'Site da GGEZ Media',
     img: '/PROJECTS/ux_ui/ggez_website.jpg',
-    desc1: 'Portal de notícias e campeonatos gamer GGEZ. Traz cores escuras de alto contraste e componentes dedicados à comunidade de e-sports.',
-    desc2: 'Layout ágil e componentes responsivos pensados na melhor experiência de uso gamer.',
+    desc1: 'Site da GGEZ Media, produtora americana de vídeo e design: serviços, trabalhos recentes, notícias e contato.',
+    desc2: 'Layout escuro com fotos recortadas de talentos e uma faixa com marcas atendidas, como BET, Blizzard e Roku.',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
@@ -301,10 +301,10 @@ const projects: Project[] = [
     id: 17,
     title: 'Digitus',
     logo: '/PROJECT LOGOS/LOGO DIGITUS.webp',
-    subTitle: 'Landing Page & Dashboard Design',
+    subTitle: 'Site Digitus Promotora',
     img: '/PROJECTS/ux_ui/digitus_website.jpg',
-    desc1: 'Concepção visual do website institucional Digitus. O layout traz foco em usabilidade, contraste elevado e visualização limpa de dados.',
-    desc2: 'Interface otimizada para navegabilidade e conversão eficiente de leads.',
+    desc1: 'Site da Digitus Promotora, promotora de crédito, com área do parceiro, formulário de cadastro e seções de missão, visão e valores.',
+    desc2: 'Os textos ainda são provisórios (lorem ipsum).',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
@@ -316,10 +316,10 @@ const projects: Project[] = [
     title: 'Corban Fintech',
     logo: '/PROJECT LOGOS/FINTECH CORBAN.png',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Digital Banking UI Concept',
+    subTitle: 'Conceito de site fintech',
     img: '/PROJECTS/ux_ui/website_fintech_corban.jpg',
-    desc1: 'Portal corporativo para a Fintech Corban, aliando solidez de segurança bancária a uma linguagem visual limpa e amigável.',
-    desc2: 'Integra fluxos claros de simulação de crédito e benefícios.',
+    desc1: 'Conceito de site para a Fintech Corban, correspondente bancário: serviços, área do parceiro e versão para celular.',
+    desc2: 'Os textos ainda são provisórios (lorem ipsum).',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
@@ -331,10 +331,10 @@ const projects: Project[] = [
     title: 'Flying Studio',
     logo: '/PROJECT LOGOS/LOGO FLYING STUDIO.webp',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Corporate Website Concept',
+    subTitle: 'Conceito de site Flying Studio',
     img: '/PROJECTS/ux_ui/flying_studio.jpg',
-    desc1: 'Estudo de interface para o Flying Studio, integrando animações dinâmicas e grades geométricas no frontend.',
-    desc2: 'Foco na expressão criativa através da tipografia fluida e navegação por gestos.',
+    desc1: 'Conceito de site para o Flying Studio, estúdio de visualização 3D para o mercado imobiliário: tour 360°, realidade virtual, imagens e filmes 3D.',
+    desc2: 'Tem galeria de empreendimentos e marcas atendidas. Os textos ainda são provisórios.',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
@@ -346,10 +346,10 @@ const projects: Project[] = [
     title: 'VALORANT® SOVA Twitch Layout',
     logo: '/PROJECT LOGOS/SOVA.png',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Overlays e Painéis da Twitch',
+    subTitle: 'Kit para stream na Twitch',
     img: '/PROJECTS/ux_ui/sova/sova.jpg',
-    desc1: 'Kit completo de branding e identidade visual para streamers desenvolvido para o canal do Sova.',
-    desc2: 'Inclui overlays de webcam, telas offline, painéis de spec do PC, redes sociais, sub e donate.',
+    desc1: 'Kit para um canal de Valorant na Twitch, com o agente Sova como tema: telas de abertura, online e offline, moldura de webcam e painéis.',
+    desc2: 'Painéis para doação, loja, specs do PC, sobre mim, subs e Twitter.',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
@@ -373,10 +373,10 @@ const projects: Project[] = [
     id: 22,
     title: 'Mepo Website',
     logo: '/PROJECT LOGOS/LOGO MEPO.webp',
-    subTitle: 'E-commerce UI/UX Layout',
+    subTitle: 'Conceito de site Mepo',
     img: '/PROJECTS/ux_ui/website_mepo.jpg',
-    desc1: 'Interface minimalista para e-commerce de moda, focada na exibição das peças e facilidade no fluxo de checkout.',
-    desc2: 'Estética clean que valoriza as cores e detalhes das fotografias de produto.',
+    desc1: 'Conceito de site para a Mepo, agência de eventos corporativos e marketing: serviços, clientes, cases, depoimentos e contato.',
+    desc2: 'Os textos ainda são provisórios (lorem ipsum).',
     behanceUrl: 'https://www.behance.net',
     category: 'UX_UI',
     isLandscape: true,
@@ -411,10 +411,10 @@ const projects: Project[] = [
     title: 'Twitch® Khleo Thomas',
     logo: '/PROJECT LOGOS/LOGO TWITCH KHLEO THOMAS.png',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Pitch Deck Comercial',
+    subTitle: 'Pitch deck para a Twitch',
     img: '/PROJECTS/decks/khleo_thomas_pitch_deck/1.jpg',
-    desc1: 'Pitch deck comercial criado para apresentação de projetos de entretenimento de Khleo Thomas.',
-    desc2: 'Diagramação no padrão horizontal (16:9) focada no mercado americano de mídia.',
+    desc1: 'Pitch deck de formatos para a Twitch apresentados por Khleo Thomas, ator e criador de conteúdo americano.',
+    desc2: 'Cada formato tem premissa e regras, como o game show ao vivo Chat Chaos.',
     behanceUrl: 'https://www.behance.net',
     category: 'DECKS',
     isLandscape: true,
@@ -483,10 +483,10 @@ const projects: Project[] = [
     title: 'NEX Playground™ | Khleo Thomas',
     logo: '/PROJECT LOGOS/LOGO NEX PLAYGROUND.webp',
     logoHeight: 'h-24 md:h-32',
-    subTitle: 'Playground Presentation Deck',
+    subTitle: 'Deck para a Nex Playground',
     img: '/PROJECTS/decks/nex_playground_deck/1.jpg',
-    desc1: 'Deck de apresentação promocional para o ecossistema Nex Playground.',
-    desc2: 'Design futurista e dinâmico, focado na melhor transmissão conceitual do ecossistema.',
+    desc1: 'Deck que apresenta Khleo Thomas à Nex Playground, console de jogos por movimento, com a proposta de uma série de desafios com celebridades.',
+    desc2: 'Mostra objetivo, convidados e como a marca aparece no YouTube e no Instagram.',
     behanceUrl: 'https://www.behance.net',
     category: 'DECKS',
     isLandscape: true,
@@ -504,10 +504,10 @@ const projects: Project[] = [
     title: 'Ecofunding™ Pitch Deck',
     logo: '/PROJECT LOGOS/LOGO ECOFUNDING.webp',
     logoHeight: 'h-20 md:h-28',
-    subTitle: 'Investor Deck Presentation',
+    subTitle: 'Pitch deck para investidores',
     img: '/PROJECTS/decks/ecofounding_pitch_deck/ecofunding_deck_page_1.jpg',
-    desc1: 'Deck de apresentação estruturado para investidores da plataforma Ecofunding.',
-    desc2: 'Explica a visão, tecnologia, mercado e a distribuição de tokens do projeto.',
+    desc1: 'Pitch deck da Ecofunding para investidores: problema, proposta de valor, tecnologia, modelo de receita e tamanho de mercado.',
+    desc2: 'Fecha com tabela de concorrentes e roadmap, na mesma identidade verde da marca.',
     behanceUrl: 'https://www.behance.net',
     category: 'DECKS',
     isLandscape: true,
@@ -557,10 +557,10 @@ const projects: Project[] = [
   {
     id: 24,
     title: 'Rafael Edison | Workshop',
-    subTitle: 'Workshop Social Media Pack',
+    subTitle: 'Workshop de audiovisual',
     img: '/PROJECTS/workshop/rafael_edison/feed.jpg',
-    desc1: 'Pacote de layouts promocionais criado para divulgação do Workshop do fotógrafo Rafael Edison nas redes sociais.',
-    desc2: 'Consiste em banners institucionais, posts de feed e stories minimalistas com tipografia elegante.',
+    desc1: 'Peças para o workshop do Rafael Edison em São Paulo, em julho de 2025: feed, story e banners.',
+    desc2: 'Colagem em vermelho com o Rafael no centro e equipe de filmagem ao fundo.',
     behanceUrl: 'https://www.behance.net',
     category: 'FLYERS',
     isLandscape: true,
@@ -575,10 +575,10 @@ const projects: Project[] = [
   {
     id: 25,
     title: 'Tarricone | Workshop',
-    subTitle: 'Promotional Branding Poster',
+    subTitle: 'Proposta de pôster',
     img: '/PROJECTS/workshop/tarricone_workshop.jpg',
-    desc1: 'Peças publicitárias desenvolvidas para o Workshop Tarricone, focado em desenvolvimento de marca e marketing digital.',
-    desc2: 'Criação de identidade visual temporária e posters de divulgação.',
+    desc1: 'Proposta de pôster para o workshop de Henrique Tarricone em São Paulo.',
+    desc2: 'A data e as chamadas ainda são provisórias.',
     behanceUrl: 'https://www.behance.net',
     category: 'FLYERS',
     isLandscape: true,
@@ -588,10 +588,10 @@ const projects: Project[] = [
   {
     id: 16,
     title: 'HB Entertainment',
-    subTitle: 'Design de Flyers Promocionais',
+    subTitle: 'Flyers de festas',
     img: '/PROJECTS/event_flyers/hb_entertainment_event_flyers/get_loud.jpg',
-    desc1: 'Série de flyers desenvolvidos para festas e eventos noturnos, explorando tipografia urbana, montagens dinâmicas e cores vibrantes.',
-    desc2: 'Materiais publicitários projetados especificamente para alto engajamento em redes sociais e Stories.',
+    desc1: 'Flyers para festas da HB Entertainment na Califórnia, como a Nostalgia (hip-hop e R&B dos anos 2000) e a getLOUD!!!.',
+    desc2: 'Cada flyer muda de estética conforme o tema, do grafite ao rosa anos 2000.',
     behanceUrl: 'https://www.behance.net',
     category: 'FLYERS',
     isLandscape: true,
@@ -665,29 +665,29 @@ const projectTranslations: Record<number, {
   desc2: { pt: string; en: string };
 }> = {
   8: {
-    subTitle: { pt: 'Manual de Identidade Zetta', en: 'Zetta Identity Manual' },
-    desc1: { pt: 'Manual técnico e diretrizes visuais criadas para a marca Zetta.', en: 'Technical manual and visual guidelines created for the Zetta brand.' },
-    desc2: { pt: 'O projeto foca no uso correto do logotipo, tipografia e comportamento cromático.', en: 'The project focuses on the correct use of the logo, typography, and chromatic behavior.' }
+    subTitle: { pt: 'Manual de identidade Zetta', en: 'Zetta identity manual' },
+    desc1: { pt: 'Identidade visual da Zetta, marca de motos e scooters elétricas de Franca: logotipo, paleta, tipografia (Zalando e Space Grotesk) e grafismos.', en: 'Visual identity for Zetta, an electric motorbike and scooter brand from Franca: logo, palette, typography (Zalando and Space Grotesk) and graphic elements.' },
+    desc2: { pt: 'O manual mostra a marca aplicada em uniforme, loja, redes sociais e campanha.', en: 'The manual shows the brand on uniforms, the store, social media and campaign imagery.' }
   },
   26: {
-    subTitle: { pt: 'Manual de Identidade Visual LOUD', en: 'LOUD Identity Manual' },
-    desc1: { pt: 'Manual de identidade visual desenvolvido para a LOUD®.', en: 'Visual identity manual developed for LOUD®.' },
-    desc2: { pt: 'Define paleta cromática secundária, variações autorizadas de logotipo e aplicações físicas e digitais da marca.', en: 'Defines secondary color palette, authorized logo variations, and physical and digital applications of the brand.' }
+    subTitle: { pt: 'Manual de identidade LOUD', en: 'LOUD identity manual' },
+    desc1: { pt: 'Manual visual da LOUD, organização brasileira de e-sports: cores (Vivid Green e White Pearl), tipografia Space Grotesk e peças para redes sociais.', en: 'Visual guidelines for LOUD, the Brazilian esports organization: colors (Vivid Green and White Pearl), Space Grotesk typography and social media pieces.' },
+    desc2: { pt: 'Inclui artes de vitória, apresentação de jogadores e anúncio de drop de roupas.', en: 'Includes match win graphics, player announcements and a merch drop post.' }
   },
   5: {
-    subTitle: { pt: 'Manual de Identidade Visual Ecofunding', en: 'Ecofunding Identity Manual' },
-    desc1: { pt: 'Manual de Identidade Visual completo desenvolvido para o projeto Ecofunding.', en: 'Complete Visual Identity manual developed for the Ecofunding project.' },
-    desc2: { pt: 'Foco na fusão conceitual de ativos ecológicos e tecnologia Web3.', en: 'Focus on the conceptual fusion of ecological assets and Web3 technology.' }
+    subTitle: { pt: 'Manual de identidade Ecofunding', en: 'Ecofunding identity manual' },
+    desc1: { pt: 'Identidade visual da Ecofunding, plataforma de investimento em projetos com critérios ESG: símbolo, versões do logotipo, paleta verde e cinza e tipografia (Lexend e DM Sans).', en: 'Visual identity for Ecofunding, an investment platform for ESG-rated projects: symbol, logo versions, green and gray palette, and typography (Lexend and DM Sans).' },
+    desc2: { pt: 'Aplicações em app, redes sociais, papelaria, jaqueta e painéis urbanos.', en: 'Applied to an app, social media, stationery, a jacket and outdoor panels.' }
   },
   4: {
-    subTitle: { pt: 'Estudo de Marca Moirarte', en: 'Moirarte Brand Study' },
-    desc1: { pt: 'Projeto de branding para a Moirarte, apresentando as inspirações do logotipo, variações cromáticas e regras de assinatura visual.', en: 'Branding project for Moirarte, presenting the logo inspirations, chromatic variations, and visual signature rules.' },
-    desc2: { pt: 'Garante o alinhamento estético sofisticado exigido pelo posicionamento de mercado da marca.', en: 'Ensures the sophisticated aesthetic alignment required by the brand\'s market positioning.' }
+    subTitle: { pt: 'Manual de identidade Moirarte', en: 'Moirarte identity manual' },
+    desc1: { pt: 'Manual de identidade da Moirarte, marca de string art. O nome junta o moiré, efeito de tramas sobrepostas, com as Moiras gregas, que tecem o fio da vida.', en: 'Identity manual for Moirarte, a string art brand. The name combines moiré, the effect of overlapping weaves, with the Greek Moirai, who spin the thread of life.' },
+    desc2: { pt: 'Inclui símbolo inspirado em busto clássico, paleta, tipografia, grafismos, embalagem e um guia de direção fotográfica.', en: 'Includes a symbol based on a classical bust, palette, typography, graphic elements, packaging and a photo direction guide.' }
   },
   7: {
-    subTitle: { pt: 'Guia Visual Sucorama', en: 'Sucorama Visual Guide' },
-    desc1: { pt: 'Guia visual e manual prático desenvolvido para a identidade visual da Sucorama.', en: 'Visual guide and practical manual developed for the visual identity of Sucorama.' },
-    desc2: { pt: 'Definições estéticas focadas em expressar naturalidade e energia saudável.', en: 'Aesthetic definitions focused on expressing naturalness and healthy energy.' }
+    subTitle: { pt: 'Manual de identidade Sucorama', en: 'Sucorama identity manual' },
+    desc1: { pt: 'Manual de identidade da Sucorama, marca de suco de laranja natural: logotipo, paleta, tipografia (Lemonilla e Kodchasan) e posts para Instagram.', en: 'Identity manual for Sucorama, a natural orange juice brand: logo, palette, typography (Lemonilla and Kodchasan) and Instagram posts.' },
+    desc2: { pt: 'Aplicações em garrafa, caixa de transporte, outdoor, ponto de ônibus e caminhão de entrega.', en: 'Applied to the bottle, shipping box, billboard, bus shelter and delivery truck.' }
   },
   9: {
     subTitle: { pt: 'Estudo de caso Esportsbet.io', en: 'Esportsbet.io case study' },
@@ -695,64 +695,64 @@ const projectTranslations: Record<number, {
     desc2: { pt: 'Inclui infográficos de palpites para campeonatos como LCS, LCK, ESL Pro League e PGL Major.', en: 'Also includes prediction infographics for tournaments like LCS, LCK, ESL Pro League and the PGL Major.' }
   },
   3: {
-    subTitle: { pt: 'Manual de Identidade Next', en: 'Next Identity Manual' },
-    desc1: { pt: 'Diretrizes de marca para o ecossistema Next. Apresenta o grid construtivo do logotipo e o comportamento tipográfico oficial.', en: 'Brand guidelines for the Next ecosystem. It presents the logo constructive grid and the official typographic behavior.' },
-    desc2: { pt: 'Design limpo e técnico orientado para tecnologia de ponta.', en: 'Clean and technical design oriented for cutting-edge technology.' }
+    subTitle: { pt: 'Manual de identidade NEXT', en: 'NEXT identity manual' },
+    desc1: { pt: 'Manual de identidade da NEXT Planejamento e Gestão, consultoria de gestão empresarial: logotipo, símbolo em X, paleta laranja e azul e tipografia Neue Haas Grotesk.', en: 'Identity manual for NEXT Planejamento e Gestão, a business management consultancy: logo, X symbol, orange and blue palette and Neue Haas Grotesk typography.' },
+    desc2: { pt: 'Aplicações em papelaria, relógio, telão e materiais digitais.', en: 'Applied to stationery, a smartwatch, a screen and digital materials.' }
   },
   6: {
-    subTitle: { pt: 'Estudo de Marca Altitude 1100', en: 'Altitude 1100 Brand Study' },
-    desc1: { pt: 'Manual de Identidade de marca criado para a marca de Café Altitude 1100.', en: 'Brand Identity manual created for the Altitude 1100 Coffee brand.' },
-    desc2: { pt: 'Combinação clássica e rústica para traduzir a origem do grão selecionado.', en: 'Classic and rustic combination to translate the origin of the selected bean.' }
+    subTitle: { pt: 'Manual de identidade Altitude 1100', en: 'Altitude 1100 identity manual' },
+    desc1: { pt: 'Manual de identidade do Café Altitude 1100, marca de café especial: símbolo de montanha, ilustrações de grãos e folhas, paleta e tipografia (Degular e Syne).', en: 'Identity manual for Café Altitude 1100, a specialty coffee brand: mountain symbol, bean and leaf illustrations, palette and typography (Degular and Syne).' },
+    desc2: { pt: 'Aplicações em copo, sacola, embalagem de grãos, papelaria e outdoor.', en: 'Applied to cups, bags, coffee packaging, stationery and a billboard.' }
   },
   2: {
-    subTitle: { pt: 'Estudo de Marca Agiliza', en: 'Agiliza Brand Study' },
-    desc1: { pt: 'Manual de aplicação de marca desenvolvido para a Agiliza, detalhando a paleta cromática, área de proteção e aplicação em diferentes fundos.', en: 'Brand application manual developed for Agiliza, detailing the color palette, protection zone, and application on different backgrounds.' },
-    desc2: { pt: 'Diretrizes focadas em usabilidade e forte apelo visual.', en: 'Guidelines focused on usability and strong visual appeal.' }
+    subTitle: { pt: 'Manual de identidade Agiliza', en: 'Agiliza identity manual' },
+    desc1: { pt: 'Manual de identidade da Agiliza, empresa de soluções empresariais: logotipo, versões sobre fundos de cor, paleta (laranja-tropical, vermelho-marfim e azul-coral) e tipografia (Inter Tight e Tektur).', en: 'Identity manual for Agiliza, a business services company: logo, versions on color backgrounds, palette (tropical orange, ivory red and coral blue) and typography (Inter Tight and Tektur).' },
+    desc2: { pt: 'Mostra a marca aplicada em site e peças digitais.', en: 'Shows the brand on a website and digital pieces.' }
   },
   1: {
-    subTitle: { pt: 'Manual de Identidade Inowave', en: 'Inowave Identity Manual' },
-    desc1: { pt: 'Manual de identidade visual desenvolvido para a Inowave. O projeto aborda a construção da marca, paleta de cores institucional, regras de aplicação tipográfica e diagramação.', en: 'Visual identity manual developed for Inowave. The project covers brand construction, institutional color palette, typographic application rules, and layout.' },
-    desc2: { pt: 'Desenvolvido para representar inovação tecnológica de forma minimalista.', en: 'Developed to represent technological innovation in a minimalist way.' }
+    subTitle: { pt: 'Manual de identidade Inowave', en: 'Inowave identity manual' },
+    desc1: { pt: 'Manual de identidade da Inowave, agência de branding e marketing, de 2023. Design e lettering do logotipo por João Marcelo, ícone por Guilherme Poppi Pavão.', en: 'Identity manual for Inowave, a branding and marketing agency, from 2023. Logo design and lettering by João Marcelo, icon by Guilherme Poppi Pavão.' },
+    desc2: { pt: 'Inclui paleta de quatro cores, tipografia Stretch Pro e aplicações em cartaz, outdoor, bottons e ecobag.', en: 'Includes a four-color palette, Stretch Pro typography and applications on posters, billboards, pins and tote bags.' }
   },
   20: {
-    subTitle: { pt: 'Estudo de Caso de Landing Page', en: 'Landing Page Case Study' },
-    desc1: { pt: 'Landing page projetada para a agência WandrMedia, destacando depoimentos de clientes e portfólio visual.', en: 'Landing page designed for the WandrMedia agency, highlighting client testimonials and a visual portfolio.' },
-    desc2: { pt: 'Layout responsivo e moderno otimizado para conversões.', en: 'Responsive and modern layout optimized for conversions.' }
+    subTitle: { pt: 'Landing page WANDR Media', en: 'WANDR Media landing page' },
+    desc1: { pt: 'Landing page da WANDR Media, agência de marketing em redes sociais para a cena de música eletrônica e festivais.', en: 'Landing page for WANDR Media, a social media marketing agency for the electronic music and festival scene.' },
+    desc2: { pt: 'A página apresenta a rede de influenciadores, os serviços e os vídeos curtos da agência.', en: 'The page presents the agency’s influencer network, services and short-form videos.' }
   },
   10: {
-    subTitle: { pt: 'Estudo de Tokens do Projeto', en: 'Project Tokens Study' },
-    desc1: { pt: 'Concepção criativa de NFTs e Tokens utilitários para a plataforma Ecofunding, incluindo renders em 3D e telas desktop.', en: 'Creative design of NFTs and utility Tokens for the Ecofunding platform, including 3D renders and desktop screens.' },
-    desc2: { pt: 'Layout de alta fidelidade integrando a linguagem de blockchain ao ecossistema verde do projeto.', en: 'High-fidelity layout integrating blockchain language with the project\'s green ecosystem.' }
+    subTitle: { pt: 'Projeto Genesis e tokens', en: 'Genesis Project and tokens' },
+    desc1: { pt: 'Direção de arte do Projeto Genesis, da Ecofunding: a moeda NFT Ecofounder e os tokens Ecoland, Ecoland Slice e Ecocarbon.', en: 'Art direction for Ecofunding’s Genesis Project: the Ecofounder NFT coin and the Ecoland, Ecoland Slice and Ecocarbon tokens.' },
+    desc2: { pt: 'Renders 3D feitos no Blender, com variações de ângulo e versões para o site.', en: '3D renders made in Blender, with angle variations and versions for the website.' }
   },
   19: {
-    subTitle: { pt: 'Portal Gamer de e-Sports', en: 'Gamer e-Sports Portal' },
-    desc1: { pt: 'Portal de notícias e campeonatos gamer GGEZ. Traz cores escuras de alto contraste e componentes dedicados à comunidade de e-sports.', en: 'GGEZ gamer news and tournament portal. It features high-contrast dark colors and components dedicated to the e-sports community.' },
-    desc2: { pt: 'Layout moderno e intuitivo ideal para leitura dinâmica de atualizações do ecossistema gamer.', en: 'Modern and intuitive layout ideal for dynamic reading of gaming ecosystem updates.' }
+    subTitle: { pt: 'Site da GGEZ Media', en: 'GGEZ Media website' },
+    desc1: { pt: 'Site da GGEZ Media, produtora americana de vídeo e design: serviços, trabalhos recentes, notícias e contato.', en: 'Website for GGEZ Media, a US video and design studio: services, recent work, news and contact.' },
+    desc2: { pt: 'Layout escuro com fotos recortadas de talentos e uma faixa com marcas atendidas, como BET, Blizzard e Roku.', en: 'Dark layout with cut-out talent photos and a strip of clients such as BET, Blizzard and Roku.' }
   },
   17: {
-    subTitle: { pt: 'Estudo de Interface Corporativa', en: 'Corporate Interface Study' },
-    desc1: { pt: 'Concepção visual do website institucional Digitus. O layout traz foco em usabilidade, contraste elevado e visualização limpa de dados.', en: 'Visual design of the Digitus institutional website. The layout focuses on usability, high contrast, and clean data visualization.' },
-    desc2: { pt: 'Desenvolvido com foco no segmento corporativo e soluções B2B.', en: 'Developed with a focus on the corporate segment and B2B solutions.' }
+    subTitle: { pt: 'Site Digitus Promotora', en: 'Digitus Promotora website' },
+    desc1: { pt: 'Site da Digitus Promotora, promotora de crédito, com área do parceiro, formulário de cadastro e seções de missão, visão e valores.', en: 'Website for Digitus Promotora, a credit services company, with a partner area, sign-up form and mission, vision and values sections.' },
+    desc2: { pt: 'Os textos ainda são provisórios (lorem ipsum).', en: 'The copy is still placeholder text (lorem ipsum).' }
   },
   21: {
-    subTitle: { pt: 'Conceito de portal fintech', en: 'Fintech portal concept' },
-    desc1: { pt: 'Portal corporativo para a Fintech Corban, aliando solidez de segurança bancária a uma linguagem visual limpa e amigável.', en: 'Corporate portal for Corban Fintech, combining the solidity of banking security with a clean and friendly visual language.' },
-    desc2: { pt: 'Experiência focada no usuário final do setor financeiro moderno.', en: 'Experience focused on the end user of the modern financial sector.' }
+    subTitle: { pt: 'Conceito de site fintech', en: 'Fintech website concept' },
+    desc1: { pt: 'Conceito de site para a Fintech Corban, correspondente bancário: serviços, área do parceiro e versão para celular.', en: 'Website concept for Fintech Corban, a banking correspondent: services, partner area and a mobile version.' },
+    desc2: { pt: 'Os textos ainda são provisórios (lorem ipsum).', en: 'The copy is still placeholder text (lorem ipsum).' }
   },
   18: {
-    subTitle: { pt: 'Estudo de Interface Geométrica', en: 'Geometric Interface Study' },
-    desc1: { pt: 'Estudo de interface para o Flying Studio, integrando animações dinâmicas e grades geométricas no frontend.', en: 'Interface study for Flying Studio, integrating dynamic animations and geometric grids in the frontend.' },
-    desc2: { pt: 'Proposta estética que celebra a proporção e a composição de forma inovadora.', en: 'Aesthetic proposal celebrating proportion and composition in an innovative way.' }
+    subTitle: { pt: 'Conceito de site Flying Studio', en: 'Flying Studio website concept' },
+    desc1: { pt: 'Conceito de site para o Flying Studio, estúdio de visualização 3D para o mercado imobiliário: tour 360°, realidade virtual, imagens e filmes 3D.', en: 'Website concept for Flying Studio, a 3D visualization studio for real estate: 360° tours, virtual reality, 3D images and films.' },
+    desc2: { pt: 'Tem galeria de empreendimentos e marcas atendidas. Os textos ainda são provisórios.', en: 'Includes a gallery of developments and clients. The copy is still placeholder text.' }
   },
   23: {
-    subTitle: { pt: 'Kit de Streamer e Redes Sociais', en: 'Streamer & Social Media Kit' },
-    desc1: { pt: 'Kit completo de branding e identidade visual para streamers desenvolvido para o canal do Sova.', en: 'Complete branding and visual identity kit for streamers developed for Sova\'s channel.' },
-    desc2: { pt: 'Desenvolvido para criar uma conexão profunda com o público gamer através de assets dinâmicos.', en: 'Developed to create a deep connection with the gaming audience through dynamic assets.' }
+    subTitle: { pt: 'Kit para stream na Twitch', en: 'Twitch stream kit' },
+    desc1: { pt: 'Kit para um canal de Valorant na Twitch, com o agente Sova como tema: telas de abertura, online e offline, moldura de webcam e painéis.', en: 'Kit for a Valorant channel on Twitch, themed around the agent Sova: intro, online and offline screens, webcam frame and panels.' },
+    desc2: { pt: 'Painéis para doação, loja, specs do PC, sobre mim, subs e Twitter.', en: 'Panels for donations, shop, PC specs, about me, subs and Twitter.' }
   },
   22: {
-    subTitle: { pt: 'Estudo de Interface de E-commerce', en: 'E-commerce Interface Study' },
-    desc1: { pt: 'Interface minimalista para e-commerce de moda, focada na exibição das peças e facilidade no fluxo de checkout.', en: 'Minimalist interface for fashion e-commerce, focused on displaying items and ease in the checkout flow.' },
-    desc2: { pt: 'Projetado para maximizar a conversão com design limpo e navegação ágil.', en: 'Designed to maximize conversion with clean design and navigation.' }
+    subTitle: { pt: 'Conceito de site Mepo', en: 'Mepo website concept' },
+    desc1: { pt: 'Conceito de site para a Mepo, agência de eventos corporativos e marketing: serviços, clientes, cases, depoimentos e contato.', en: 'Website concept for Mepo, a corporate events and marketing agency: services, clients, cases, testimonials and contact.' },
+    desc2: { pt: 'Os textos ainda são provisórios (lorem ipsum).', en: 'The copy is still placeholder text (lorem ipsum).' }
   },
   12: {
     subTitle: { pt: 'Apresentação da agência Arcnova', en: 'Arcnova agency presentation' },
@@ -760,9 +760,9 @@ const projectTranslations: Record<number, {
     desc2: { pt: 'Paleta laranja e preto, com títulos grandes em caixa alta.', en: 'Orange and black palette with large all-caps headlines.' }
   },
   14: {
-    subTitle: { pt: 'Pitch Deck Comercial', en: 'Commercial Pitch Deck' },
-    desc1: { pt: 'Pitch deck comercial criado para apresentação de projetos de entretenimento de Khleo Thomas.', en: 'Commercial pitch deck created for the presentation of Khleo Thomas\' entertainment projects.' },
-    desc2: { pt: 'Design corporativo e elegante elaborado para aproximar marcas de entretenimento.', en: 'Corporate and elegant design crafted to bring entertainment brands together.' }
+    subTitle: { pt: 'Pitch deck para a Twitch', en: 'Twitch pitch deck' },
+    desc1: { pt: 'Pitch deck de formatos para a Twitch apresentados por Khleo Thomas, ator e criador de conteúdo americano.', en: 'Pitch deck of Twitch show formats hosted by Khleo Thomas, an American actor and content creator.' },
+    desc2: { pt: 'Cada formato tem premissa e regras, como o game show ao vivo Chat Chaos.', en: 'Each format has a premise and rules, like the live game show Chat Chaos.' }
   },
   27: {
     subTitle: { pt: 'Slides para evento', en: 'Event slides' },
@@ -775,14 +775,14 @@ const projectTranslations: Record<number, {
     desc2: { pt: 'Inclui coberturas de eventos e cases com prints de resultados.', en: 'Also includes event coverage and case studies with results screenshots.' }
   },
   15: {
-    subTitle: { pt: 'Pitch Deck Nex Playground', en: 'Nex Playground Pitch Deck' },
-    desc1: { pt: 'Deck de apresentação promocional para o ecossistema Nex Playground.', en: 'Promotional presentation deck for the Nex Playground ecosystem.' },
-    desc2: { pt: 'Estética voltada ao público gamer e casual de alta fidelidade gráfica.', en: 'Aesthetics geared towards gaming and casual audience of high graphic fidelity.' }
+    subTitle: { pt: 'Deck para a Nex Playground', en: 'Nex Playground deck' },
+    desc1: { pt: 'Deck que apresenta Khleo Thomas à Nex Playground, console de jogos por movimento, com a proposta de uma série de desafios com celebridades.', en: 'Deck introducing Khleo Thomas to Nex Playground, a motion gaming console, with a proposal for a celebrity challenge series.' },
+    desc2: { pt: 'Mostra objetivo, convidados e como a marca aparece no YouTube e no Instagram.', en: 'Covers the goal, guests and how the brand shows up on YouTube and Instagram.' }
   },
   28: {
-    subTitle: { pt: 'Pitch Deck para Investidores', en: 'Pitch Deck for Investors' },
-    desc1: { pt: 'Deck de apresentação estruturado para investidores da plataforma Ecofunding.', en: 'Structured presentation deck for investors of the Ecofunding platform.' },
-    desc2: { pt: 'Dados ambientais e modelos de tokenomics exibidos de maneira moderna e atraente.', en: 'Environmental data and tokenomics models displayed in a modern and attractive way.' }
+    subTitle: { pt: 'Pitch deck para investidores', en: 'Investor pitch deck' },
+    desc1: { pt: 'Pitch deck da Ecofunding para investidores: problema, proposta de valor, tecnologia, modelo de receita e tamanho de mercado.', en: 'Ecofunding’s investor pitch deck: problem, value proposition, technology, revenue model and market size.' },
+    desc2: { pt: 'Fecha com tabela de concorrentes e roadmap, na mesma identidade verde da marca.', en: 'It ends with a competitor table and roadmap, in the brand’s green identity.' }
   },
   11: {
     subTitle: { pt: 'Slides para evento', en: 'Event slides' },
@@ -790,19 +790,19 @@ const projectTranslations: Record<number, {
     desc2: { pt: 'A linguagem visual vem do automobilismo, com a bandeira quadriculada e o laranja da marca.', en: 'The visual language comes from motorsport, with checkered flag shapes and the brand’s orange.' }
   },
   24: {
-    subTitle: { pt: 'Workshop de Fotografia', en: 'Photography Workshop' },
-    desc1: { pt: 'Pacote de layouts promocionais criado para divulgação do Workshop do fotógrafo Rafael Edison nas redes sociais.', en: 'Package of promotional layouts created for the promotion of photographer Rafael Edison\'s Workshop on social media.' },
-    desc2: { pt: 'Flyers que exploram enquadramento fotográfico, luzes dramáticas e tipografia arrojada.', en: 'Flyers that explore photographic framing, dramatic lights, and bold typography.' }
+    subTitle: { pt: 'Workshop de audiovisual', en: 'Audiovisual workshop' },
+    desc1: { pt: 'Peças para o workshop do Rafael Edison em São Paulo, em julho de 2025: feed, story e banners.', en: 'Pieces for Rafael Edison’s workshop in São Paulo, July 2025: feed post, story and banners.' },
+    desc2: { pt: 'Colagem em vermelho com o Rafael no centro e equipe de filmagem ao fundo.', en: 'A red collage with Rafael in the center and a film crew behind him.' }
   },
   25: {
-    subTitle: { pt: 'Workshop de Marketing Digital', en: 'Digital Marketing Workshop' },
-    desc1: { pt: 'Peças publicitárias desenvolvidas para o Workshop Tarricone, focado em desenvolvimento de marca e marketing digital.', en: 'Advertising pieces developed for the Tarricone Workshop, focused on brand development and digital marketing.' },
-    desc2: { pt: 'Identidade vibrante desenvolvida para captação nas redes sociais.', en: 'Vibrant identity developed for user acquisition on social media.' }
+    subTitle: { pt: 'Proposta de pôster', en: 'Poster proposal' },
+    desc1: { pt: 'Proposta de pôster para o workshop de Henrique Tarricone em São Paulo.', en: 'Poster proposal for Henrique Tarricone’s workshop in São Paulo.' },
+    desc2: { pt: 'A data e as chamadas ainda são provisórias.', en: 'The date and headlines are still placeholders.' }
   },
   16: {
-    subTitle: { pt: 'Flyers de Eventos Noturnos', en: 'Nightlife Event Flyers' },
-    desc1: { pt: 'Série de flyers desenvolvidos para festas e eventos noturnos, explorando tipografia urbana, montagens dinâmicas e cores vibrantes.', en: 'Series of flyers developed for parties and nightlife events, exploring urban typography, dynamic montages, and vibrant colors.' },
-    desc2: { pt: 'Direção de arte focada no público jovem e na cultura noturna urbana.', en: 'Art direction focused on the youth audience and urban nightlife culture.' }
+    subTitle: { pt: 'Flyers de festas', en: 'Party flyers' },
+    desc1: { pt: 'Flyers para festas da HB Entertainment na Califórnia, como a Nostalgia (hip-hop e R&B dos anos 2000) e a getLOUD!!!.', en: 'Flyers for HB Entertainment parties in California, such as Nostalgia (2000s hip-hop and R&B) and getLOUD!!!.' },
+    desc2: { pt: 'Cada flyer muda de estética conforme o tema, do grafite ao rosa anos 2000.', en: 'Each flyer changes style with the theme, from graffiti to 2000s pink.' }
   }
 };
 
