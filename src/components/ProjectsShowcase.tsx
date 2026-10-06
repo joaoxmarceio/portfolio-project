@@ -854,6 +854,17 @@ interface CategoryBlockProps {
   lang: 'pt' | 'en';
 }
 
+// Converte o título do projeto em um endereço para links diretos (ex.: "BALUARTE®" -> "baluarte")
+const projectSlug = (title: string) =>
+  title
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[®™©]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
 function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, categoryId, lang }: CategoryBlockProps) {
   const [activeIdx, setActiveIdx] = useState<number>(0);
   const [activeProject, setActiveProject] = useState<number | null>(null);
@@ -955,6 +966,28 @@ function CategoryShowcaseBlock({ categoryName, projects: catProjects, isLeft, ca
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeProject, isZoomed]);
+
+  // Link direto: abre o projeto quando a URL termina em #slug (ex.: joaomarceio.com.br/#baluarte)
+  React.useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const openFromHash = () => {
+      const slug = decodeURIComponent(window.location.hash.slice(1)).toLowerCase();
+      if (!slug) return;
+      const target = catProjects.find((p) => projectSlug(p.title) === slug);
+      if (!target) return;
+      setActiveProject(target.id);
+      // espera a animação de abertura antes de rolar até o projeto
+      timer = setTimeout(() => {
+        constraintsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 450);
+    };
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+    return () => {
+      window.removeEventListener('hashchange', openFromHash);
+      if (timer) clearTimeout(timer);
+    };
+  }, [catProjects]);
 
   return (
     <div
